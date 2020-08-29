@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunplayer.dao.CourseNewDao">
+    <select id="getAllNewCourses" resultType="CourseNewModel">
+        select * from POCUS_COURSENEW
+    </select>
+    
+    <select id="getNewCourse" resultType="CourseNewModel">
+        select * from POCUS_COURSENEW where CNID = #{id}
+    </select>
+
+    <insert id="addNewCourse">
+        <!--ignore忽略自动增长的主键id-->
+        insert ignore into POCUS_COURSENEW (CNID, CID) values (#{id}, #{cid})
+    </insert>
+    
+    <update id="updateNewCourse">
+        update POCUS_COURSENEW set CID=#{cid} where CNID=#{id}
+    </update>
+
+    <delete id="deleteTodayCourse" parameterType="String">
+        delete from POCUS_ COURSETODAY where CTID=#{id}
+    </delete>
+</mapper>

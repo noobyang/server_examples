@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunplayer.dao.LiveDao">
+    <select id="getAllLives" resultType="LiveModel">
+        select * from POCUS_LIVE
+    </select>
+    
+    <select id="getLive" resultType="LiveModel">
+        select * from POCUS_LIVE where LIVEID = #{id}
+    </select>
+
+    <insert id="addLive">
+        <!--ignore忽略自动增长的主键id-->
+        insert ignore into POCUS_LIVE (LIVEID, LIVE_NAME) values (#{id}, #{name})
+    </insert>
+    
+    <update id="updateLive">
+        update POCUS_LIVE set LIVE_NAME=#{name} where LIVEID=#{id}
+    </update>
+
+    <delete id="deleteLivePrev" parameterType="String">
+        delete from POCUS_LIVE where LPID=#{id}
+    </delete>
+</mapper>

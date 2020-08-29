@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunplayer.dao.BannerDao">
+    <select id="getAllBanners" resultType="BannerModel">
+        select * from POCUS_BANNER
+    </select>
+    
+    <select id="getBanner" resultType="BannerModel">
+        select * from POCUS_BANNER where BID = #{id}
+    </select>
+
+    <insert id="addBanner">
+        <!--ignore忽略自动增长的主键id-->
+        insert ignore into POCUS_BANNER (BID, PICLINK) values (#{id}, #{piclink})
+    </insert>
+    
+    <update id="updateBanner">
+        update POCUS_BANNER set PICLINK=#{piclink} where BID=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="String">
+        delete from user where id=#{id}
+    </delete>
+</mapper>

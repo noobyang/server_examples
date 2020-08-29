@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunplayer.dao.LivingDao">
+    <select id="getAllLivings" resultType="LivingModel">
+        select * from POCUS_LIVEING
+    </select>
+    
+    <select id="getLiving" resultType="LivingModel">
+        select * from POCUS_LIVEING where LIID = #{id}
+    </select>
+
+    <insert id="addLiving">
+        <!--ignore忽略自动增长的主键id-->
+        insert ignore into POCUS_LIVEING (LIID, LIVEID) values (#{id}, #{liveid})
+    </insert>
+    
+    <update id="updateLiving">
+        update POCUS_LIVEING set LIVEID=#{liveid} where LIID=#{id}
+    </update>
+
+    <delete id="deleteLivingPrev" parameterType="String">
+        delete from POCUS_LIVEING where LIID=#{id}
+    </delete>
+</mapper>

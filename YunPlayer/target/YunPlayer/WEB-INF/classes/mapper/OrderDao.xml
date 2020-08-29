@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunplayer.dao.OrderDao">
+    <select id="getAllOrders" resultType="OrderModel">
+        select * from POCUS_ORDER
+    </select>
+    
+    <select id="getOrder" resultType="OrderModel">
+        select * from POCUS_ORDER where ORDERID = #{id}
+    </select>
+
+    <insert id="addOrder">
+        <!--ignore忽略自动增长的主键id-->
+        insert ignore into POCUS_ORDER (ORDERID, TOTAL) values (#{id}, #{name})
+    </insert>
+    
+    <update id="updateOrder">
+        update POCUS_ORDER set TOTAL=#{name} where ORDERID=#{id}
+    </update>
+
+    <delete id="deleteOrder" parameterType="String">
+        delete from POCUS_ORDER where ORDERID=#{id}
+    </delete>
+</mapper>
