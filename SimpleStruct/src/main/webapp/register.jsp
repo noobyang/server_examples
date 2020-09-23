@@ -11,11 +11,10 @@
     <title>注册</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/privilege_register" method="post">
+<form action="register" method="post">
+    <%--注意数据类型要和 action 中的对应上--%>
     用户名：<input type="text" name="user.username"><br>
     密码：<input type="text" name="user.psd"><br>
-    年龄：<input type="text" name="user.age"><br>
-    生日：<input type="text" name="user.birthday"><br>
     <input type="submit" value="注册"><br>
 </form>
 

@@ -51,4 +51,11 @@
 
     </package>
 
+    <package name="noobyang1" extends="struts-default">
+
+        <action name="register" class="com.noobyang.action.ParamsAction" method="register">
+            <result name="success">success.jsp</result>
+        </action>
+    </package>
+
 </struts>
