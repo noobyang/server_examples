@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="noobyang" extends="struts-default" strict-method-invocation="false">
+
+<!--        <action name="login" class="com.noobyang.PrivilegeAction" method="login">-->
+<!--            <result name="success">success.jsp</result>-->
+<!--        </action>-->
+
+<!--        <action name="register" class="com.noobyang.PrivilegeAction" method="register">-->
+<!--            <result name="success">success.jsp</result>-->
+<!--        </action>-->
+
+
+<!--        通配符使用-->
+<!--        name=privilege_*，我们用了_作为分隔符。*就是我们的通配符-->
+<!--        {1}，就是代表着第一个通配符-->
+        <action name="privilege_*" class="com.noobyang.PrivilegeAction" method="{1}">
+            <result name="success">success.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>
