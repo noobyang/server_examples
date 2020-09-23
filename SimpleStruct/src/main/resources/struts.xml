@@ -22,11 +22,11 @@
     <!-- 4. 修改上传文件的最大大小为30M -->
     <constant name="struts.multipart.maxSize" value="31457280"/>
 
-<!--        <action name="login" class="com.noobyang.PrivilegeAction" method="login">-->
+<!--        <action name="login" class="com.noobyang.action.PrivilegeAction" method="login">-->
 <!--            <result name="success">success.jsp</result>-->
 <!--        </action>-->
 
-<!--        <action name="register" class="com.noobyang.PrivilegeAction" method="register">-->
+<!--        <action name="register" class="com.noobyang.action.PrivilegeAction" method="register">-->
 <!--            <result name="success">success.jsp</result>-->
 <!--        </action>-->
 
@@ -44,7 +44,7 @@
 <!--        4. 如果不写class，class默认执行的action在struts-default有配置<default-class-ref class="com.opensymphony.xwork2.ActionSupport" />-->
 <!--        什么时候会不写class？就是需要跳转到WEB-INF目录下的资源的时候-->
 <!--        这就类似与Servlet需要跳转到WEB-INF下的资源。【Tomcat不允许直接访问WEB-INF资源】-->
-        <action name="privilege_*" class="com.noobyang.PrivilegeAction" method="{1}">
+        <action name="privilege_*" class="com.noobyang.action.PrivilegeAction" method="{1}">
 <!--            3. 全局跳转-->
 <!--            <result name="success">success.jsp</result>-->
         </action>
