@@ -1,10 +1,10 @@
-package com.noobyang;
+package com.noobyang.login;
 
 public class UserService {
 
     private UserDao userDao = new UserDao();
 
-    public User longin(User user) {
+    public User login(User user) {
         return userDao.login(user);
     }
 

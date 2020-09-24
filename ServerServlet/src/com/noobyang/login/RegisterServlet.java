@@ -1,11 +1,15 @@
-package com.noobyang;
+package com.noobyang.login;
 
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@javax.servlet.annotation.WebServlet(name = "RegisterServlet",urlPatterns = "/RegisterServlet")
+@WebServlet(name = "RegisterServlet",urlPatterns = "/RegisterServlet")
 public class RegisterServlet extends javax.servlet.http.HttpServlet {
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //得到用户带过来的数据，封装到Bean对象中
         String username = request.getParameter("username");
@@ -36,7 +40,7 @@ public class RegisterServlet extends javax.servlet.http.HttpServlet {
 
     }
 
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         this.doPost(request, response);
 

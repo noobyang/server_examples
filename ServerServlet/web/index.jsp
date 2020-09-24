@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>First Servlet</title>
+    <title>Index</title>
   </head>
   <body>
   Hello World !

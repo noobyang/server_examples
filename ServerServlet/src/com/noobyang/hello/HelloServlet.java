@@ -1,12 +1,13 @@
-package com.noobyang;
+package com.noobyang.hello;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloServlet extends javax.servlet.http.HttpServlet {
+public class HelloServlet extends HttpServlet {
 
     private String message;
 

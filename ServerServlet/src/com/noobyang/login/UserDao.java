@@ -1,4 +1,4 @@
-package com.noobyang;
+package com.noobyang.login;
 
 public class UserDao {
 
