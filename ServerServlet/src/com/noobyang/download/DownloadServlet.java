@@ -28,6 +28,7 @@ public class DownloadServlet extends HttpServlet {
         String fileName = path.substring(path.lastIndexOf("\\") + 1);
         // 设置消息头，告诉浏览器，我要下载1.png这个图片
         resp.setHeader("Content-Disposition", "attachment; filename=" + fileName);
+//        resp.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8"));
 
         // 把读取到的资源写给浏览器
         int len = 0;
