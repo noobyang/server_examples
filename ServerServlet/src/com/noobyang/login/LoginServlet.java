@@ -3,12 +3,13 @@ package com.noobyang.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet",urlPatterns = "/LoginServlet")
-public class LoginServlet extends javax.servlet.http.HttpServlet {
+public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //得到用户带过来的数据，封装到Bean对象中
