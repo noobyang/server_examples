@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-@WebServlet(name = "SessionServlet", urlPatterns = "/SessionServlet")
+@WebServlet(name = "CookieServlet", urlPatterns = "/CookieServlet")
 public class CookieServlet extends HttpServlet {
 
     @Override
