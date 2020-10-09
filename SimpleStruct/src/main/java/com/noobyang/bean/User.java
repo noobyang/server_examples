@@ -6,6 +6,7 @@ public class User {
 
     private String username;
     private String psd;
+    private Date birthday;
 
     public String getUsername() {
         return username;
@@ -23,4 +24,11 @@ public class User {
         this.psd = psd;
     }
 
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 }

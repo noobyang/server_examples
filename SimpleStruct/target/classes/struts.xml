@@ -55,6 +55,7 @@
 
         <action name="register" class="com.noobyang.action.ParamsAction" method="register">
             <result name="success">success.jsp</result>
+            <result name="input">error.jsp</result>
         </action>
     </package>
 

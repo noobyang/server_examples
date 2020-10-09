@@ -15,6 +15,8 @@
     <%--注意数据类型要和 action 中的对应上--%>
     用户名：<input type="text" name="user.username"><br>
     密码：<input type="text" name="user.psd"><br>
+<%--    生日：<input type="date" name="user.birthday"><br>--%>
+    生日：<input type="text" name="user.birthday"><br>
     <input type="submit" value="注册"><br>
 </form>
 
