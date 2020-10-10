@@ -8,9 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Success</title>
+    <title>Index</title>
 </head>
 <body>
-<h2>Success</h2>
+<form action="upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file1"><br>
+    <input type="file" name="file2"><br>
+    <input type="submit" value="上传"><br>
+</form>
 </body>
 </html>

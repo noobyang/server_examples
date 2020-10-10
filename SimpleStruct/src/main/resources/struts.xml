@@ -57,6 +57,11 @@
             <result name="success">success.jsp</result>
             <result name="input">error.jsp</result>
         </action>
+
+        <action name="upload" class="com.noobyang.action.UploadAction" method="upload">
+            <result name="success">success.jsp</result>
+        </action>
+
     </package>
 
 </struts>
