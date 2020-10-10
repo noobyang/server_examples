@@ -76,6 +76,11 @@
             </result>
         </action>
 
+        <action name="modeldriven" class="com.noobyang.action.ModelDrivenAction" method="execute">
+            <result name="success">success.jsp</result>
+            <result name="input">error.jsp</result>
+        </action>
+
     </package>
 
 </struts>
