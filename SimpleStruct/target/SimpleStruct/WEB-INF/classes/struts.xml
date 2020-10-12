@@ -83,4 +83,31 @@
 
     </package>
 
+    <package name="noobyang2" extends="struts-default" >
+
+        <interceptors>
+            <!--配置用户自定义的拦截器-->
+            <interceptor name="CustomInterceptor" class="com.noobyang.interceptor.CustomInterceptor"/>
+
+            <!--自定义拦截器栈，我们配置了自定义的拦截器，默认的拦截器栈就不会被执行，因此，想要使用默认的拦截器功能，就要配置进来-->
+            <interceptor-stack name="mystack">
+                <!--引用默认的拦截器栈，一定要放在第一行-->
+                <interceptor-ref name="defaultStack"/>
+
+                <!--引用自定义的拦截器-->
+                <interceptor-ref name="CustomInterceptor"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!--上面配置了拦截器栈，但是没有被执行...下面配置执行拦截器-->
+        <default-interceptor-ref name="mystack"/>
+
+        <action name="interceptor" class="com.noobyang.action.InterceptorAction" method="test">
+            <result name="success">success.jsp</result>
+
+        </action>
+
+    </package>
+
+
 </struts>
