@@ -22,14 +22,8 @@
     <!-- 4. 修改上传文件的最大大小为30M -->
     <constant name="struts.multipart.maxSize" value="31457280"/>
 
-<!--        <action name="login" class="com.noobyang.action.PrivilegeAction" method="login">-->
-<!--            <result name="success">success.jsp</result>-->
-<!--        </action>-->
-
-<!--        <action name="register" class="com.noobyang.action.PrivilegeAction" method="register">-->
-<!--            <result name="success">success.jsp</result>-->
-<!--        </action>-->
-
+<!--    <constant name="struts.ui.theme" value="simple"/>-->
+<!--    <constant name="struts.custom.i18n.resources" value="msg"/>-->
 
 <!--    1. 通配符使用-->
 <!--    name=privilege_*，我们用了_作为分隔符。*就是我们的通配符-->
