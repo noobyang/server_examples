@@ -19,14 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c13d0f5-5320-4509-a4b6-ef3eb1ef1338" name="Default Changelist" comment="web lesson one:spring init">
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/DynamicProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/StaticProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/TestConcrete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/TestInterface.java" afterDir="false" />
+    <list default="true" id="9c13d0f5-5320-4509-a4b6-ef3eb1ef1338" name="Default Changelist" comment="web lesson two:spring proxy">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/aop/AOP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/aop/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/aop/IUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/aop/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/TestInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/proxy/TestInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -57,10 +62,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.DynamicProxy">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.noobyang.aop.App" />
+      <module name="SimpleSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.noobyang.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DynamicProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.noobyang.proxy.DynamicProxy" />
       <module name="SimpleSpring" />
@@ -89,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.DynamicProxy" />
         <item itemvalue="Application.StaticProxy" />
       </list>
@@ -105,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602487824271</updated>
       <workItem from="1602487826760" duration="1842000" />
-      <workItem from="1602556621972" duration="5763000" />
+      <workItem from="1602556621972" duration="10976000" />
     </task>
     <task id="LOCAL-00001" summary="web lesson one:spring init">
       <created>1602493533925</created>
@@ -114,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602493533925</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="web lesson two:spring proxy">
+      <created>1602574482039</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602574482039</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,36 +164,53 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="web lesson one:spring init" />
-    <option name="LAST_COMMIT_MESSAGE" value="web lesson one:spring init" />
+    <MESSAGE value="web lesson two:spring proxy" />
+    <option name="LAST_COMMIT_MESSAGE" value="web lesson two:spring proxy" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser" timestamp="1602573320965">
+    <state x="35" y="0" key="#Project_Structure" timestamp="1602578759944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602573320965" />
-    <state width="1313" height="187" key="GridCell.Tab.0.bottom" timestamp="1602573518865">
+    <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1602578759944" />
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602578730434">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602573518865" />
-    <state width="1313" height="187" key="GridCell.Tab.0.center" timestamp="1602573518865">
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602578730434" />
+    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser" timestamp="1602578068257">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602573518865" />
-    <state width="1313" height="187" key="GridCell.Tab.0.left" timestamp="1602573518865">
+    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602578068257" />
+    <state width="1313" height="349" key="GridCell.Tab.0.bottom" timestamp="1602580461424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602573518865" />
-    <state width="1313" height="187" key="GridCell.Tab.0.right" timestamp="1602573518865">
+    <state width="1313" height="349" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602580461424" />
+    <state width="1313" height="349" key="GridCell.Tab.0.center" timestamp="1602580461424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602573518865" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1602493537087">
+    <state width="1313" height="349" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602580461424" />
+    <state width="1313" height="349" key="GridCell.Tab.0.left" timestamp="1602580461424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602493537087" />
+    <state width="1313" height="349" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602580461424" />
+    <state width="1313" height="349" key="GridCell.Tab.0.right" timestamp="1602580461424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="349" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602580461424" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1602574484378">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602574484378" />
+    <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602578130147">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602578130147" />
     <state width="1330" height="700" key="javadoc.popup.new" timestamp="1602573683976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1330" height="700" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1602573683976" />
+    <state x="256" y="0" key="spring file set editor" timestamp="1602578483621">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="256" y="0" key="spring file set editor/0.0.1366.728@0.0.1366.728" timestamp="1602578483621" />
   </component>
 </project>
