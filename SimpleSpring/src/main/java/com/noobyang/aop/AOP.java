@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AOP {
 
-    @Before("execution(* com.*.*(..))")
+    @Before("execution(* com.noobyang.aop.UserDao.save(..))")
     public void before() {
         System.out.println("AOP before");
 
     }
 
-    @After("execution(* com.*.*(..))")
+    @After("execution(* com.noobyang.aop.UserDao.save(..))")
     public void after() {
         System.out.println("AOP after");
 

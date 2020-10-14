@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        IUser iUser = (IUser) applicationContext.getBean("proxy");
+        IUser iUser = (IUser) applicationContext.getBean("userDao");
         System.out.println("main " + iUser.getClass());
         iUser.save();
 
