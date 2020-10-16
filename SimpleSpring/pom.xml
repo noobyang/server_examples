@@ -21,22 +21,37 @@
 
   <dependencies>
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
-
+    <!-- Spring -->
+    <!-- Spring core 模块 IOC容器，解决对象创建和之间的依赖关系。applicationContext.xml-->
+    <!-- Spring core 模块 spring 核心功能-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>5.2.0.RELEASE</version>
     </dependency>
-
+    <!-- Spring core 模块 spring 上下文节点-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+    <!-- Spring core 模块 bean 节点 -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
       <version>5.2.0.RELEASE</version>
+    </dependency>
+    <!-- Spring core 模块 spring 表达式相关表-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+    <!-- Spring core 模块 日志-->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
     </dependency>
 
     <dependency>
@@ -64,11 +79,6 @@
       <version>5.2.0.RELEASE</version>
     </dependency>
 
-    <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <version>1.2</version>
-    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
