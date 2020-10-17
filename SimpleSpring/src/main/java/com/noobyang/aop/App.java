@@ -11,10 +11,9 @@ public class App {
 
     public static void main(String[] args) {
 
-//        testAOP(args);
+        testAOP(args);
 
         testBean(args);
-
 
 
     }
@@ -36,9 +35,18 @@ public class App {
     public static void testAOP(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        IUser iUser = (IUser) applicationContext.getBean("userDao");
-        System.out.println("main " + iUser.getClass());
-        iUser.save();
+//        IUser userDao = (IUser) applicationContext.getBean("userDao");
+//        System.out.println("main " + userDao.getClass());
+//        userDao.save();
+//
+//        IUser userParams = (IUser) applicationContext.getBean("userParams");
+//        System.out.println("main " + userParams.getClass());
+//        userParams.save();
+
+        User user = (User) applicationContext.getBean("user");
+        System.out.println("main " + user.getClass());
+
+
 
     }
 
