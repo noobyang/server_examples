@@ -1,8 +1,5 @@
 package com.noobyang.aop;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class UserParams implements IUser {
 
     private String id;
@@ -14,7 +11,7 @@ public class UserParams implements IUser {
     }
 
     @Override
-    public void save() {
-        System.out.println("UserParams save " + id + " " + username);
+    public void say() {
+        System.out.println("UserParams say " + id + " " + username);
     }
 }

@@ -1,9 +1,8 @@
 package com.noobyang.aop;
 
-public class User {
-
-    public User() {
-
+public class User implements IUser {
+    @Override
+    public void say() {
+        System.out.println("User say");
     }
-
 }

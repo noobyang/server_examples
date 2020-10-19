@@ -1,4 +1,4 @@
-package com.noobyang.aop;
+package com.noobyang.factory;
 
 public class UserFactory {
 

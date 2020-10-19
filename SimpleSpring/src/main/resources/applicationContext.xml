@@ -2,9 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:c="http://www.springframework.org/schema/c"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <!--default-autowire="byType"-->
     <!--c名称空间-->
 
 
@@ -14,7 +21,7 @@
     <bean class="com.noobyang.aop.AOP" />
 
     <!-- 定义目标对象 -->
-    <bean id="userDao" class="com.noobyang.aop.UserDao" />
+    <bean id="user" class="com.noobyang.aop.User" />
     <!-- scope="singleton" lazy-init="true" init-method="" destroy-method="" -->
 <!--    1) 对象创建： 单例/多例-->
 <!--    scope="singleton", 默认值， 即 默认是单例 【service/dao/工具类】-->
@@ -39,9 +46,53 @@
         <constructor-arg index="1" name="username" type="java.lang.String" value="noobyang"/>
     </bean>
 
+
     <!--首先创建工厂对象-->
-    <bean id="factory" class="com.noobyang.aop.UserFactory"/>
+    <bean id="factory" class="com.noobyang.factory.UserFactory"/>
     <!--指定工厂对象和工厂方法-->
-    <bean id="user" class="com.noobyang.aop.User" factory-bean="factory" factory-method="getBean"/>
+    <bean id="userFactory" class="com.noobyang.factory.User" factory-bean="factory" factory-method="getBean"/>
+
+
+    <!--创建userDao对象-->
+    <bean id="userDao" class="com.noobyang.injection.UserDao"/>
+    <!--创建userService对象-->
+    <bean id="userService" class="com.noobyang.injection.UserService">
+        <!--要想在userService层中能够引用到userDao，就必须先创建userDao对象-->
+        <constructor-arg index="0" name="userDao" type="com.noobyang.injection.UserDao" ref="userDao"/>
+    </bean>
+
+<!--    &lt;!&ndash;创建userService对象&ndash;&gt;
+    <bean id="userService" class="com.noobyang.injection.UserService">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    &lt;!&ndash;
+    1.创建userService，看到有userDao这个属性
+    2.而userDao这个属性又是一个对象
+    3.在property属性下又内置了一个bean
+    4.创建userDao
+    &ndash;&gt;
+    <bean id="userService" class="com.noobyang.injection.UserService">
+        <property name="userDao">
+            <bean class="com.noobyang.injection.UserDao"/>
+        </property>
+    </bean>
+
+    &lt;!&ndash;不用写property节点了，直接使用p名称空间&ndash;&gt;
+    &lt;!&ndash;xmlns:p="http://www.springframework.org/schema/p"&ndash;&gt;
+    <bean id="userService" class="com.noobyang.injection.UserService" p:userDao-ref="userDao"/>
+
+    &lt;!&ndash;
+        1.通过名字来自动装配
+        2.发现userService中有个叫userDao的属性
+        3.看看IOC容器UserDao类型的对象
+        4.如果有，就装配进去
+    &ndash;&gt;
+    <bean id="userService" class="com.noobyang.injection.UserService" autowire="byType"/>-->
+
+
+    <!--注意 xmlns:context 的配置，和 xsi:schemaLocation 需要配置 context-->
+    <context:component-scan base-package="com.noobyang.injection" />
+
 
 </beans>
