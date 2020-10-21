@@ -17,6 +17,10 @@
 
     <!-- 启动@aspectj的自动代理支持-->
     <aop:aspectj-autoproxy />
+    <!--注意 xmlns:context 的配置，和 xsi:schemaLocation 需要配置 context-->
+    <context:component-scan base-package="com.noobyang" />
+
+
     <!-- 定义aspect类 -->
     <bean class="com.noobyang.aop.AOP" />
 
@@ -91,8 +95,13 @@
     <bean id="userService" class="com.noobyang.injection.UserService" autowire="byType"/>-->
 
 
-    <!--注意 xmlns:context 的配置，和 xsi:schemaLocation 需要配置 context-->
-    <context:component-scan base-package="com.noobyang.injection" />
+    <!--创建userDao对象-->
+    <bean id="user2" class="com.noobyang.aop2.User2"/>
+    <bean id="aop2" class="com.noobyang.aop2.AOP2"/>
 
+    <bean id="proxy" class="com.noobyang.aop2.ProxyFactory" factory-method="getProxyInstance">
+        <constructor-arg index="0" ref="user2"/>
+        <constructor-arg index="1" ref="aop2"/>
+    </bean>
 
 </beans>

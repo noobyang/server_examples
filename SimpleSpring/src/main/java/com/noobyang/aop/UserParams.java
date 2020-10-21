@@ -1,5 +1,8 @@
 package com.noobyang.aop;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class UserParams implements IUser {
 
     private String id;

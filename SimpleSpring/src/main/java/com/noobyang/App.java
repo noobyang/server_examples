@@ -1,6 +1,8 @@
 package com.noobyang;
 
 import com.noobyang.aop.IUser;
+import com.noobyang.aop.OrderDao;
+import com.noobyang.aop2.IUser2;
 import com.noobyang.cglib.ProxyFactory;
 import com.noobyang.cglib.UserDao;
 import com.noobyang.factory.User;
@@ -18,16 +20,20 @@ public class App {
     public static void main(String[] args) {
 
 //        testBean(args);
-//
+
 //        testAOP(args);
-//
+
+//        testAOP2(args);
+
+        testAOP3(args);
+
 //        testFactory(args);
 
 //        testInjection(args);
 
 //        testInjection2(args);
 
-        testCglib(args);
+//        testCglib(args);
 
 
     }
@@ -56,6 +62,30 @@ public class App {
         IUser userParams = (IUser) applicationContext.getBean("userParams");
         System.out.println("testAOP " + userParams.getClass());
         userParams.say();
+    }
+
+    /**
+     * 应用上下文，ApplicationContext【功能强大，一般我们使用这个】
+     */
+    public static void testAOP2(String[] args) {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        IUser2 user = (IUser2) applicationContext.getBean("proxy");
+
+        user.say();
+    }
+
+    /**
+     * 应用上下文，ApplicationContext【功能强大，一般我们使用这个】
+     */
+    public static void testAOP3(String[] args) {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        OrderDao orderDao = (OrderDao) applicationContext.getBean("orderDao");
+
+        System.out.println(orderDao.getClass());
+
+        orderDao.save();
     }
 
     /**
