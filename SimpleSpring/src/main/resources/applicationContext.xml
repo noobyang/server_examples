@@ -104,4 +104,23 @@
         <constructor-arg index="1" ref="aop2"/>
     </bean>
 
+
+    <!--对象实例-->
+    <!--切面类-->
+    <!--AOP配置-->
+<!--    <aop:config >-->
+
+<!--        &lt;!&ndash;定义切入表达式，拦截哪些方法&ndash;&gt;-->
+<!--        <aop:pointcut id="pointCut" expression="execution(* com.noobyang.aop.*.*(..))"/>-->
+
+<!--        &lt;!&ndash;指定切面类是哪个&ndash;&gt;-->
+<!--        <aop:aspect ref="aop">-->
+
+<!--            &lt;!&ndash;指定来拦截的时候执行切面类的哪些方法&ndash;&gt;-->
+<!--            <aop:before method="begin" pointcut-ref="pointCut"/>-->
+<!--            <aop:after method="close" pointcut-ref="pointCut"/>-->
+
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
 </beans>
