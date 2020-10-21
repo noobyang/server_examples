@@ -1,6 +1,8 @@
 package com.noobyang;
 
 import com.noobyang.aop.IUser;
+import com.noobyang.cglib.ProxyFactory;
+import com.noobyang.cglib.UserDao;
 import com.noobyang.factory.User;
 import com.noobyang.injection.UserService;
 import com.noobyang.injection.UserService2;
@@ -23,7 +25,9 @@ public class App {
 
 //        testInjection(args);
 
-        testInjection2(args);
+//        testInjection2(args);
+
+        testCglib(args);
 
 
     }
@@ -91,6 +95,17 @@ public class App {
         userService.save();
 
         System.out.println("testInjection2 " + userService.getClass());
+    }
+
+    /**
+     * 应用上下文，ApplicationContext【功能强大，一般我们使用这个】
+     */
+    public static void testCglib(String[] args) {
+        UserDao userDao = new UserDao();
+
+        UserDao factory = (UserDao) new ProxyFactory(userDao).getProxyInstance();
+
+        factory.save();
     }
 
 }
