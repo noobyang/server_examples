@@ -28,6 +28,13 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>5.2.0.RELEASE</version>
+      <!--因为使用了sl4j，所以去掉commons-logging-->
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!-- Spring core 模块 spring 上下文节点-->
     <dependency>
@@ -47,12 +54,35 @@
       <artifactId>spring-expression</artifactId>
       <version>5.2.0.RELEASE</version>
     </dependency>
-    <!-- Spring core 模块 日志-->
+
+
+    <!--日志输出-->
     <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <version>1.2</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.26</version>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.slf4j</groupId>-->
+<!--      <artifactId>log4j-over-slf4j</artifactId>-->
+<!--    </dependency>-->
+    <!-- 日志 包含slf4j接口和log4j实现 -->
+<!--    <dependency>-->
+<!--      <groupId>org.slf4j</groupId>-->
+<!--      <artifactId>slf4j-api</artifactId>-->
+<!--      <version>1.7.26</version>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
 
     <!-- Spring AOP -->
     <dependency>

@@ -20,7 +20,7 @@ example:
         <!-- 【拦截所有public方法】 -->
         <!--<aop:pointcut expression="execution(public * *(..))" id="pt"/>-->
 
-        <!-- 【拦截所有save开头的方法 】 -->
+        <!-- 【拦截所有save开头的方法Log4j 】 -->
         <!--<aop:pointcut expression="execution(* save*(..))" id="pt"/>-->
 
         <!-- 【拦截指定类的指定方法, 拦截时候一定要定位到方法】 -->

@@ -25,10 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f74252-f919-4995-9925-f6108ca822a4" name="Default Changelist" comment="web lesson four: servlet, session">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ServerServlet_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ServerServlet_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleStruct/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleStruct/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleStruct/src/main/java/com/noobyang/action/ParamsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleStruct/src/main/java/com/noobyang/action/ParamsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSpring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSpring/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +177,7 @@
       <workItem from="1601426685497" duration="1052000" />
       <workItem from="1602205509170" duration="2425000" />
       <workItem from="1602212993987" duration="253000" />
+      <workItem from="1603349039380" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="web lesson two: hello servlet">
       <created>1598760609866</created>
