@@ -59,7 +59,7 @@
         <appender-ref ref="stdout"/>
         <appender-ref ref="infoFile"/>
         <appender-ref ref="errorFile"/>
-        <appender-ref ref="logstash"/>
+<!--        <appender-ref ref="logstash"/>-->
     </root>
 
 </configuration>

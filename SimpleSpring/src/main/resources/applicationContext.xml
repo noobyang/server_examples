@@ -123,4 +123,30 @@
 <!--        </aop:aspect>-->
 <!--    </aop:config>-->
 
+
+
+    <!--JDBC-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql:///mydatabase?serverTimezone=GMT%2B8&amp;useSSL=false"/>
+        <property name="user" value="liyang"/>
+        <property name="password" value="liyang"/>
+        <property name="initialPoolSize" value="3"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="maxStatements" value="100"/>
+        <property name="acquireIncrement" value="2"/>
+    </bean>
+
+    <!-- 2. 创建JdbcTemplate对象 -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="userDaoJDBC" class="com.noobyang.dao.UserDao">
+        <!--要想在userService层中能够引用到userDao，就必须先创建userDao对象-->
+        <constructor-arg index="0" name="jdbcTemplate" type="org.springframework.jdbc.core.JdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+
+
 </beans>

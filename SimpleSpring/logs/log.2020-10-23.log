@@ -1,0 +1,34 @@
+[2020-10-23 10:14:38.288] [main] ERROR com.noobyang.dao.TestJDBC : com.mysql.jdbc.Driver
+[2020-10-23 10:20:18.919] [main] ERROR com.noobyang.dao.TestJDBC : The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+[2020-10-23 10:24:16.682] [main] ERROR com.noobyang.dao.TestJDBC : Duplicate entry '8' for key 'user.PRIMARY'
+[2020-10-23 11:00:46.116] [main] INFO  com.noobyang.dao.TestJDBC : id 1
+[2020-10-23 11:00:46.119] [main] INFO  com.noobyang.dao.TestJDBC : name aaa
+[2020-10-23 11:00:46.119] [main] INFO  com.noobyang.dao.TestJDBC : sex 男
+[2020-10-23 11:00:46.119] [main] INFO  com.noobyang.dao.TestJDBC : age 18
+[2020-10-23 11:00:46.120] [main] INFO  com.noobyang.dao.TestJDBC : id 2
+[2020-10-23 11:00:46.120] [main] INFO  com.noobyang.dao.TestJDBC : name bbb
+[2020-10-23 11:00:46.120] [main] INFO  com.noobyang.dao.TestJDBC : sex 女
+[2020-10-23 11:00:46.120] [main] INFO  com.noobyang.dao.TestJDBC : age 25
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : id 3
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : name ccc
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : sex 男
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : age 20
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : id 4
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : name 张三
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : sex 女
+[2020-10-23 11:00:46.121] [main] INFO  com.noobyang.dao.TestJDBC : age 55
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : id 5
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : name 李四
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : sex 女
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : age 16
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : id 7
+[2020-10-23 11:00:46.122] [main] INFO  com.noobyang.dao.TestJDBC : name 小屯
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : sex 男
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : age 26
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : id 8
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : name 大屯
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : sex 女
+[2020-10-23 11:00:46.123] [main] INFO  com.noobyang.dao.TestJDBC : age 36
+[2020-10-23 17:10:54.152] [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog : MLog clients using slf4j logging.
+[2020-10-23 17:10:54.582] [main] INFO  com.mchange.v2.c3p0.C3P0Registry : Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+[2020-10-23 17:10:55.867] [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2t5sh7adniao0xtmfv88|6aa8e115, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2t5sh7adniao0xtmfv88|6aa8e115, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql:///mydatabase?serverTimezone=GMT%2B8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]

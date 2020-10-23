@@ -55,6 +55,19 @@
       <version>5.2.0.RELEASE</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring</artifactId>
+      <version>5.2.0.RELEASE</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+
 
     <!--日志输出-->
     <dependency>
@@ -112,18 +125,20 @@
     </dependency>
 
 
+    <!-- DAO -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring</artifactId>
-      <version>5.2.0.RELEASE</version>
-      <type>pom</type>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.21</version>
+    </dependency>
+    <!-- 数据源c3p0 -->
+    <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.5.2</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-expression</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
 
     <!-- Spring test -->
     <dependency>

@@ -19,14 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c13d0f5-5320-4509-a4b6-ef3eb1ef1338" name="Default Changelist" comment="web lesson five:spring aop expression">
-      <change afterPath="$PROJECT_DIR$/logs/demoClass.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/log/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerServlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerServlet/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9c13d0f5-5320-4509-a4b6-ef3eb1ef1338" name="Default Changelist" comment="web lesson six:logback log save">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error.2020-10-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/log.2020-10-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/dao/IUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/dao/TestJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/dao/TestSpringJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple_web/.idea/simple_web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.2020-10-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log.2020-10-22.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +64,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -74,7 +82,7 @@
       <recent name="com.noobyang.aop" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo">
+  <component name="RunManager" selected="Application.TestSpringJDBC">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.noobyang.App" />
       <module name="SimpleSpring" />
@@ -101,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.noobyang.proxy.DynamicProxy" />
+    <configuration name="TestJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.noobyang.dao.TestJDBC" />
       <module name="SimpleSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.noobyang.proxy.*" />
+          <option name="PATTERN" value="com.noobyang.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,18 +122,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpringJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.noobyang.dao.TestSpringJDBC" />
       <module name="SimpleSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.noobyang.factory.*" />
+          <option name="PATTERN" value="com.noobyang.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.noobyang.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.noobyang.aop.Test1" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestSpringJDBC" />
+        <item itemvalue="Application.TestJDBC" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.Test2.test" />
-        <item itemvalue="JUnit.Test1.test" />
-        <item itemvalue="Application.DynamicProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +182,8 @@
       <workItem from="1603072290265" duration="13080000" />
       <workItem from="1603243105755" duration="820000" />
       <workItem from="1603244741732" duration="10879000" />
-      <workItem from="1603328231097" duration="4415000" />
+      <workItem from="1603328231097" duration="6995000" />
+      <workItem from="1603414576090" duration="9359000" />
     </task>
     <task id="LOCAL-00001" summary="web lesson one:spring init">
       <created>1602493533925</created>
@@ -249,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603271441852</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="web lesson six:logback log save">
+      <created>1603357003528</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603357003528</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,17 +290,22 @@
     <MESSAGE value="web lesson five:spring cglib" />
     <MESSAGE value="web lesson five:spring aop2" />
     <MESSAGE value="web lesson five:spring aop expression" />
-    <option name="LAST_COMMIT_MESSAGE" value="web lesson five:spring aop expression" />
+    <MESSAGE value="web lesson six:logback log save" />
+    <option name="LAST_COMMIT_MESSAGE" value="web lesson six:logback log save" />
   </component>
   <component name="WindowStateProjectService">
     <state x="35" y="0" key="#Project_Structure" timestamp="1602578759944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1602578759944" />
-    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602578730434">
+    <state x="0" y="171" key="#SQL_Dialects" timestamp="1603421628889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602578730434" />
+    <state x="0" y="171" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1603421628889" />
+    <state x="126" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603420459233">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="126" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1603420459233" />
     <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser" timestamp="1603243614534">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -296,26 +314,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="225" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603262414994" />
-    <state width="1313" height="152" key="GridCell.Tab.0.bottom" timestamp="1603356352583">
+    <state width="1313" height="313" key="GridCell.Tab.0.bottom" timestamp="1603422056187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="152" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603356352583" />
-    <state width="1313" height="152" key="GridCell.Tab.0.center" timestamp="1603356352582">
+    <state width="1313" height="313" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603422056187" />
+    <state width="1313" height="313" key="GridCell.Tab.0.center" timestamp="1603422056186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="152" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603356352582" />
-    <state width="1313" height="152" key="GridCell.Tab.0.left" timestamp="1603356352582">
+    <state width="1313" height="313" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603422056186" />
+    <state width="1313" height="313" key="GridCell.Tab.0.left" timestamp="1603422056186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="152" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603356352582" />
-    <state width="1313" height="152" key="GridCell.Tab.0.right" timestamp="1603356352583">
+    <state width="1313" height="313" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603422056186" />
+    <state width="1313" height="313" key="GridCell.Tab.0.right" timestamp="1603422056186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="152" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603356352583" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1603271445126">
+    <state width="1313" height="313" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603422056186" />
+    <state width="264" height="550" key="HiddenNamespacesPopup" timestamp="1603420308765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603271445126" />
+    <state width="264" height="550" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1603420308765" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1603357007303">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603357007303" />
     <state x="267" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603261455385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -324,10 +346,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1603092239026" />
-    <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1603353362277">
+    <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1603443962885">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603353362277" />
+    <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603443962885" />
     <state width="1330" height="700" key="javadoc.popup.new" timestamp="1603245269998">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
