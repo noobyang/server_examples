@@ -42,7 +42,10 @@ example:
         <!-- 【取非值】 -->
         <!--<aop:pointcut expression="!execution(* cn.itcast.g_pointcut.OrderDao.save())" id="pt"/>-->
 
-
+4. dao 事务
+    Spring声明式事务管理器类：
+        Jdbc技术：DataSourceTransactionManager
+        Hibernate技术：HibernateTransactionManager
 
 
 

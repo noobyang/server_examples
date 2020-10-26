@@ -24,6 +24,8 @@ public class TestJDBC {
             // 执行命令对象
             Statement stmt =  con.createStatement();
 
+            // con.setAutoCommit(false); // 设置手动控制事务
+
 //            execInsert(stmt);
 
             execQuery(stmt);
@@ -46,10 +48,7 @@ public class TestJDBC {
             String sex = rs.getString(3);
             int age = rs.getInt(4);
 
-            log.info("id " + id);
-            log.info("name " + name);
-            log.info("sex " + sex);
-            log.info("age " + age);
+            log.info("id " + id + "， name " + name + "， sex " + sex + "， age " + age);
         }
     }
 
