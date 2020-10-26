@@ -29,12 +29,18 @@
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/views/"/><!--设置JSP文件的目录位置-->
+        <property name="prefix" value="/"/><!--设置JSP文件的目录位置-->
         <property name="suffix" value=".jsp"/>
         <property name="exposeContextBeansAsAttributes" value="true"/>
     </bean>
 
     <!-- 自动扫描装配 -->
     <context:component-scan base-package="com.noobyang"/>
+
+
+    <!--注册控制器-->
+    <!--name属性的值表示的是请求的路径【也就是说，当用户请求到/helloAction时，就交由HelloAction类进行处理】-->
+    <bean class="com.noobyang.action.HelloAction" name="/hello.action"/>
+
 
 </beans>
