@@ -21,8 +21,8 @@ public class AnnotationAction {
     @RequestMapping(value="/annotation.action", method = RequestMethod.POST)
     public String annotation(Model model) throws Exception{
         log.info("annotation");
-        model.addAttribute("message","你是谁 ？");
-        return "annotation";
+        model.addAttribute("message","Annotation");
+        return "message";
     }
 
 
