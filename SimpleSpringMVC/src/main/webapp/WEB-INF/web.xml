@@ -46,9 +46,27 @@
     <!--</servlet>-->
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
-<!--        <url-pattern>/</url-pattern>-->
+        <!--<url-pattern>/</url-pattern>-->
         <!--映射的路径为.action-->
         <url-pattern>*.action</url-pattern>
     </servlet-mapping>
+
+
+    <!-- 编码过滤器 -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 
 </web-app>

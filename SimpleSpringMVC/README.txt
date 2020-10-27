@@ -17,6 +17,15 @@
    只要是.action 为后缀的请求都是会经过SpringMVC的核心Servlet
    org.springframework.web.servlet.handler.SimpleUrlHandlerMapping
 
+4. 控制器
+   编码过滤器（只需要在web.xml配置文件中设置过滤编码器就行了）
+   使用注解开发（在配置扫描路径的时候，后面不要加.*）
+   注解@RequestMapping详解
+   业务方法接收参数
+   字符串转日期
+   重定向和转发
+   返回JSON
+
 
 
 

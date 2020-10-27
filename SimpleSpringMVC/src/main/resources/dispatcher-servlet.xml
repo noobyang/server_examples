@@ -17,6 +17,11 @@
 
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
     <mvc:annotation-driven/>
+<!--    映射器：-->
+<!--    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-->
+<!--    适配器：-->
+<!--    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-->
+
 
     <!--静态资源映射-->
     <!--本项目把静态资源放在了webapp的statics目录下，资源映射如下-->
@@ -24,6 +29,11 @@
     <mvc:resources mapping="/js/**" location="/static/js/"/>
     <mvc:resources mapping="/image/**" location="/static/images/"/>
 
+    <!-- 自动扫描装配 -->
+    <context:component-scan base-package="com.noobyang"/>
+
+
+    <!--视图解析器-->
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP-->
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
     <!--如果Action中书写的是视图逻辑名称，那么视图解析器就必须配置-->
@@ -35,19 +45,17 @@
         <property name="exposeContextBeansAsAttributes" value="true"/>
     </bean>
 
-    <!-- 自动扫描装配 -->
-    <context:component-scan base-package="com.noobyang"/>
 
-
-    <!--注册控制器-->
+    <!--控制器-->
     <!--name属性的值表示的是请求的路径【也就是说，当用户请求到/helloAction时，就交由HelloAction类进行处理】-->
-<!--    <bean class="com.noobyang.action.HelloAction" name="/hello.action"/>-->
+    <bean name="/hello.action" class="com.noobyang.action.HelloAction"/>
 
+    <!--映射器【可省略】 -->
     <!--当我们需要多个请求路径都交由helloAction控制器来处理的话，我们只要添加prop标签就行了-->
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="/hello.action">helloAction</prop>
+                <prop key="/hi.action">helloAction</prop>
                 <prop key="/bye.action">helloAction</prop>
             </props>
         </property>
@@ -57,6 +65,14 @@
 
     <!-- 适配器【可省略】 -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+
+    <!-- 专用于 jsp 到 jsp/html 的转发控制器 -->
+    <bean name="/ok.action" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <!-- 转发到真实视图名 -->
+        <property name="viewName" value="ok"/>
+    </bean>
+
 
 
     <!--要放到最底下-->
