@@ -23,10 +23,11 @@
     <mvc:resources mapping="/css/**" location="/static/css/"/>
     <mvc:resources mapping="/js/**" location="/static/js/"/>
     <mvc:resources mapping="/image/**" location="/static/images/"/>
-    <mvc:default-servlet-handler/>  <!--这句要加上，要不然可能会访问不到静态资源，具体作用自行百度-->
 
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP-->
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
+    <!--如果Action中书写的是视图逻辑名称，那么视图解析器就必须配置-->
+    <!--如果Action中书写的是视图真实名称，那么视图解析器就可选配置-->
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/"/><!--设置JSP文件的目录位置-->
@@ -40,7 +41,23 @@
 
     <!--注册控制器-->
     <!--name属性的值表示的是请求的路径【也就是说，当用户请求到/helloAction时，就交由HelloAction类进行处理】-->
-    <bean class="com.noobyang.action.HelloAction" name="/hello.action"/>
+<!--    <bean class="com.noobyang.action.HelloAction" name="/hello.action"/>-->
 
+    <!--当我们需要多个请求路径都交由helloAction控制器来处理的话，我们只要添加prop标签就行了-->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/hello.action">helloAction</prop>
+                <prop key="/bye.action">helloAction</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="helloAction" class="com.noobyang.action.HelloAction"/>
+
+
+
+    <!--要放到最底下-->
+    <!--这句要加上，要不然可能会访问不到静态资源，具体作用自行百度-->
+    <mvc:default-servlet-handler/>
 
 </beans>
