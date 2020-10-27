@@ -52,8 +52,11 @@
             </props>
         </property>
     </bean>
-    <bean id="helloAction" class="com.noobyang.action.HelloAction"/>
+    <bean id="helloAction" class="com.noobyang.action.HelloAction2"/>
 
+
+    <!-- 适配器【可省略】 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
 
     <!--要放到最底下-->
