@@ -1,5 +1,6 @@
 package com.noobyang.action;
 
+import com.noobyang.action.bean.ListBean;
 import com.noobyang.action.bean.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +36,17 @@ public class ParamsAction {
         }
         log.info("params2 " + username + " " + str);
         model.addAttribute("message", username + " " + str);
+        return "message";
+    }
+
+    @RequestMapping(value="/params2.action", method = RequestMethod.POST)
+    public String params3(Model model, ListBean bean) throws Exception {
+        String str = "";
+        for (User user : bean.getList()) {
+            str  = str + user.getUsername() + " " + user.getId()  + " ";
+        }
+        log.info("params3 " + str);
+        model.addAttribute("message", str);
         return "message";
     }
 
