@@ -70,10 +70,10 @@ public class ParamsAction {
     /**
      * 字符串转日期类型
      */
-    @InitBinder
-    protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws Exception {
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
-    }
+//    @InitBinder
+//    protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws Exception {
+//        binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
+//    }
 
     @RequestMapping(value="/params5.action", method = RequestMethod.POST)
     public String params5(Model model, String username, Date date) throws Exception {
