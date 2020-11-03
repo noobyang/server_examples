@@ -86,10 +86,18 @@ public class ParamsAction {
 
     @RequestMapping(value="/params6.action", method = RequestMethod.POST)
     public String params6(Model model, String username, Date date) throws Exception {
-        model.addAttribute("message", "redirect");
+            model.addAttribute("message", "redirect");
         // 我们一般做开发的时候，经常编辑完数据就返回到显示列表中。我们在Struts2是使用配置文件进行重定向或转发的
         // 结果重定向和转发
-        return "redirect:/params6.jsp";
+//        return "redirect:message.jsp";
+        return "redirect:/redirect6.action";
+    }
+
+    @RequestMapping("/redirect6.action")
+    public String redirect6(Model model) throws Exception {
+        log.info("redirect6");
+        model.addAttribute("message", "redirect");
+        return "message";
     }
 
 }
