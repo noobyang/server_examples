@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <!-- 通常，一个session-factory节点代表一个数据库 -->
+    <session-factory>
+
+        <!-- 1. 数据库连接配置 -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!--Caused by: org.dom4j.DocumentException: Error on line 7 of document  : 对实体 "useSSL" 的引用必须以 ';' 分隔符结尾。 Nested exception: 对实体 "useSSL" 的引用必须以 ';' 分隔符结尾。-->
+        <property name="hibernate.connection.url">jdbc:mysql:///mydatabase?serverTimezone=GMT%2B8&amp;useSSL=false</property>
+        <property name="hibernate.connection.username">liyang</property>
+        <property name="hibernate.connection.password">liyang</property>
+        <!--
+            数据库方法配置， hibernate在运行的时候，会根据不同的方言生成符合当前数据库语法的sql
+         -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+
+        <!-- 2. 其他相关配置 -->
+        <!-- 2.1 显示hibernate在运行时候执行的sql语句 -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- 2.2 格式化sql -->
+        <property name="hibernate.format_sql">true</property>
+        <!-- 2.3 自动建表  -->
+<!--        create ：如字面意思“创建”，根据 上述的数据库脚本生成新的表结构，也就是每次执行都会先删除原表，然后重新建一张表，再写入新的数据。-->
+<!--        update ：望文生义“更新”，也是根据 model 生成表，但即使表的结构改变了，表原来的行（数据）依然会保留，它来加入新的数据。这也是最常用的属性。-->
+<!--        create-drop ：“创造-销毁”，这个属性会根据 model 生成表结构，写入数据，但是在 sessionfactory 关闭的时候，创造出来的表也要跟着被销毁。-->
+<!--        validate ：“查验”，这个值跟上面三个都不一样，它不会创建新的表也不会销毁表，它的作用是与原来的表比较，然后插入新的值。-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--3. 加载所有映射-->
+        <mapping resource="hbm/User.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>
