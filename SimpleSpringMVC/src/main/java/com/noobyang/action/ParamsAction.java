@@ -99,7 +99,7 @@ public class ParamsAction {
         return "redirect:/redirect6.action";
     }
 
-    @RequestMapping("/redirect6.action")
+    @RequestMapping(value="/redirect6.action", method = RequestMethod.POST)
     public String redirect6(Model model) throws Exception {
         log.info("redirect6");
         model.addAttribute("message", "redirect");
@@ -113,7 +113,7 @@ public class ParamsAction {
      *     required【是否必须要有该参数】
      *     defaultvalue设置默认值
      */
-    @RequestMapping("/params7.action")
+    @RequestMapping(value="/params7.action", method = RequestMethod.POST)
     public String params7(Model model, @RequestParam(value="id", required=true) String id) throws Exception {
         log.info("params7");
         model.addAttribute("message", "params7");
@@ -128,14 +128,14 @@ public class ParamsAction {
         return itemsType;
     }
 
-    @RequestMapping("/uploadfile.action")
+    @RequestMapping(value="/uploadfile.action", method = RequestMethod.POST)
     public void uploadfile(MultipartFile picture) throws Exception {
         log.info("uploadfile " + picture.getOriginalFilename());
         log.info("uploadfile " + picture.getSize());
         log.info("uploadfile " + Arrays.toString(picture.getBytes()));
     }
 
-    @RequestMapping("/validation")
+    @RequestMapping(value="/validation", method = RequestMethod.POST)
     public void validation(@Validated Items items, BindingResult bindingResult) {
         List<ObjectError> allErrors = bindingResult.getAllErrors();
         for (ObjectError allError : allErrors) {
@@ -144,6 +144,14 @@ public class ParamsAction {
 
     }
 
+
+    // restful的配置
+    // @RequestMapping中指定restful方式的url中的参数，参数需要用{}包起来
+    // @PathVariable将url中的{}包起参数和形参进行绑定
+    @RequestMapping(value = "/getItem/{id}", method = RequestMethod.GET)
+    public @ResponseBody String getItem(@PathVariable("id") Integer id) throws Exception{
+        return "result:" + id;
+    }
 
 
 

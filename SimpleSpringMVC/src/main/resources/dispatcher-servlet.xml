@@ -29,6 +29,7 @@
     <mvc:resources mapping="/js/**" location="/static/js/"/>
     <mvc:resources mapping="/image/**" location="/static/images/"/>
 
+
     <!-- 自动扫描装配 -->
     <context:component-scan base-package="com.noobyang"/>
 
@@ -167,6 +168,26 @@
     <!-- 定义统一异常处理器 -->
     <bean class="com.noobyang.action.exception.CustomExceptionResolver"/>
 
+
+
+    <!--拦截器 -->
+    <mvc:interceptors>
+        <!--多个拦截器,顺序执行 -->
+        <!-- <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.noobyang.action.HandlerInterceptor1"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.noobyang.action.HandlerInterceptor2"></bean>
+        </mvc:interceptor> -->
+
+        <mvc:interceptor>
+            <!-- /**可以拦截路径不管多少层 -->
+            <mvc:mapping path="/**" />
+            <bean class="com.noobyang.action.HandlerInterceptor1"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 
 

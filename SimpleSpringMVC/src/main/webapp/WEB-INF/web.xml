@@ -44,11 +44,17 @@
     <!--<servlet-name>EmpServlet</servlet-name>-->
     <!--<servlet-class>com.gx.filter.EmpServlet</servlet-class>-->
     <!--</servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>springMVC</servlet-name>-->
+<!--        &lt;!&ndash;<url-pattern>/</url-pattern>&ndash;&gt;-->
+<!--        &lt;!&ndash;映射的路径为.action&ndash;&gt;-->
+<!--        <url-pattern>*.action</url-pattern>-->
+<!--    </servlet-mapping>-->
+    <!-- restful的配置 -->
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
-        <!--<url-pattern>/</url-pattern>-->
-        <!--映射的路径为.action-->
-        <url-pattern>*.action</url-pattern>
+        <!-- rest方式配置为/ -->
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
 
