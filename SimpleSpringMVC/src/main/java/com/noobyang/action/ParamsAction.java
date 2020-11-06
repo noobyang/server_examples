@@ -8,16 +8,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class ParamsAction {
@@ -83,6 +83,10 @@ public class ParamsAction {
         str  = str + username + " " + date  + " ";
         log.info("params5 " + str);
         model.addAttribute("message", str);
+
+        // TODO 测试异常捕获
+//        throw new NullPointerException("CustomDateConverter");
+
         return "message";
     }
 
@@ -130,5 +134,17 @@ public class ParamsAction {
         log.info("uploadfile " + picture.getSize());
         log.info("uploadfile " + Arrays.toString(picture.getBytes()));
     }
+
+    @RequestMapping("/validation")
+    public void validation(@Validated Items items, BindingResult bindingResult) {
+        List<ObjectError> allErrors = bindingResult.getAllErrors();
+        for (ObjectError allError : allErrors) {
+            log.info(allError.getDefaultMessage());
+        }
+
+    }
+
+
+
 
 }
