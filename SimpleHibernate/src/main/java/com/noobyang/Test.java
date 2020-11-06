@@ -20,6 +20,12 @@ public class Test {
         //不给参数就默认加载hibernate.cfg.xml文件，
         configuration.configure();
 
+        // 加载User的映射文件
+        // 方法一
+        // <mapping resource="hbm/User.hbm.xml"/>
+        // 方法二
+        // configuration.configure().addClass(User.class);
+
         //创建Session工厂对象
         SessionFactory factory = configuration.buildSessionFactory();
         //得到Session对象
@@ -38,6 +44,7 @@ public class Test {
 
         //关闭Session
         session.close();
+
         factory.close();
     }
 
