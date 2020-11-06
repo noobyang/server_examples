@@ -9,13 +9,15 @@ import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.ServletRequestDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class ParamsAction {
@@ -98,6 +100,35 @@ public class ParamsAction {
         log.info("redirect6");
         model.addAttribute("message", "redirect");
         return "message";
+    }
+
+    /**
+     * 如果我们使用@RequestParam注解的话，我们就可以使方法参数名与传递过来的name属性名不同…
+     * 该注解有三个变量
+     *     value【指定name属性的名称是什么】
+     *     required【是否必须要有该参数】
+     *     defaultvalue设置默认值
+     */
+    @RequestMapping("/params7.action")
+    public String params7(Model model, @RequestParam(value="id", required=true) String id) throws Exception {
+        log.info("params7");
+        model.addAttribute("message", "params7");
+        return "message";
+    }
+
+    @ModelAttribute("itemsType")
+    public Map<String, String> getItemsType() throws Exception {
+        HashMap<String, String> itemsType = new HashMap<>();
+        itemsType.put("oo1", "Dog");
+        itemsType.put("oo2", "Cat");
+        return itemsType;
+    }
+
+    @RequestMapping("/uploadfile.action")
+    public void uploadfile(MultipartFile picture) throws Exception {
+        log.info("uploadfile " + picture.getOriginalFilename());
+        log.info("uploadfile " + picture.getSize());
+        log.info("uploadfile " + Arrays.toString(picture.getBytes()));
     }
 
 }
