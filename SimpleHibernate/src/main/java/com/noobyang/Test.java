@@ -1,10 +1,11 @@
 package com.noobyang;
 
 import com.noobyang.entity.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Restrictions;
+
+import java.util.List;
 
 public class Test {
 
@@ -36,8 +37,30 @@ public class Test {
         //开启事务
         transaction.begin();
 
-        //把对象添加到数据库中
+        // 1. insert 把对象添加到数据库中
         session.saveOrUpdate(user);
+
+        // 2. query HQL
+        Query query = session.createQuery("FROM User");
+        System.out.println(query.list());
+
+        query = session.createQuery("FROM User WHERE id=?");
+        // 这里的？号是从0开始的，并不像JDBC从1开始的！
+        query.setParameter(0, user.getId());
+        System.out.println(query.list());
+
+        // 2. query QBC
+        // 创建关于user对象的criteria对象
+        Criteria criteria = session.createCriteria(User.class);
+        //添加条件
+        criteria.add(Restrictions.eq("id", 1));
+        //查询全部数据
+        System.out.println(criteria.list());
+
+        // 2. 将所有的记录封装成User对象存进List集合中
+        SQLQuery sqlQuery = session.createSQLQuery("SELECT * FROM user").addEntity(User.class);
+        System.out.println(sqlQuery.list());
+
 
         //提交事务
         transaction.commit();
