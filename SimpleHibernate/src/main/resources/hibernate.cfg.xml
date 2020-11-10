@@ -37,6 +37,8 @@
         <mapping resource="hbm/UserList3.hbm.xml"/>
         <mapping resource="hbm/Dept.hbm.xml"/>
         <mapping resource="hbm/Employee.hbm.xml"/>
+        <mapping resource="hbm/Project.hbm.xml"/>
+        <mapping resource="hbm/Developer.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -40,13 +40,53 @@ public class Test {
 
 //        testUserList3(session);
 
-        testOneMany(session);
+//        testOneMany(session);
+
+        testManyMany(session);
 
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testManyMany(Session session) {
+        //创建对象
+        Developer cj = new Developer();
+        Developer wc = new Developer();
+        Developer lz = new Developer();
+        Project ds = new Project();
+        Project oa = new Project();
+
+        //设置对象的数据
+        cj.setDeveloperName("曹吉");
+        wc.setDeveloperName("王春");
+        lz.setDeveloperName("老张");
+
+        oa.setProjectName("OA系统");
+        ds.setProjectName("电商系统");
+
+        //使用Project来关联数据【在多对多中，一样的】
+        oa.getDevelopers().add(wc);
+        oa.getDevelopers().add(lz);
+
+        ds.getDevelopers().add(cj);
+        ds.getDevelopers().add(wc);
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        session.save(oa);
+        session.save(ds);
+
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testOneMany(Session session) {

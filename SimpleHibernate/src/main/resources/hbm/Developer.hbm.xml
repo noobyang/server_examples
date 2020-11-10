@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+
+    <class name="Developer" table="developer">
+
+        <!--映射主键-->
+        <id name="developerId" column="developerId">
+            <generator class="native"/>
+        </id>
+
+        <!--映射普通字段-->
+        <property name="developerName" column="developerName"/>
+
+
+        <!--映射多对多的关系-->
+        <!--Set的属性名称为developers，对应developer_project表-->
+        <!--object references an unsaved transient instance - save the transient instance-->
+        <!--cascade="save-update"-->
+        <set name="projects" table="developer_project" cascade="save-update">
+            <!--对应developer_project表的外键列-->
+            <key column="developer_id"/>
+
+            <!--集合的类型和developer_project表的另一个外键列-->
+            <many-to-many column="project_id" class="Project"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>
