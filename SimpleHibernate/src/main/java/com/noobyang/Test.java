@@ -1,11 +1,11 @@
 package com.noobyang;
 
 import com.noobyang.entity.User;
+import com.noobyang.entity.UserList;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
 
-import java.util.List;
 
 public class Test {
 
@@ -31,6 +31,45 @@ public class Test {
         SessionFactory factory = configuration.buildSessionFactory();
         //得到Session对象
         Session session = factory.openSession();
+
+
+//        testUser(session);
+
+        testUserList(session);
+
+
+        //关闭Session
+        session.close();
+
+        factory.close();
+    }
+
+    private static void testUserList(Session session) {
+        //创建对象
+        UserList user = new UserList();
+        user.setUsername("豆芽");
+        user.setPassword("女");
+        user.getAddress().add("广州");
+        user.getAddress().add("上海");
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        session.saveOrUpdate(user);
+
+        //提交事务
+        transaction.commit();
+    }
+
+    private static void testUser(Session session) {
+        //创建对象
+        User user = new User();
+        user.setAge(5);
+        user.setName("豆芽");
+        user.setSex("女");
 
         //使用Hibernate操作数据库，都要开启事务,得到事务对象
         Transaction transaction = session.getTransaction();
@@ -64,11 +103,6 @@ public class Test {
 
         //提交事务
         transaction.commit();
-
-        //关闭Session
-        session.close();
-
-        factory.close();
     }
 
 }
