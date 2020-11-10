@@ -1,9 +1,6 @@
 package com.noobyang;
 
-import com.noobyang.entity.User;
-import com.noobyang.entity.UserList;
-import com.noobyang.entity.UserList2;
-import com.noobyang.entity.UserList3;
+import com.noobyang.entity.*;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
@@ -41,13 +38,57 @@ public class Test {
 
 //        testUserList2(session);
 
-        testUserList3(session);
+//        testUserList3(session);
+
+        testOneMany(session);
 
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testOneMany(Session session) {
+        //创建对象
+        Dept dept = new Dept();
+        dept.setDeptName("开发部");
+
+        Employee zs = new Employee();
+        zs.setEmpName("张珊");
+        zs.setSalary(1111);
+        Employee ls = new Employee();
+        ls.setEmpName("李四");
+        ls.setSalary(2222);
+
+        // 添加关系
+        // 在一对多与多对一的关联关系中，保存数据最好的通过多的一方来维护关系，
+        // 这样可以减少update语句的生成，从而提高hibernate的执行效率！
+        // Hibernate执行了5条SQL语句
+//        dept.getSet().add(zs);
+//        dept.getSet().add(ls);
+        // Hibernate执行了3条SQL
+        zs.setDept(dept);
+        ls.setDept(dept);
+
+        // 值得注意是：配置了哪一方，哪一方才有维护关联关系的权限！
+        // 当我在部门中不配置员工的关联关系了，那么在操作部门的时候就不能得到员工的数据了
+        // 【也就是：在保存部门时，不能同时保存员工的数据】
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        session.save(dept);
+        session.save(zs);
+        session.save(ls);
+
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testUserList3(Session session) {

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="Employee" table="employee">
+        <id column="id" name="id">
+            <generator class="native"/>
+        </id>
+
+        <!--普通字段数据-->
+        <property name="empName" column="empName"/>
+        <property name="salary" column="salary"/>
+
+        <!--Hibernate这个标签可看成在当前表中设置一个外键dept_no-->
+        <many-to-one name="dept" class="Dept" column="dept_no"/>
+    </class>
+
+</hibernate-mapping>

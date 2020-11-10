@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="Dept" table="dept">
+        <id column="id" name="id">
+            <generator class="native"/>
+        </id>
+
+        <!--普通字段映射-->
+        <property name="deptName" column="deptname"/>
+
+        <!--维护关系的是Set集合，对应employee表-->
+        <set  cascade="save-update" name="set" table="employee">
+
+            <!--employee的外键列是dept_no-->
+            <key column="dept_no"/>
+
+            <!--一个部门对应多个员工，集合的类型是Employee-->
+            <one-to-many class="Employee"/>
+        </set>
+    </class>
+
+</hibernate-mapping>
