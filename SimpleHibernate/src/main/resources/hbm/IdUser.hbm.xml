@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="IdUser" table="id_user">
+
+        <!--映射主键-->
+        <id name="userId" column="userId">
+            <generator class="native"/>
+        </id>
+
+        <!--映射普通字段-->
+        <property name="userName" column="userName"/>
+
+        <!--
+            User是没有外键字段的表
+                一对一的关系的属性名称name是idCard
+                类型是IdCard
+        -->
+        <one-to-one name="idCard" class="IdCard"/>
+
+    </class>
+
+</hibernate-mapping>
