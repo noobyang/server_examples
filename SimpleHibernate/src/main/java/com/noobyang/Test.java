@@ -2,6 +2,8 @@ package com.noobyang;
 
 import com.noobyang.entity.User;
 import com.noobyang.entity.UserList;
+import com.noobyang.entity.UserList2;
+import com.noobyang.entity.UserList3;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
@@ -35,13 +37,57 @@ public class Test {
 
 //        testUser(session);
 
-        testUserList(session);
+//        testUserList(session);
+
+//        testUserList2(session);
+
+        testUserList3(session);
 
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testUserList3(Session session) {
+        //创建对象
+        UserList3 user = new UserList3();
+        user.setUsername("豆芽");
+        user.setPassword("女");
+        user.getAddress().put("1", "广州");
+        user.getAddress().put("2", "上海");
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        session.saveOrUpdate(user);
+
+        //提交事务
+        transaction.commit();
+    }
+
+    private static void testUserList2(Session session) {
+        //创建对象
+        UserList2 user = new UserList2();
+        user.setUsername("豆芽");
+        user.setPassword("女");
+        user.getAddress().add("广州");
+        user.getAddress().add("上海");
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        session.saveOrUpdate(user);
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testUserList(Session session) {

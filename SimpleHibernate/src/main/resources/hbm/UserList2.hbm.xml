@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="UserList2" table="user_list2">
+
+        <!--主键映射-->
+        <id name="id" column="id" >
+            <generator class="native"/>
+        </id>
+
+        <!--普通字段映射-->
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+
+<!--        Set：-->
+<!--        name： 映射集合的名称-->
+<!--        table：集合的属性要映射到哪张表(address)-->
+<!--        key：-->
+<!--        column：指定要映射的表（address）中的外键列-->
+<!--        element：要映射的表的其他字段-->
+<!--        类型一定要指定！-->
+        <list name="address" table="address2">
+            <key column="address_id"/>
+            <!--index是关键字，不能使用！！！！-->
+            <list-index column="indexNum"/>
+            <element column="address" type="string"/>
+        </list>
+
+    </class>
+</hibernate-mapping>
