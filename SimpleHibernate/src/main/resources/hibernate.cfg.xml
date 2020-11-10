@@ -41,6 +41,8 @@
         <mapping resource="hbm/Developer.hbm.xml"/>
         <mapping resource="hbm/IdCard.hbm.xml"/>
         <mapping resource="hbm/IdUser.hbm.xml"/>
+        <mapping resource="hbm/IdCard2.hbm.xml"/>
+        <mapping resource="hbm/IdUser2.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

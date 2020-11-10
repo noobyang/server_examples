@@ -44,13 +44,42 @@ public class Test {
 
 //        testManyMany(session);
 
-        testOneOne(session);
+//        testOneOne(session);
+
+        testOneOne2(session);
 
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testOneOne2(Session session) {
+        //创建对象
+        IdUser2 user = new IdUser2();
+        IdCard2 idCard = new IdCard2();
+
+        //设置对象的数据
+        user.setUserName("你好3");
+        idCard.setIdCardName("身份证003");
+        idCard.setIdCardId(4235);
+
+        //一对一关联数据
+        idCard.setUser(user);
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        //保存对象的数据,idCard配置文件使用级联保存
+        session.save(idCard);
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testOneOne(Session session) {

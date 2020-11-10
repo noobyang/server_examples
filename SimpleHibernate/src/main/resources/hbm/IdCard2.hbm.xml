@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="IdCard2" table="id_card2">
+
+        <!--映射主键-->
+        <id name="userId" column="userId">
+            <!--
+                做主键的同时也做外键
+                外键的类型名称为user
+            -->
+            <generator class="foreign">
+                <param name="property">user</param>
+            </generator>
+        </id>
+
+        <!--映射普通字段-->
+        <!--映射普通字段-->
+        <property name="idCardName" column="idCardName"/>
+        <property name="idCardId" column="idCartId"/>
+
+        <!--idCart是有外键的表，要把字段映射成外键，用的是manyToOne-->
+
+        <!--
+            外键的属性name是user
+            对应表的字段是userId
+            属性的类型是User
+            该字段需要唯一性 unique
+        -->
+        <one-to-one name="user" class="IdUser2" constrained="true"/>
+
+    </class>
+
+</hibernate-mapping>
