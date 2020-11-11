@@ -54,11 +54,108 @@ public class Test {
 
         testExtends3(session);
 
+//        testQuery(session);
+
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testQuery(Session session) {
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+
+        // 命名
+        Query query = session.createQuery("from Monkey3 m where m.name=:monkeyName");
+        //HQL是从0开始的
+        query.setParameter("monkeyName", "大猴子");
+        System.out.println(query.list());
+
+        // 区间
+        query = session.createQuery("from Dept d where d.id between ? and ?");
+        query.setParameter(0, 1);
+        query.setParameter(1, 20);
+        System.out.println(query.list());
+
+        // 模糊
+        query = session.createQuery("from Dept d where d.deptName like ?");
+        query.setString(0, "%部%");
+        System.out.println(query.list());
+
+        // count
+        query = session.createQuery("select COUNT(*) from Monkey3");
+        Object o = query.uniqueResult();
+        System.out.println(o);
+
+
+        //-- 统计 employee 表中，每个部门的人数
+        // 数据库写法：SELECT dept_id,COUNT(*) FROM  employee GROUP BY dept_id;
+        // HQL写法
+        query = session.createQuery("select e.dept, count(*) from Employee e group by e.dept");
+        System.out.println(query.list());
+
+
+        //1) 内连接   【映射已经配置好了关系，关联的时候，直接写对象的属性即可】
+        query = session.createQuery("from Dept d inner join d.set");
+        System.out.println(query.list());
+        //2) 左外连接
+        query = session.createQuery("from Dept d left join d.set");
+        System.out.println(query.list());
+        //3) 右外连接
+        query = session.createQuery("from Employee e right join e.dept");
+        System.out.println(query.list());
+
+        //1) 迫切内连接    【使用fetch, 会把右表的数据，填充到左表对象中！】
+        query = session.createQuery("from Dept d inner join fetch d.set");
+        System.out.println(query.list());
+        //2) 迫切左外连接
+        query = session.createQuery("from Dept d left join fetch d.set");
+        System.out.println(query.list());
+
+
+        query = session.getNamedQuery("getAllDept");
+        query.setParameter(0, 10);
+        System.out.println(query.list());
+
+
+        // 创建关于user对象的criteria对象
+        Criteria criteria = session.createCriteria(User.class);
+        //添加条件
+        criteria.add(Restrictions.eq("id", 1));
+        //查询全部数据
+        System.out.println(criteria.list());
+
+
+        SQLQuery sqlQuery = session.createSQLQuery("SELECT * FROM monkey3_ limit 0,3");
+        System.out.println(sqlQuery.list());
+
+
+        // 分页查询
+        query = session.createQuery("from Monkey3");
+        // 得到滚动结果集
+        ScrollableResults scroll = query.scroll();
+        // 滚动到最后一行
+        scroll.last();
+        int i = scroll.getRowNumber() + 1;
+        System.out.println("总计路数：" + i);
+
+        // 设置分页位置
+        query.setFirstResult(0);
+        query.setMaxResults(3);
+
+        System.out.println(query.list());
+
+
+
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testExtends3(Session session) {
@@ -87,7 +184,6 @@ public class Test {
         //提交事务
         transaction.commit();
     }
-
 
     private static void testExtends(Session session) {
         //创建对象

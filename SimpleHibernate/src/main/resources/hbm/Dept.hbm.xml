@@ -4,7 +4,9 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <!--在domain包下-->
-<hibernate-mapping package="com.noobyang.entity">
+<!--在hbm.xml文件中的auto-import="true" 要设置true。当然了，默认值就是ture
+    如果是false，写hql的时候，要指定类的全名-->
+<hibernate-mapping package="com.noobyang.entity" auto-import="true">
 
     <class name="Dept" table="dept">
         <id column="id" name="id">
@@ -24,5 +26,12 @@
             <one-to-many class="Employee"/>
         </set>
     </class>
+
+    <!-- 存放sql语句,如果有<>这样的字符数据，需要使用CDATA转义！ -->
+    <query name="getAllDept">
+        <![CDATA[
+            from Dept d where id < ?
+        ]]>
+    </query>
 
 </hibernate-mapping>
