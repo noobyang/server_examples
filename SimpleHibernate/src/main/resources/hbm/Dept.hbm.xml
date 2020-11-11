@@ -15,7 +15,7 @@
         <property name="deptName" column="deptname"/>
 
         <!--维护关系的是Set集合，对应employee表-->
-        <set  cascade="save-update" name="set" table="employee">
+        <set  cascade="save-update" name="set" table="employee" inverse="true">
 
             <!--employee的外键列是dept_no-->
             <key column="dept_no"/>

@@ -40,7 +40,7 @@ public class Test {
 
 //        testUserList3(session);
 
-//        testOneMany(session);
+        testOneMany(session);
 
 //        testManyMany(session);
 
@@ -234,6 +234,26 @@ public class Test {
         transaction.commit();
     }
 
+    /**
+     *
+     * Inverse属性：表示控制权是否转移..
+     *     true:控制权已转移【当前一方没有控制权】
+     *     false：控制权没有转移【当前一方有控制权】
+     * Inverse属性，是在维护关联关系的时候起作用的。只能在“一”的一方中使用该属性！Inverse属性的默认值为fasle，也就是当前一方是有控制权的
+     * inverse属性只能在“一”的一方中设置。inverse=false表示有控制权，inverse=ture表示没有控制权
+     *
+     * cascade表示级联的意思，简单来说就是操作某一属性时，对其他关联字段的影响
+     * casecade属性不像inverse属性只能在“一”的一方设置，它可以在“一”的一方也可以在“多”的一方设置
+     * cascade有这么几个值
+     *     none          不级联操作， 默认值
+     *     save-update     级联保存或更新
+     *     delete          级联删除
+     *     save-update,delete    级联保存、更新、删除
+     *     all                 同上。级联保存、更新、删除
+     *
+     * inverse的优先级是比cascade的优先级要高的，因此设置了inverse属性为true，那么cascade就无效了。
+     *
+     */
     private static void testOneMany(Session session) {
         //创建对象
         Dept dept = new Dept();
