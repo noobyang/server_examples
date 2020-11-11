@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="Car" table="car" >
+
+        <!--映射主键-->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+
+        <!--映射普通字段-->
+        <property name="name" column="name"/>
+
+        <!--
+        映射组件字段
+        -->
+        <component name="wheel">
+            <property name="count"/>
+            <property name="size"/>
+        </component>
+
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="Animal" table="t_animal">
+
+        <id name="id">
+            <generator class="native"/>
+        </id>
+
+        <!-- 指定鉴别器字段(区分不同的子类) -->
+        <discriminator column="type_"/>
+
+        <property name="name"/>
+
+        <!--
+        子类：猫
+        每个子类都用subclass节点映射
+        注意：一定要指定鉴别器字段，否则报错！
+        鉴别器字段：作用是在数据库中区别每一个子类的信息， 就是一个列
+        discriminator-value="cat_"
+        指定鉴别器字段,即type_字段的值
+        如果不指定，默认为当前子类的全名
+        -->
+
+        <subclass name="Cat" discriminator-value="cat_">
+            <property name="catchMouse"/>
+        </subclass>
+
+        <!--
+        子类：猴子
+        -->
+        <subclass name="Monkey" discriminator-value="monkey_">
+            <property name="eatBanana"/>
+        </subclass>
+
+    </class>
+
+
+</hibernate-mapping>

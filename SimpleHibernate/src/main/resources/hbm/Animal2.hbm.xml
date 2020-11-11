@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <class name="Animal" table="t_animal2">
+
+        <id name="id">
+            <generator class="native"/>
+        </id>
+
+        <property name="name"/>
+
+
+        <!--
+        Animal下的子类映射成一张表
+        指定子类的类型，对应的表
+        指定子类的外键字段【需要对应Animal】
+        指定子类的普通属性
+        -->
+        <joined-subclass name="Cat" table="cat2_">
+            <!--key对应的是外键字段-->
+            <key column="animal_id"/>
+            <property name="catchMouse"/>
+        </joined-subclass>
+
+        <joined-subclass name="Monkey" table="monkey2_">
+            <!--key对应的是外键字段-->
+            <key column="animal_id"/>
+            <property name="eatBanana"/>
+        </joined-subclass>
+
+    </class>
+
+</hibernate-mapping>

@@ -43,6 +43,13 @@
         <mapping resource="hbm/IdUser.hbm.xml"/>
         <mapping resource="hbm/IdCard2.hbm.xml"/>
         <mapping resource="hbm/IdUser2.hbm.xml"/>
+        <mapping resource="hbm/Car.hbm.xml"/>
+        <!--子类映射到一张表-->
+<!--        <mapping resource="hbm/Animal.hbm.xml"/>-->
+        <!--父类、子类映射到不同表-->
+<!--        <mapping resource="hbm/Animal2.hbm.xml"/>-->
+        <!--(推荐)每个子类映射一张表， 父类不对应表(2张表)-->
+        <mapping resource="hbm/Animal3.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

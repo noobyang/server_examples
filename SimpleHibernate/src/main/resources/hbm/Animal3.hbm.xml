@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--在domain包下-->
+<hibernate-mapping package="com.noobyang.entity">
+
+    <!--
+    想要父类不映射成表，设置成abstract
+    -->
+    <class name="Animal3" abstract="true">
+
+        <!--
+        如果使用了union-subclass节点，那么主键生成策略不能是自增长，我们改成uuid即可
+        -->
+        <id name="id">
+            <generator class="uuid"/>
+        </id>
+
+        <property name="name"/>
+
+        <!--
+        将子类的信息都映射成一张表
+        给出属性的名称
+        属性对应的数据库表
+        普通字段
+        -->
+        <union-subclass name="Cat3" table="cat3_">
+            <property name="catchMouse"/>
+        </union-subclass>
+
+        <union-subclass name="Monkey3" table="monkey3_">
+            <property name="eatBanana"/>
+        </union-subclass>
+
+    </class>
+    
+</hibernate-mapping>

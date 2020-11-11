@@ -46,13 +46,101 @@ public class Test {
 
 //        testOneOne(session);
 
-        testOneOne2(session);
+//        testOneOne2(session);
+
+//        testComponent(session);
+
+//        testExtends(session);
+
+        testExtends3(session);
 
 
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    private static void testExtends3(Session session) {
+        //创建对象
+        Cat3 cat = new Cat3();
+        Monkey3 monkey = new Monkey3();
+
+        //设置属性
+        cat.setName("大花猫");
+        cat.setCatchMouse("小老鼠");
+
+        monkey.setEatBanana("吃香蕉");
+        monkey.setName("大猴子");
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        //保存对象的数据,idCard配置文件使用级联保存
+        session.save(cat);
+        session.save(monkey);
+
+        //提交事务
+        transaction.commit();
+    }
+
+
+    private static void testExtends(Session session) {
+        //创建对象
+        Cat cat = new Cat();
+        Monkey monkey = new Monkey();
+
+        //设置属性
+        cat.setName("大花猫");
+        cat.setCatchMouse("小老鼠");
+
+        monkey.setEatBanana("吃香蕉");
+        monkey.setName("大猴子");
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        //保存对象的数据,idCard配置文件使用级联保存
+        session.save(cat);
+        session.save(monkey);
+
+        //提交事务
+        transaction.commit();
+    }
+
+    private static void testComponent(Session session) {
+        //创建对象
+        Wheel wheel = new Wheel();
+        Car car = new Car();
+
+        //设置属性
+        wheel.setCount(43);
+        wheel.setSize(22);
+        car.setName("宝马");
+
+        //维护关系
+        car.setWheel(wheel);
+
+
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        // 1. insert 把对象添加到数据库中
+        //保存对象的数据,idCard配置文件使用级联保存
+        session.save(car);
+
+        //提交事务
+        transaction.commit();
     }
 
     private static void testOneOne2(Session session) {
