@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logback配置
+    1. 生产环境禁止输出日志到控制台
+       注释 <appender-ref ref="STDOUT" /> 即可
+    2. 配置包日志
+       配置logger标签即可，name字段为包全路径，lever可控制日志等级
+    3. 生产环境下不停机更新日志配置
+       scanPeriod：设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效
+-->
+<configuration scan="true" scanPeriod="60000">
+
+    <!-- Basic log dir, name config -->
+    <property name="LOG_HOME" value="./logs"/>
+
+    <!--滚动文件-->
+    <appender name="infoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- ThresholdFilter:临界值过滤器，过滤掉 TRACE 和 DEBUG 级别的日志 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/log.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory><!--保存最近30天的日志-->
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{36} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--滚动文件-->
+    <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- ThresholdFilter:临界值过滤器，过滤掉 TRACE 和 DEBUG 级别的日志 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>error</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory><!--保存最近30天的日志-->
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{36} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- 控制台输出 不需要修改 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度 %logger输出日志的logger名 %msg：日志消息，%n是换行符 -->
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{36} : %msg%n</pattern>
+            <!--解决乱码问题-->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="infoFile"/>
+        <appender-ref ref="errorFile"/>
+<!--        <appender-ref ref="logstash"/>-->
+    </root>
+
+</configuration>
