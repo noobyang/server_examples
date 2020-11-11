@@ -57,10 +57,38 @@ public class Test {
 //        testQuery(session);
 
 
+        testSession(factory);
+
+
         //关闭Session
         session.close();
 
         factory.close();
+    }
+
+    /**
+     * 如果要使用getCurrentSession()，需要在配置文件中配置:
+     *
+     * <property name="hibernate.current_session_context_class">thread</property>
+     */
+    public static void testSession(SessionFactory factory) {
+        // openSession:  创建Session, 每次都会创建一个新的session
+        Session session1 = factory.openSession();
+        Session session2 = factory.openSession();
+        System.out.println(session1 == session2);
+        session1.close();
+        session2.close();
+
+        // getCurrentSession 创建或者获取session
+        // 线程的方式创建session
+        // 一定要配置：<property name="hibernate.current_session_context_class">thread</property>
+        Session session3 = factory.getCurrentSession();// 创建session，绑定到线程
+        Session session4 = factory.getCurrentSession();// 从当前访问线程获取session
+        System.out.println(session3 == session4);
+
+        // 关闭 【以线程方式创建的session，可以不用关闭； 线程结束session自动关闭】
+        session3.close();
+        //session4.close(); 报错，因为同一个session已经关闭了！
     }
 
     private static void testQuery(Session session) {
