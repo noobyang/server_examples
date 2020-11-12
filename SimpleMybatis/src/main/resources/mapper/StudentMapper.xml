@@ -55,4 +55,87 @@
         select * from student limit #{start},#{end};
     </select>
 
+    <!--动态 SQL-->
+    <select id="findByCondition" resultMap="studentMap" parameterType="map">
+        select * from student
+        <where>
+            <if test="name!=null">
+                and name=#{name}
+            </if>
+            <if test="sal!=null">
+                and sal &lt; #{sal}
+            </if>
+        </where>
+    </select>
+
+    <!--动态更新-->
+    <!--不要忘了逗号-->
+    <update id="updateByCondition" parameterType="map">
+        update student
+        <set>
+            <if test="name!=null">
+                name = #{name},
+            </if>
+            <if test="sal!=null">
+                sal = #{sal},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteByCondition" parameterType="int">
+        <!-- foreach用于迭代数组元素
+             open表示开始符号
+             close表示结束符合
+             separator表示元素间的分隔符
+             item表示迭代的数组，属性值可以任意，但提倡与方法的数组名相同
+             #{ids}表示数组中的每个元素值
+         -->
+        delete from student where id in
+        <foreach collection="array" open="(" close=")" separator="," item="ids">
+            #{ids}
+        </foreach>
+    </delete>
+
+
+    <!--SQL片段默认是不帮我们自动生成合适的SQL，因此需要我们自己手动除去逗号-->
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                id,
+            </if>
+
+            <if test="id!=null">
+                name,
+            </if>
+
+            <if test="id!=null">
+                sal,
+            </if>
+        </trim>
+    </sql>
+
+<!--    prefixOverrides:指定去除多余的前缀内容-->
+<!--    suffixOverrides:指定去除多余的后缀内容，如：suffixOverrides=","，去除trim标签内sql语句多余的后缀","。-->
+    <sql id="value">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                #{id},
+            </if>
+
+            <if test="id!=null">
+                #{name},
+            </if>
+
+            <if test="id!=null">
+                #{sal},
+            </if>
+        </trim>
+    </sql>
+    <!--动态插入-->
+    <insert id="insertByCondition" parameterType="com.noobyang.entity.Student">
+        insert into student (<include refid="key"/>) values
+        (<include refid="value"/>)
+    </insert>
+
 </mapper>

@@ -14,7 +14,15 @@ public class Test {
         SqlSession sqlSession = MybatisUtil.getSqlSession();
         try {
 
-            pagination(sqlSession);
+            insertByCondition(sqlSession);
+
+//            deleteByCondition(sqlSession);
+
+//            updateByCondition(sqlSession);
+
+//            findByCondition(sqlSession);
+
+//            pagination(sqlSession);
 
 //            update(sqlSession);
 
@@ -35,6 +43,49 @@ public class Test {
         }
     }
 
+    public static void insertByCondition(SqlSession sqlSession) {
+        Student student = new Student(7, "noobyang", null);
+        // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+        int size = sqlSession.insert("StudentID.insertByCondition", student);
+        System.out.println(size);
+        sqlSession.commit();
+
+    }
+
+    public static void deleteByCondition(SqlSession sqlSession) {
+        int[] ids = new int[]{1, 2, 3};
+        // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+        int size = sqlSession.delete("StudentID.deleteByCondition", ids);
+        System.out.println(size);
+        sqlSession.commit();
+
+    }
+
+    public static void updateByCondition(SqlSession sqlSession) {
+        Map<String, Object> map = new HashMap();
+        map.put("id", 3);
+        map.put("name", null);
+        map.put("sal", 1000d);
+        // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+        int size = sqlSession.update("StudentID.updateByCondition", map);
+        System.out.println(size);
+        sqlSession.commit();
+
+    }
+
+    public static void findByCondition(SqlSession sqlSession) {
+        Map<String, Object> map = new HashMap();
+        map.put("name", "noobyang1");
+        map.put("sal", null);
+        // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+        List<Student> students = sqlSession.selectList("StudentID.findByCondition", map);
+        for (Student student : students) {
+            System.out.println(student.getName());
+        }
+        sqlSession.commit();
+
+    }
+
     public static void pagination(SqlSession sqlSession) {
         Map<String, Object> map = new HashMap();
         map.put("start", 0);
@@ -51,16 +102,16 @@ public class Test {
     public static void update(SqlSession sqlSession) {
         Student student = new Student(3, "noobyang1", 1030d);
         // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
-        int id = sqlSession.update("StudentID.update", student);
-        System.out.println(id);
+        int size = sqlSession.update("StudentID.update", student);
+        System.out.println(size);
         sqlSession.commit();
 
     }
 
     public static void delete(SqlSession sqlSession) {
         // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
-        int id = sqlSession.delete("StudentID.delete", 3);
-        System.out.println(id);
+        int size = sqlSession.delete("StudentID.delete", 3);
+        System.out.println(size);
         sqlSession.commit();
 
     }
@@ -87,8 +138,8 @@ public class Test {
         Student student = new Student(3, "noobyang", 10000d);
 
         // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
-        int id = sqlSession.insert("StudentID.add", student);
-        System.out.println(id);
+        int size = sqlSession.insert("StudentID.add", student);
+        System.out.println(size);
         sqlSession.commit();
 
     }
