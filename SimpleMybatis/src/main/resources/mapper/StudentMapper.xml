@@ -49,4 +49,10 @@
         update student set name=#{name},sal=#{sal} where id=#{id};
     </update>
 
+    <!--分页查询-->
+    <select id="pagination" parameterType="map" resultType="com.noobyang.entity.Student">
+        /*根据key自动找到对应Map集合的value*/
+        select * from student limit #{start},#{end};
+    </select>
+
 </mapper>

@@ -3,7 +3,9 @@ package com.noobyang;
 import com.noobyang.entity.Student;
 import org.apache.ibatis.session.SqlSession;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Test {
 
@@ -12,7 +14,9 @@ public class Test {
         SqlSession sqlSession = MybatisUtil.getSqlSession();
         try {
 
-            update(sqlSession);
+            pagination(sqlSession);
+
+//            update(sqlSession);
 
 //            delete(sqlSession);
 
@@ -29,6 +33,19 @@ public class Test {
         } finally {
             MybatisUtil.closeSqlSession();
         }
+    }
+
+    public static void pagination(SqlSession sqlSession) {
+        Map<String, Object> map = new HashMap();
+        map.put("start", 0);
+        map.put("end", 10);
+        // 映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+        List<Student> students = sqlSession.selectList("StudentID.pagination", map);
+        for (Student student : students) {
+            System.out.println(student.getName());
+        }
+        sqlSession.commit();
+
     }
 
     public static void update(SqlSession sqlSession) {
