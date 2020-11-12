@@ -3,14 +3,50 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace属性是名称空间，必须唯一 -->
-<mapper namespace="com.noobyang.entity.Student">
+<mapper namespace="StudentID">
 
-    <select id="findById" parameterType="int" resultType="com.noobyang.entity.Student">
-        select * from student where id = #{id}
+    <!-- resultMap标签:映射实体与表
+     type属性：表示实体全路径名
+     id属性：为实体与表的映射取一个任意的唯一的名字
+    -->
+    <resultMap type="com.noobyang.entity.Student" id="studentMap">
+        <!-- id标签:映射主键属性
+             result标签：映射非主键属性
+             property属性:实体的属性名
+             column属性：表的字段名
+        -->
+        <id property="id" column="id_"/>
+        <result property="name" column="name_"/>
+        <result property="sal" column="sal_"/>
+    </resultMap>
+
+    <select id="findById" parameterType="int" resultMap="studentMap">
+        select id id_, name name_, sal sal_ from student where id = #{id};
     </select>
 
     <insert id="add" parameterType="com.noobyang.entity.Student">
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+            select LAST_INSERT_ID()
+        </selectKey>
         insert into student (id, name, sal) values (#{id},#{name},#{sal});
     </insert>
+
+    <!--
+    查询所有数据
+    返回值类型讲道理是List<Student>的，但我们只要写集合中的类型就行了
+    -->
+    <select id="findAll" resultType="com.noobyang.entity.Student">
+        select * from student;
+    </select>
+
+    <!--根据id删除-->
+    <delete id="delete" parameterType="int">
+        delete from student where id=#{id};
+    </delete>
+
+    <!--更新-->
+    <update id="update" parameterType="com.noobyang.entity.Student">
+        update student set name=#{name},sal=#{sal} where id=#{id};
+    </update>
 
 </mapper>
