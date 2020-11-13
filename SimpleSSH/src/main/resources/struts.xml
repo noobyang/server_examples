@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+<!--    2. 常亮配置-->
+    <!-- 0. 请求数据编码 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!-- 1. 修改Struts默认的访问后缀 -->
+<!--    也就是说，“,”号能够匹配空格键-->
+<!--    如果配置后缀为action。那么后缀一定要写action-->
+<!--    如果配置后缀为action,do,。那么后缀可以是action，可以是do，也可以不写-->
+<!--    如果配置后缀为action,,。那么后缀可以是action，可以不写-->
+    <constant name="struts.action.extension" value="action,do,"/>
+    <!-- 2. 修改xml自动重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <!-- 3. 开启动态方法调用 (默认不开启)-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <!-- 4. 修改上传文件的最大大小为30M -->
+    <constant name="struts.multipart.maxSize" value="31457280"/>
+
+    <constant name="struts.custom.i18n.resources" value="msg"/>
+
+    <!-- 配置成开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 配置拓展名为action -->
+    <constant name="struts.action.extention" value="action" />
+    <!-- 把主题配置成simple -->
+    <constant name="struts.ui.theme" value="simple" />
+
+
+
+
+
+
+</struts>

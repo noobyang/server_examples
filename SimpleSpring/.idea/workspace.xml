@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c13d0f5-5320-4509-a4b6-ef3eb1ef1338" name="Default Changelist" comment="web lesson seven:jdbc mysql, transaction">
-      <change beforePath="$PROJECT_DIR$/../SimpleHibernate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleHibernate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleHibernate/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleHibernate/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/src/main/java/com/noobyang/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimpleSSH/src/main/resources/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSSH/SimpleSSH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSSH/SimpleSSH.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSSH/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSSH/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSSH/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSSH/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleStruct" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27931035" />
@@ -182,6 +190,7 @@
       <workItem from="1604659831726" duration="651000" />
       <workItem from="1604662464781" duration="20000" />
       <workItem from="1605063505219" duration="38000" />
+      <workItem from="1605255543045" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="web lesson one:spring init">
       <created>1602493533925</created>
@@ -328,6 +337,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="225" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603675586843" />
+    <state x="410" y="60" key="FileChooserDialogImpl" timestamp="1605255558133">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="410" y="60" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605255558133" />
     <state width="1313" height="405" key="GridCell.Tab.0.bottom" timestamp="1603688712838">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -372,10 +385,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1603681634142" />
-    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1603261636270">
+    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup" timestamp="1605257464723">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603261636270" />
+    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605257464723" />
     <state x="256" y="0" key="spring file set editor" timestamp="1602578483621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
