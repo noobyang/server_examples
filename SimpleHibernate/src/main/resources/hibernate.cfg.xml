@@ -25,21 +25,6 @@
         <property name="hibernate.c3p0.idle_test_period">30000</property>
         <property name="hibernate.c3p0.acquire_increment">2</property>
 
-
-        <!--二级缓存默认不开启，需要手动开启-->
-        <!-- a.  开启二级缓存 -->
-        <property name="hibernate.cache.use_second_level_cache">true</property>
-        <!-- b. 指定使用哪一个缓存框架(默认提供的) -->
-        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
-        <!-- c. 指定哪一些类，需要加入二级缓存 -->
-        <class-cache usage="read-write" class="com.noobyang.entity.Dept"/>
-        <!-- 集合缓存[集合缓存的元素对象，也加加入二级缓存] Hibernate默认是没有为集合数据设置二级缓存的 -->
-        <collection-cache usage="read-write" collection="com.noobyang.entity.Dept.set"/>
-        <!-- 开启查询缓存 -->
-        <property name="hibernate.cache.use_query_cache">true</property>
-
-
-
         <!--如果要使用getCurrentSession()，需要在配置文件中配置-->
         <!--配置线程Session-->
         <property name="hibernate.current_session_context_class">thread</property>
@@ -62,6 +47,16 @@
 <!--        validate (生成环境时候) 执行验证： 当映射文件的内容与数据库表结构不一样的时候就报错！-->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+
+        <!--二级缓存默认不开启，需要手动开启-->
+        <!-- a.  开启二级缓存 -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!-- b. 指定使用哪一个缓存框架(默认提供的) -->
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+        <!-- 开启查询缓存 -->
+        <property name="hibernate.cache.use_query_cache">true</property>
+
+
         <!--3. 加载所有映射-->
         <mapping resource="hbm/User.hbm.xml"/>
         <mapping resource="hbm/UserList.hbm.xml"/>
@@ -83,5 +78,15 @@
         <!--(推荐)每个子类映射一张表， 父类不对应表(2张表)-->
         <mapping resource="hbm/Animal3.hbm.xml"/>
 
+
+        <!-- c. 指定哪一些类，需要加入二级缓存 -->
+        <class-cache usage="read-write" class="com.noobyang.entity.Dept"/>
+        <!-- 集合缓存[集合缓存的元素对象，也加加入二级缓存] Hibernate默认是没有为集合数据设置二级缓存的 -->
+        <collection-cache usage="read-write" collection="com.noobyang.entity.Dept.set"/>
+
+
     </session-factory>
+<!--    配置session-factory>标签是必须按照-->
+<!--    property*,mapping*,(class-cache|collection-cache),event,listener*这个顺序.不知道大家是否也犯过类此错误.-->
+
 </hibernate-configuration>
