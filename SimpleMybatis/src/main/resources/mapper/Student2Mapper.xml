@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace属性是名称空间，必须唯一 -->
+<mapper namespace="Student2">
+
+    <resultMap type="com.noobyang.entity.Student2" id="studentMap">
+        <id property="id" column="sid"/>
+        <result property="name" column="sname"/>
+
+        <!--
+        property写的是在Student实体中写关联字段的属性变量名称
+        resultMap写的是映射文件中的命名空间.id
+        -->
+        <association property="card" resultMap="Card.cardMap"/>
+    </resultMap>
+
+    <select id="findById" parameterType="int" resultMap="studentMap">
+        select * from student2 s, card c where c.cid = s.scid and sid=#{id};
+    </select>
+
+</mapper>

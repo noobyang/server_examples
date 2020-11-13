@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace属性是名称空间，必须唯一 -->
+<mapper namespace="Student3">
+
+    <resultMap type="com.noobyang.entity.Student3" id="studentMap">
+        <id property="id" column="sid"/>
+        <result property="name" column="sname"/>
+
+        <association property="grade" resultMap="Grade.gradeMap"/>
+    </resultMap>
+
+
+    <!--查询选修的java学科有多少位学生-->
+
+    <!--由于我们只要查询学生的名字，而我们的实体studentMap可以封装学生的名字，那么我们返回studentMap即可，并不需要再关联到学科表-->
+    <select id="findByGrade" parameterType="string" resultMap="studentMap">
+        select s.sname, s.sid, s.sgid, g.gid, g.gname from student3 s, grade g WHERE s.sgid=g.gid and g.gname=#{name};
+    </select>
+
+</mapper>

@@ -7,6 +7,30 @@
     <!-- 加载类路径下的属性文件 -->
     <properties resource="db.properties"/>
 
+
+    <!-- 全局配置参数 -->
+    <settings>
+        <!-- 延迟加载总开关 -->
+        <setting name="lazyLoadingEnabled" value="true" />
+        <!-- 设置按需加载 -->
+        <setting name="aggressiveLazyLoading" value="false" />
+    </settings>
+
+
+    <!-- 定义 别名 -->
+    <typeAliases>
+        <!--
+        单个别名的定义
+        alias：别名，type：别名映射的类型  -->
+        <typeAlias type="com.noobyang.entity.Student" alias="Student_alias"/>
+        <!-- 批量别名定义
+        指定包路径，自动扫描包下边的pojo，定义别名，别名默认为类名（首字母小写或大写）
+         -->
+        <package name="com.noobyang.entity"/>
+
+    </typeAliases>
+
+
     <!-- 设置一个默认的连接环境信息 -->
     <environments default="mysql_developer">
         <!-- 连接环境信息，取一个任意唯一的名字 -->
@@ -38,9 +62,19 @@
         </environment>
     </environments>
 
-
     <mappers>
         <mapper resource="mapper/StudentMapper.xml"/>
+
+        <mapper resource="mapper/Student2Mapper.xml"/>
+        <mapper resource="mapper/CardMapper.xml"/>
+
+        <mapper resource="mapper/Student3Mapper.xml"/>
+        <mapper resource="mapper/GradeMapper.xml"/>
+
+        <mapper resource="mapper/Student4Mapper.xml"/>
+        <mapper resource="mapper/CourseMapper.xml"/>
     </mappers>
+
+
 
 </configuration>

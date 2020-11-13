@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace属性是名称空间，必须唯一 -->
+<mapper namespace="Student4">
+
+    <resultMap type="com.noobyang.entity.Student4" id="studentMap">
+        <id property="id" column="sid"/>
+        <result property="name" column="sname"/>
+    </resultMap>
+
+    <select id="findAllByCourseName" parameterType="string" resultMap="studentMap">
+        select s.sname
+        from student4 s inner join middle m
+        on s.sid = m.msid
+        inner join course c
+        on m.mcid = c.cid
+        and c.cname = #{name}
+    </select>
+
+</mapper>
