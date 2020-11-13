@@ -8,7 +8,7 @@
     <!-- 注册监 spring 听器 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
 
