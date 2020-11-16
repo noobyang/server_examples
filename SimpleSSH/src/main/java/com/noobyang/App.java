@@ -37,7 +37,7 @@ public class App {
         Session session = factory.openSession();
         session.beginTransaction();
 
-        session.save(new Person(1, "人员1"));
+        session.save(new Person("人员2"));
 
         session.getTransaction().commit();
         session.close();
@@ -66,7 +66,7 @@ public class App {
         //开启事务
         transaction.begin();
 
-        session.save(new Person(1, "人员1"));
+        session.save(new Person("人员2"));
 
         // Warring: 需要放在事物中！数据才能插入数据库中
         //提交事务
