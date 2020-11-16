@@ -32,6 +32,10 @@
     <constant name="struts.ui.theme" value="simple" />
 
 
+    <!-- struts.xml 使用spring工厂 -->
+    <constant name="struts.objectFactory" value="spring" />
+
+
     <package name="test" extends="struts-default">
         <action name="test1" class="com.noobyang.action.TestAction" method="test1">
             <result name="success">test.jsp</result>

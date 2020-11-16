@@ -14,6 +14,7 @@
         <property name="hibernate.connection.password">liyang</property>
 
 
+
         <!-- 【连接池配置】 -->
         <!-- 配置连接驱动管理类 -->
         <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
@@ -58,14 +59,14 @@
 
 
         <!--3. 加载所有映射-->
-
+        <mapping resource="hbm/Person.hbm.xml"/>
 
 
 
         <!-- c. 指定哪一些类，需要加入二级缓存 -->
-        <class-cache usage="read-write" class="com.noobyang.entity.Dept"/>
+<!--        <class-cache usage="read-write" class="com.noobyang.entity.Person"/>-->
         <!-- 集合缓存[集合缓存的元素对象，也加加入二级缓存] Hibernate默认是没有为集合数据设置二级缓存的 -->
-        <collection-cache usage="read-write" collection="com.noobyang.entity.Dept.set"/>
+<!--        <collection-cache usage="read-write" collection="com.noobyang.entity.Person"/>-->
 
 
     </session-factory>
