@@ -178,6 +178,7 @@
       <artifactId>hibernate-jpa-2.0-api</artifactId>
       <version>1.0.1.Final</version>
     </dependency>
+<!--    org.hibernate.AnnotationException: java.lang.NoSuchMethodException: org.hibernate.validator.ClassValidator.<init>(java.lang.Class, java.util.ResourceBundle, org.hibernate.validator.MessageInterpolator, java.util.Map, org.hibernate.annotations.common.reflection.ReflectionManager)-->
 <!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-legacy &ndash;&gt;-->
 <!--    <dependency>-->
 <!--      <groupId>org.hibernate</groupId>-->

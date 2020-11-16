@@ -4,12 +4,15 @@
 
 <hibernate-mapping package="com.noobyang.entity">
     <class name="Person" table="person">
-        <id name="id" type="java.lang.String">
-            <column name="id" length="32" />
-            <generator class="uuid.hex" />
+        <!-- 联合主键 <composite-id> -->
+        <!--主键映射，属性名为id，列名也为id-->
+        <id name="id" column="id">
+            <!--根据底层数据库主键自动增长-->
+            <generator class="native"/>
+
         </id>
-        <property name="username" type="java.lang.String">
-            <column name="username" length="20" not-null="true" />
-        </property>
+
+        <!--非主键映射，属性和列名一一对应-->
+        <property name="name" column="name"/>
     </class>
 </hibernate-mapping>

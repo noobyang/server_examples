@@ -4,6 +4,7 @@ import com.noobyang.entity.Person;
 import com.noobyang.service.ITestService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -36,7 +37,7 @@ public class App {
         Session session = factory.openSession();
         session.beginTransaction();
 
-        session.save(new Person("人员1"));
+        session.save(new Person(1, "人员1"));
 
         session.getTransaction().commit();
         session.close();
@@ -60,7 +61,16 @@ public class App {
         //得到Session对象
         Session session = factory.openSession();
 
-        session.save(new Person("人员1"));
+        //使用Hibernate操作数据库，都要开启事务,得到事务对象
+        Transaction transaction = session.getTransaction();
+        //开启事务
+        transaction.begin();
+
+        session.save(new Person(1, "人员1"));
+
+        // Warring: 需要放在事物中！数据才能插入数据库中
+        //提交事务
+        transaction.commit();
 
         //关闭Session
         session.close();

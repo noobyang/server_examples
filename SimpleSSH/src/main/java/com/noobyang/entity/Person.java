@@ -4,35 +4,30 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-    private String id;
-    private String username;
+    private int id;
+    private String name;
 
     public Person() {
     }
 
-    public Person(String username) {
-        this.username = username;
-
-    }
-
-    public Person(String id, String username) {
+    public Person(int id, String name) {
         this.id = id;
-        this.username = username;
+        this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 }
