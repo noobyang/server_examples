@@ -62,29 +62,65 @@
         </property>
     </bean>
 
+
     <!-- Write operations are not allowed in read-only mode (FlushMode.MANUAL): Turn your Session into FlushM -->
     <!-- 配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-    <!-- 开启注解事务-->
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--  -->
+    <!-- 方法零，开启注解事务，为所有方法开启事务 -->
+<!--    <tx:annotation-driven transaction-manager="transactionManager"/>-->
 
-    <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
-        <property name="transactionManager" ref="transactionManager"/>
-        <!-- 配置事务属性 -->
-        <property name="transactionAttributes">
-            <props>
-                <prop key="add*">PROPAGATION_REQUIRED</prop>
-                <prop key="save*">PROPAGATION_REQUIRED</prop>
-                <prop key="delete*">PROPAGATION_REQUIRED</prop>
-                <prop key="update*">PROPAGATION_REQUIRED</prop>
-                <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
-            </props>
-        </property>
-    </bean>
+    <!-- 方法一，开启注解事务，通过事务拦截器为 *ServiceImpl 类中特定方法开启事务 -->
+<!--    <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">-->
+<!--        <property name="transactionManager" ref="transactionManager"/>-->
+<!--        &lt;!&ndash; 配置事务属性 &ndash;&gt;-->
+<!--        <property name="transactionAttributes">-->
+<!--            <props>-->
+<!--                <prop key="add*">PROPAGATION_REQUIRED</prop>-->
+<!--                <prop key="save*">PROPAGATION_REQUIRED</prop>-->
+<!--                <prop key="delete*">PROPAGATION_REQUIRED</prop>-->
+<!--                <prop key="update*">PROPAGATION_REQUIRED</prop>-->
+<!--                <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">-->
+<!--        <property name="beanNames">-->
+<!--            <list>-->
+<!--                <value>*ServiceImpl</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="interceptorNames">-->
+<!--            <list>-->
+<!--                <value>transactionInterceptor</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <!-- 方法二，开启注解事务，通过 pointcut 为 *ServiceImpl 类中特定方法开启事务 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="save*" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="delete*" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="update*" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="find*" read-only="true" propagation="REQUIRED"/>
+            <tx:method name="*" read-only="true" rollback-for="Throwable" />
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="serviceOperation" expression="execution(* com.noobyang..*ServiceImpl.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
+    </aop:config>
 
 
+    <!-- 所有业务配置文件都要用到sessionFactory，那么这个就是专门来创建sessionFactory的，其他的业务配置文件指定parent就有了该属性 -->
+    <!-- 所有业务dao的parent -->
+<!--    <bean id="testDao" abstract="true">-->
+<!--        <property name="sessionFactory" ref="sessionFactory"/>-->
+<!--    </bean>-->
 
 
     <bean id="testDaoImpl" class="com.noobyang.dao.impl.TestDaoImpl">
