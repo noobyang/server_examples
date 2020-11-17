@@ -185,29 +185,6 @@
       <artifactId>geronimo-jta_1.1_spec</artifactId>
       <version>1.1.1</version>
     </dependency>
-    <dependency>
-      <groupId>org.hibernate.javax.persistence</groupId>
-      <artifactId>hibernate-jpa-2.0-api</artifactId>
-      <version>1.0.1.Final</version>
-    </dependency>
-<!--    org.hibernate.AnnotationException: java.lang.NoSuchMethodException: org.hibernate.validator.ClassValidator.<init>(java.lang.Class, java.util.ResourceBundle, org.hibernate.validator.MessageInterpolator, java.util.Map, org.hibernate.annotations.common.reflection.ReflectionManager)-->
-<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-legacy &ndash;&gt;-->
-<!--    <dependency>-->
-<!--      <groupId>org.hibernate</groupId>-->
-<!--      <artifactId>hibernate-validator-legacy</artifactId>-->
-<!--      <version>4.0.2.GA</version>-->
-<!--    </dependency>-->
-<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations &ndash;&gt;-->
-<!--    <dependency>-->
-<!--      <groupId>org.hibernate</groupId>-->
-<!--      <artifactId>hibernate-annotations</artifactId>-->
-<!--      <version>3.2.1.GA</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.hibernate</groupId>-->
-<!--      <artifactId>hibernate-entitymanager</artifactId>-->
-<!--      <version>3.2.1.GA</version>-->
-<!--    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
     <dependency>

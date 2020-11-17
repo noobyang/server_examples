@@ -1,1 +1,277 @@
 DEBUG [main] 2020-11-17 16:43:14 (App.java:94) debug
+DEBUG [MLog-Init-Reporter] 2020-11-17 16:57:53 (Slf4jMLog.java:207) Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+DEBUG [MLog-Init-Reporter] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+DEBUG [MLog-Init-Reporter] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+DEBUG [MLog-Init-Reporter] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+DEBUG [MLog-Init-Reporter] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:207) The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:204) MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=2t5sh7ad1n7u89zc5jy4h|bf1ec20,name=2t5sh7ad1n7u89zc5jy4h|bf1ec20 registered.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:204) MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=2t5sh7ad1n7u89zc5jy4h|bf1ec20,name=2t5sh7ad1n7u89zc5jy4h|bf1ec20 unregistered, in order to be reregistered after update.
+DEBUG [main] 2020-11-17 16:57:53 (Slf4jMLog.java:204) MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=2t5sh7ad1n7u89zc5jy4h|bf1ec20,name=2t5sh7ad1n7u89zc5jy4h|bf1ec20 registered.
+DEBUG [main] 2020-11-17 16:57:54 (CoreLogging.java:28) Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+DEBUG [main] 2020-11-17 16:57:54 (IntegratorServiceImpl.java:46) Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+DEBUG [main] 2020-11-17 16:57:54 (IntegratorServiceImpl.java:46) Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+DEBUG [main] 2020-11-17 16:57:54 (IntegratorServiceImpl.java:46) Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+DEBUG [main] 2020-11-17 16:57:54 (Environment.java:199) HHH000206: hibernate.properties not found
+DEBUG [main] 2020-11-17 16:57:54 (LocalXmlResourceResolver.java:63) Interpreting public/system identifier : [-//Hibernate/Hibernate Mapping DTD 3.0//EN] - [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+DEBUG [main] 2020-11-17 16:57:54 (LocalXmlResourceResolver.java:85) Recognized legacy hibernate-mapping identifier; attempting to resolve on classpath under org/hibernate/
+DEBUG [main] 2020-11-17 16:57:54 (MappingBinder.java:59) Performing JAXB binding of hbm.xml document : Origin(name=null,type=INPUT_STREAM)
+DEBUG [main] 2020-11-17 16:57:55 (Configuration.java:722) Building session factory using internal StandardServiceRegistryBuilder
+DEBUG [main] 2020-11-17 16:57:55 (ServiceBinding.java:68) Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+DEBUG [main] 2020-11-17 16:57:55 (Configuration.java:652) Building session factory using provided StandardServiceRegistry
+DEBUG [main] 2020-11-17 16:57:55 (RegionFactoryInitiator.java:118) Cannot default RegionFactory based on registered strategies as `[class org.hibernate.cache.ehcache.internal.EhcacheRegionFactory, class org.hibernate.cache.ehcache.internal.SingletonEhcacheRegionFactory]` RegionFactory strategies were registered
+DEBUG [main] 2020-11-17 16:57:55 (RegionFactoryInitiator.java:49) Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration boolean -> org.hibernate.type.BooleanType@270b6b5e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration boolean -> org.hibernate.type.BooleanType@270b6b5e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@270b6b5e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4248e66b
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration true_false -> org.hibernate.type.TrueFalseType@167279d1
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration yes_no -> org.hibernate.type.YesNoType@9a6fbc0
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration byte -> org.hibernate.type.ByteType@7a8136b3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration byte -> org.hibernate.type.ByteType@7a8136b3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7a8136b3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration character -> org.hibernate.type.CharacterType@4d178d55
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration char -> org.hibernate.type.CharacterType@4d178d55
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4d178d55
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration short -> org.hibernate.type.ShortType@2875b016
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration short -> org.hibernate.type.ShortType@2875b016
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2875b016
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration integer -> org.hibernate.type.IntegerType@64b7225f
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration int -> org.hibernate.type.IntegerType@64b7225f
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@64b7225f
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration long -> org.hibernate.type.LongType@4beeb0e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration long -> org.hibernate.type.LongType@4beeb0e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Long -> org.hibernate.type.LongType@4beeb0e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration float -> org.hibernate.type.FloatType@39651a82
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration float -> org.hibernate.type.FloatType@39651a82
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Float -> org.hibernate.type.FloatType@39651a82
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration double -> org.hibernate.type.DoubleType@745c2004
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration double -> org.hibernate.type.DoubleType@745c2004
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@745c2004
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@552ed807
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@552ed807
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7318daf8
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7318daf8
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration string -> org.hibernate.type.StringType@661c46bc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.String -> org.hibernate.type.StringType@661c46bc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration nstring -> org.hibernate.type.StringNVarcharType@540b0448
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3b95d13c
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration url -> org.hibernate.type.UrlType@54d901aa
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.net.URL -> org.hibernate.type.UrlType@54d901aa
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration Duration -> org.hibernate.type.DurationType@4bafe935
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.Duration -> org.hibernate.type.DurationType@4bafe935
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration Instant -> org.hibernate.type.InstantType@5e5073ab
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.Instant -> org.hibernate.type.InstantType@5e5073ab
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@422b8438
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@422b8438
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration LocalDate -> org.hibernate.type.LocalDateType@70331432
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@70331432
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@280d9edc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@280d9edc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@15e0fe05
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@15e0fe05
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@69fa8e76
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@69fa8e76
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@dab48d3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@dab48d3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration date -> org.hibernate.type.DateType@c3177d5
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.Date -> org.hibernate.type.DateType@c3177d5
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration time -> org.hibernate.type.TimeType@243f003c
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.Time -> org.hibernate.type.TimeType@243f003c
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration timestamp -> org.hibernate.type.TimestampType@409986fe
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@409986fe
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.Date -> org.hibernate.type.TimestampType@409986fe
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@53dad875
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration calendar -> org.hibernate.type.CalendarType@34819867
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@34819867
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@34819867
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@771d1ffb
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@1da4b6b3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration locale -> org.hibernate.type.LocaleType@34fe326d
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@34fe326d
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration currency -> org.hibernate.type.CurrencyType@a33b4e3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@a33b4e3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration timezone -> org.hibernate.type.TimeZoneType@7e736350
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@7e736350
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration class -> org.hibernate.type.ClassType@736048ed
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Class -> org.hibernate.type.ClassType@736048ed
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@47b179d7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@47b179d7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@783115d9
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration binary -> org.hibernate.type.BinaryType@173f73e7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration byte[] -> org.hibernate.type.BinaryType@173f73e7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration [B -> org.hibernate.type.BinaryType@173f73e7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@4efc25fc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@4efc25fc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@4efc25fc
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration row_version -> org.hibernate.type.RowVersionType@3a5c2626
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration image -> org.hibernate.type.ImageType@41bf79da
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration characters -> org.hibernate.type.CharArrayType@5ff90645
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration char[] -> org.hibernate.type.CharArrayType@5ff90645
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration [C -> org.hibernate.type.CharArrayType@5ff90645
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2c768ada
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2c768ada
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2c768ada
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration text -> org.hibernate.type.TextType@7c447c76
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration ntext -> org.hibernate.type.NTextType@5d5b5fa7
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration blob -> org.hibernate.type.BlobType@4aaae508
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@4aaae508
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@75769ab0
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration clob -> org.hibernate.type.ClobType@4c59e45e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4c59e45e
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration nclob -> org.hibernate.type.NClobType@36fcf6c0
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@36fcf6c0
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2d23faef
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@43f61afb
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration serializable -> org.hibernate.type.SerializableType@39c1fe0b
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration object -> org.hibernate.type.ObjectType@9d7ccfe
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@9d7ccfe
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7c29adc8
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4b2e3e8f
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4bbb49b0
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@f096f37
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3effd4f3
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@41f4fe5
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@15f8701f
+DEBUG [main] 2020-11-17 16:57:55 (BasicTypeRegistry.java:157) Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@514cd540
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (DefaultIdentifierGeneratorFactory.java:81) Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:207) The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:207) The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:207) The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:204) com.mchange.v2.resourcepool.BasicResourcePool@4e6f2bb5 config: [start -> 10; min -> 3; max -> 30; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 1800000; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 450000; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:204) Created new pool for auth, username (masked): 'li******'.
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:204) acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+DEBUG [main] 2020-11-17 16:57:55 (Slf4jMLog.java:204) awaitAvailable(): [unknown]
+DEBUG [main] 2020-11-17 16:57:55 (JdbcEnvironmentInitiator.java:72) Database ->
+       name : MySQL
+    version : 8.0.22
+      major : 8
+      minor : 0
+DEBUG [main] 2020-11-17 16:57:55 (JdbcEnvironmentInitiator.java:83) Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)
+      major : 8
+      minor : 0
+DEBUG [main] 2020-11-17 16:57:55 (DelegatingBasicLogger.java:389) JDBC version : 4.2
+DEBUG [main] 2020-11-17 16:57:55 (IdentifierHelperBuilder.java:115) JDBC driver metadata reported database stores quoted identifiers in more than one case
+DEBUG [main] 2020-11-17 16:57:56 (IdentifierHelperBuilder.java:189) IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+DEBUG [main] 2020-11-17 16:57:56 (Namespace.java:51) Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+DEBUG [main] 2020-11-17 16:57:56 (TypeConfiguration.java:152) Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4cdb8504] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@76db540e]
+DEBUG [main] 2020-11-17 16:57:56 (ModelBinder.java:238) Mapping class: com.noobyang.entity.Person -> person
+DEBUG [main] 2020-11-17 16:57:56 (ModelBinder.java:2560) Mapped property: id -> [id]
+DEBUG [main] 2020-11-17 16:57:56 (PrimaryKey.java:35) Forcing column [id] to be non-null as it is part of the primary key for table [person]
+DEBUG [main] 2020-11-17 16:57:56 (ModelBinder.java:2560) Mapped property: name -> [name]
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryImpl.java:203) Building session factory
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:68) SessionFactory name : null
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:69) Automatic flush during beforeCompletion(): enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:70) Automatic session close at end of transaction: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:72) Statistics: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:74) Deleted entity synthetic identifier rollback: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:75) Default entity-mode: pojo
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:76) Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:77) Allow initialization of lazy state outside session : disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:79) Using BatchFetchStyle : LEGACY
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:80) Default batch fetch size: -1
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:81) Maximum outer join fetch depth: 2
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:82) Default null ordering: NONE
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:83) Order SQL updates by primary key: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:84) Order SQL inserts for batching: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:86) multi-tenancy strategy : NONE
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:88) JTA Track by Thread: enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:90) Query language substitutions: {}
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:91) Named query checking : enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:93) Second-level cache: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:94) Second-level query cache: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:95) Second-level query cache factory: null
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:96) Second-level cache region prefix: null
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:97) Optimize second-level cache for minimal puts: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:98) Structured second-level cache entries: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:99) Second-level cache direct-reference entries: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:100) Automatic eviction of collection cache: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:102) JDBC batch size: 15
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:103) JDBC batch updates for versioned data: enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:104) Scrollable result sets: enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:105) Wrap result sets: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:106) JDBC3 getGeneratedKeys(): enabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:107) JDBC result set fetch size: null
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:108) Connection release mode: ON_CLOSE
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:109) Generate SQL with comments: disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:111) JPA compliance - query : disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:112) JPA compliance - closed-handling : disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:113) JPA compliance - lists : disabled
+DEBUG [main] 2020-11-17 16:57:56 (Settings.java:114) JPA compliance - transactions : disabled
+DEBUG [main] 2020-11-17 16:57:56 (ClassLoaderAccessImpl.java:60) Not known whether passed class name [com.noobyang.entity.Person] is safe
+DEBUG [main] 2020-11-17 16:57:56 (ClassLoaderAccessImpl.java:62) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.noobyang.entity.Person
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryImpl.java:258) Session factory constructed with filter configurations : {}
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryImpl.java:259) Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@8bd86c8, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.cpu.isalist=amd64, sun.jnu.encoding=GBK, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=D:\develop\IntelliJ IDEA 2020.1.3\lib\idea_rt.jar;C:\Users\Administrator\.m2\repository\org\junit\platform\junit-platform-launcher\1.7.0\junit-platform-launcher-1.7.0.jar;C:\Users\Administrator\.m2\repository\org\junit\vintage\junit-vintage-engine\5.7.0\junit-vintage-engine-5.7.0.jar;C:\Users\Administrator\.m2\repository\junit\junit\4.13\junit-4.13.jar;D:\develop\IntelliJ IDEA 2020.1.3\plugins\junit\lib\junit5-rt.jar;D:\develop\IntelliJ IDEA 2020.1.3\plugins\junit\lib\junit-rt.jar;D:\develop\jdk\jre\lib\charsets.jar;D:\develop\jdk\jre\lib\deploy.jar;D:\develop\jdk\jre\lib\ext\access-bridge-64.jar;D:\develop\jdk\jre\lib\ext\cldrdata.jar;D:\develop\jdk\jre\lib\ext\dnsns.jar;D:\develop\jdk\jre\lib\ext\jaccess.jar;D:\develop\jdk\jre\lib\ext\jfxrt.jar;D:\develop\jdk\jre\lib\ext\localedata.jar;D:\develop\jdk\jre\lib\ext\nashorn.jar;D:\develop\jdk\jre\lib\ext\sunec.jar;D:\develop\jdk\jre\lib\ext\sunjce_provider.jar;D:\develop\jdk\jre\lib\ext\sunmscapi.jar;D:\develop\jdk\jre\lib\ext\sunpkcs11.jar;D:\develop\jdk\jre\lib\ext\zipfs.jar;D:\develop\jdk\jre\lib\javaws.jar;D:\develop\jdk\jre\lib\jce.jar;D:\develop\jdk\jre\lib\jfr.jar;D:\develop\jdk\jre\lib\jfxswt.jar;D:\develop\jdk\jre\lib\jsse.jar;D:\develop\jdk\jre\lib\management-agent.jar;D:\develop\jdk\jre\lib\plugin.jar;D:\develop\jdk\jre\lib\resources.jar;D:\develop\jdk\jre\lib\rt.jar;D:\code\web\server_examples\SimpleSSH\target\classes;C:\Users\Administrator\.m2\repository\org\springframework\spring-core\5.2.0.RELEASE\spring-core-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-jcl\5.2.0.RELEASE\spring-jcl-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-context\5.2.0.RELEASE\spring-context-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-beans\5.2.0.RELEASE\spring-beans-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-expression\5.2.0.RELEASE\spring-expression-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-web\5.2.10.RELEASE\spring-web-5.2.10.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-aop\5.2.0.RELEASE\spring-aop-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-aspects\5.2.0.RELEASE\spring-aspects-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\aspectj\aspectjrt\1.9.4\aspectjrt-1.9.4.jar;C:\Users\Administrator\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\Administrator\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-test\5.2.0.RELEASE\spring-test-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\cglib\cglib\3.3.0\cglib-3.3.0.jar;C:\Users\Administrator\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-orm\5.2.0.RELEASE\spring-orm-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-jdbc\5.2.0.RELEASE\spring-jdbc-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-tx\5.2.0.RELEASE\spring-tx-5.2.0.RELEASE.jar;C:\Users\Administrator\.m2\repository\org\apache\struts\struts2-core\2.5.18\struts2-core-2.5.18.jar;C:\Users\Administrator\.m2\repository\org\freemarker\freemarker\2.3.26-incubating\freemarker-2.3.26-incubating.jar;C:\Users\Administrator\.m2\repository\ognl\ognl\3.1.15\ognl-3.1.15.jar;C:\Users\Administrator\.m2\repository\commons-fileupload\commons-fileupload\1.3.3\commons-fileupload-1.3.3.jar;C:\Users\Administrator\.m2\repository\commons-io\commons-io\2.5\commons-io-2.5.jar;C:\Users\Administrator\.m2\repository\org\apache\commons\commons-lang3\3.6\commons-lang3-3.6.jar;C:\Users\Administrator\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\Administrator\.m2\repository\org\apache\struts\struts2-spring-plugin\2.5.25\struts2-spring-plugin-2.5.25.jar;C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-core\5.4.23.Final\hibernate-core-5.4.23.Final.jar;C:\Users\Administrator\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Administrator\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Administrator\.m2\repository\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;C:\Users\Administrator\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Administrator\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Administrator\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Administrator\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Administrator\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Administrator\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Administrator\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Administrator\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Administrator\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Administrator\.m2\repository\net\sf\ehcache\ehcache-core\2.6.11\ehcache-core-2.6.11.jar;C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-ehcache\5.4.23.Final\hibernate-ehcache-5.4.23.Final.jar;C:\Users\Administrator\.m2\repository\net\sf\ehcache\ehcache\2.10.6\ehcache-2.10.6.jar;C:\Users\Administrator\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\Administrator\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Administrator\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\Administrator\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Administrator\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Administrator\.m2\repository\org\apache\geronimo\specs\geronimo-jta_1.1_spec\1.1.1\geronimo-jta_1.1_spec-1.1.1.jar;C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-c3p0\5.4.23.Final\hibernate-c3p0-5.4.23.Final.jar;C:\Users\Administrator\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar;C:\Users\Administrator\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\8.0.21\mysql-connector-java-8.0.21.jar;C:\Users\Administrator\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-core\2.11.0\log4j-core-2.11.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.11.0\log4j-api-2.11.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-web\2.11.0\log4j-web-2.11.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.11.0\log4j-slf4j-impl-2.11.0.jar;C:\Users\Administrator\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Administrator\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Administrator\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Administrator\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Administrator\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Administrator\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Administrator\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Administrator\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Administrator\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Administrator\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;D:\develop\IntelliJ IDEA 2020.1.3\lib\idea_rt.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Shanghai, os.name=Windows 10, java.vm.specification.version=1.8, javax.persistence.validation.mode=none, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=D:\develop\jdk\jre\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.noobyang.App,testHibernate, sun.cpu.endian=little, user.home=C:\Users\Administrator, user.language=zh, java.specification.vendor=Oracle Corporation, java.home=D:\develop\jdk\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=D:\develop\jdk\jre\lib\resources.jar;D:\develop\jdk\jre\lib\rt.jar;D:\develop\jdk\jre\lib\sunrsasign.jar;D:\develop\jdk\jre\lib\jsse.jar;D:\develop\jdk\jre\lib\jce.jar;D:\develop\jdk\jre\lib\charsets.jar;D:\develop\jdk\jre\lib\jfr.jar;D:\develop\jdk\jre\classes, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_261-b12, user.name=Administrator, path.separator=;, os.version=10.0, java.endorsed.dirs=D:\develop\jdk\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, hibernate.classLoaders=[sun.misc.Launcher$AppClassLoader@18b4aac2], hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\, java.version=1.8.0_261, user.dir=D:\code\web\server_examples\SimpleSSH, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@4fa9ab6, java.library.path=D:\develop\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\develop\svn\bin;D:\develop\jdk\bin;D:\develop\jdk\jre\bin;D:\develop\Git\cmd;D:\develop\android-ndk-r21b;D:\develop\Sdk\tools;D:\develop\Sdk\platform-tools;D:\develop\node\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\develop\flutter\bin;;D:\develop\IntelliJ IDEA 2020.2.1\bin;;C:\Users\Administrator\AppData\Roaming\npm;., java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.261-b12, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2t5sh7ad1n7u89zc5jy4h|bf1ec20, dataSourceName -> 2t5sh7ad1n7u89zc5jy4h|bf1ec20 ], java.ext.dirs=D:\develop\jdk\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0}
+DEBUG [main] 2020-11-17 16:57:56 (JaccIntegrator.java:80) Skipping JACC integration as it was not enabled
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryImpl.java:298) Instantiated session factory
+DEBUG [main] 2020-11-17 16:57:56 (TypeConfiguration.java:157) Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4cdb8504] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@7fb66650]
+DEBUG [main] 2020-11-17 16:57:56 (ClassLoaderAccessImpl.java:60) Not known whether passed class name [com.noobyang.entity.Person] is safe
+DEBUG [main] 2020-11-17 16:57:56 (ClassLoaderAccessImpl.java:62) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.noobyang.entity.Person
+DEBUG [main] 2020-11-17 16:57:56 (AbstractEntityPersister.java:3876) Static SQL for entity: com.noobyang.entity.Person
+DEBUG [main] 2020-11-17 16:57:56 (AbstractEntityPersister.java:3881)  Version select: select id from person where id =?
+DEBUG [main] 2020-11-17 16:57:56 (AbstractEntityPersister.java:3884)  Snapshot select: select person_.id, person_.name as name2_0_ from person person_ where person_.id=?
+DEBUG [main] 2020-11-17 16:57:56 (DelegatingBasicLogger.java:394)  Insert 0: insert into person (name, id) values (?, ?)
+DEBUG [main] 2020-11-17 16:57:56 (DelegatingBasicLogger.java:394)  Update 0: update person set name=? where id=?
+DEBUG [main] 2020-11-17 16:57:56 (DelegatingBasicLogger.java:394)  Delete 0: delete from person where id=?
+DEBUG [main] 2020-11-17 16:57:56 (QuerySpacesImpl.java:174) Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@42505474]
+DEBUG [main] 2020-11-17 16:57:56 (MetamodelGraphWalker.java:146) Visiting attribute path : name
+DEBUG [main] 2020-11-17 16:57:56 (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) Building LoadPlan...
+DEBUG [main] 2020-11-17 16:57:56 (LoadQueryJoinAndFetchProcessor.java:102) processing queryspace <gen:0>
+DEBUG [main] 2020-11-17 16:57:56 (LoadPlanTreePrinter.java:55) LoadPlan(entity=com.noobyang.entity.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.noobyang.entity.Person, querySpaceUid=<gen:0>, path=com.noobyang.entity.Person)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.noobyang.entity.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+DEBUG [main] 2020-11-17 16:57:56 (EntityLoader.java:137) Static select for entity com.noobyang.entity.Person [NONE]: select person0_.id as id1_0_0_, person0_.name as name2_0_0_ from person person0_ where person0_.id=?
+DEBUG [main] 2020-11-17 16:57:56 (Table.java:520) No alter strings for table : person
+DEBUG [main] 2020-11-17 16:57:56 (JtaPlatformInitiator.java:43) No JtaPlatform was specified, checking resolver
+DEBUG [main] 2020-11-17 16:57:56 (JtaPlatformResolverInitiator.java:33) No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+DEBUG [main] 2020-11-17 16:57:56 (StandardJtaPlatformResolver.java:137) Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+DEBUG [main] 2020-11-17 16:57:56 (NamedQueryRepository.java:153) Checking 0 named HQL queries
+DEBUG [main] 2020-11-17 16:57:56 (NamedQueryRepository.java:167) Checking 0 named SQL queries
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryRegistry.java:51) Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@1e79d43
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryRegistry.java:73) Registering SessionFactory: 57ba76fb-c1f6-4458-a3f3-43198007074d (<unnamed>)
+DEBUG [main] 2020-11-17 16:57:56 (SessionFactoryRegistry.java:80) Not binding SessionFactory to JNDI, no JNDI name configured
+DEBUG [main] 2020-11-17 16:57:56 (HibernateTransactionManager.java:386) Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2t5sh7ad1n7u89zc5jy4h|bf1ec20, dataSourceName -> 2t5sh7ad1n7u89zc5jy4h|bf1ec20 ]] of Hibernate SessionFactory for HibernateTransactionManager
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [add*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [save*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [delete*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [update*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [find*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly]
+DEBUG [main] 2020-11-17 16:57:56 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly,-Throwable]
+DEBUG [main] 2020-11-17 16:57:57 (StatisticsInitiator.java:101) Statistics initialized [enabled=false]
+DEBUG [main] 2020-11-17 16:57:57 (TransactionImpl.java:53) On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+DEBUG [main] 2020-11-17 16:57:57 (TransactionImpl.java:81) begin
+DEBUG [main] 2020-11-17 16:57:57 (AbstractSaveEventListener.java:128) Generated identifier: 8aa024eb75d56cc20175d56cc6940000, using strategy: org.hibernate.id.UUIDHexGenerator
+DEBUG [main] 2020-11-17 16:57:57 (TransactionImpl.java:98) committing
+DEBUG [main] 2020-11-17 16:57:57 (AbstractFlushingEventListener.java:139) Processing flush-time cascades
+DEBUG [main] 2020-11-17 16:57:57 (AbstractFlushingEventListener.java:192) Dirty checking collections
+DEBUG [main] 2020-11-17 16:57:57 (AbstractFlushingEventListener.java:113) Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [main] 2020-11-17 16:57:57 (AbstractFlushingEventListener.java:120) Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [main] 2020-11-17 16:57:57 (EntityPrinter.java:110) Listing entities:
+DEBUG [main] 2020-11-17 16:57:57 (EntityPrinter.java:117) com.noobyang.entity.Person{name=人员1241, id=8aa024eb75d56cc20175d56cc6940000}
+DEBUG [main] 2020-11-17 16:57:57 (SqlStatementLogger.java:144) insert into person (name, id) values (?, ?)

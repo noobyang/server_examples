@@ -1,0 +1,2 @@
+ WARN [main] 2020-11-17 16:57:54 (LocalXmlResourceResolver.java:81) HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+ WARN [main] 2020-11-17 16:57:56 (UUIDHexGenerator.java:42) HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
