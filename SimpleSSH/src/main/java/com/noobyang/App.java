@@ -2,6 +2,8 @@ package com.noobyang;
 
 import com.noobyang.entity.Person;
 import com.noobyang.service.ITestService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-
 
     @Test
     public void testLoad() {
@@ -85,6 +86,13 @@ public class App {
         ITestService testService = (ITestService) context.getBean("testServiceImpl");
 
         testService.save(new Person("人员20006"));
+    }
+
+    private static final Logger logger = LogManager.getLogger(App.class);
+    @Test
+    public void testLog() {
+        logger.debug("debug");
+
     }
 
 
