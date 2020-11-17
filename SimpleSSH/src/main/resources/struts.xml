@@ -43,5 +43,6 @@
     </package>
 
 
+<!--    <include file="/action/struts-action.xml"/>-->
 
 </struts>

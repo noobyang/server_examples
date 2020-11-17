@@ -127,4 +127,6 @@
     </bean>
 
 
+<!--    <import resource="classpath:applicationContext-dao.xml"/>-->
+
 </beans>
