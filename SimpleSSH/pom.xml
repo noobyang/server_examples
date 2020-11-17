@@ -115,6 +115,8 @@
       <version>5.2.0.RELEASE</version>
     </dependency>
 
+
+
     <!-- struts -->
     <dependency>
       <groupId>org.apache.struts</groupId>
@@ -137,22 +139,39 @@
 
 
     <!-- hibernate -->
+    <!-- spring & hibernate 版本需要匹配 spring5 对 hibernate3 会报如下错误 -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>3.6.9.Final</version>
+      <version>5.4.23.Final</version>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.hibernate</groupId>-->
+<!--      <artifactId>hibernate-core</artifactId>-->
+<!--      <version>3.6.9.Final</version>-->
+<!--    </dependency>-->
+
+    <!-- org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.cache.spi.RegionFactory] -->
+    <!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache-core -->
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-core</artifactId>
+      <version>2.6.11</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>5.4.23.Final</version>
+    </dependency>
+
     <dependency>
       <groupId>org.javassist</groupId>
       <artifactId>javassist</artifactId>
       <version>3.20.0-GA</version>
     </dependency>
     <!-- dom4j and xml  -->
-    <dependency>
-      <groupId>dom4j</groupId>
-      <artifactId>dom4j</artifactId>
-      <version>1.6.1</version>
-    </dependency>
     <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
@@ -196,11 +215,18 @@
 <!--      <artifactId>hibernate-entitymanager</artifactId>-->
 <!--      <version>3.2.1.GA</version>-->
 <!--    </dependency>-->
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-c3p0</artifactId>
-      <version>3.3.2.GA</version>
+      <version>5.4.23.Final</version>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.hibernate</groupId>-->
+<!--      <artifactId>hibernate-c3p0</artifactId>-->
+<!--      <version>3.3.2.GA</version>-->
+<!--    </dependency>-->
     <!-- DAO -->
     <!-- 数据源c3p0 -->
     <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->

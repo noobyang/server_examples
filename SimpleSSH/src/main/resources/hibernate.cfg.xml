@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <!-- 通常，一个session-factory节点代表一个数据库 -->
-    <session-factory>
+    <session-factory name="mysql">
 
         <!-- 1. 数据库连接配置 -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
@@ -17,7 +17,10 @@
 
         <!-- 【连接池配置】 -->
         <!-- 配置连接驱动管理类 -->
-        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <!-- 在 hibernate3 中设置 provider_class 时是这样设置的 -->
+        <!-- <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+        <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+
         <!-- 配置连接池参数信息 -->
         <property name="hibernate.c3p0.min_size">2</property>
         <property name="hibernate.c3p0.max_size">4</property>
@@ -32,8 +35,9 @@
 
 
         <!--数据库方法配置， hibernate在运行的时候，会根据不同的方言生成符合当前数据库语法的sql-->
-        <!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
+        <!-- <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
 
         <!-- 2. 其他相关配置 -->
@@ -42,18 +46,22 @@
         <!-- 2.2 格式化sql -->
         <property name="hibernate.format_sql">true</property>
         <!-- 2.3 自动建表  -->
-        <!--        create-drop 每次在创建sessionFactory时候执行创建表。当调用sesisonFactory的close方法的时候，删除表！-->
-        <!--        create   每次都重新建表； 如果表已经存在就先删除再创建-->
-        <!--        update  如果表不存在就创建； 表存在就不创建；-->
-        <!--        validate (生成环境时候) 执行验证： 当映射文件的内容与数据库表结构不一样的时候就报错！-->
+        <!-- create-drop 每次在创建sessionFactory时候执行创建表。当调用sesisonFactory的close方法的时候，删除表！-->
+        <!-- create   每次都重新建表； 如果表已经存在就先删除再创建-->
+        <!-- update  如果表不存在就创建； 表存在就不创建；-->
+        <!-- validate (生成环境时候) 执行验证： 当映射文件的内容与数据库表结构不一样的时候就报错！-->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
 
         <!--二级缓存默认不开启，需要手动开启-->
         <!-- a.  开启二级缓存 -->
         <property name="hibernate.cache.use_second_level_cache">true</property>
-        <!-- b. 指定使用哪一个缓存框架(默认提供的) -->
-        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+        <!-- b. 设置缓存的类型，设置缓存的提供商。指定使用哪一个缓存框架(默认提供的) -->
+        <!-- 在 hibernate3 中设置缓存提供商时是这样设置的 -->
+<!--        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>-->
+        <!-- 在 hibernate4 中设置缓存提供商时是这样设置的 -->
+<!--        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
         <!-- 开启查询缓存 -->
         <property name="hibernate.cache.use_query_cache">true</property>
 
