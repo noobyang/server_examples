@@ -37,7 +37,7 @@ public class App {
         Session session = factory.openSession();
         session.beginTransaction();
 
-        session.save(new Person("人员141"));
+        session.save(new Person("人员1241"));
 
         session.getTransaction().commit();
         session.close();
@@ -76,6 +76,15 @@ public class App {
         session.close();
 
         factory.close();
+    }
+
+    @Test
+    public void testMVC() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        ITestService testService = (ITestService) context.getBean("testServiceImpl");
+
+        testService.save(new Person("人员1179"));
     }
 
 
