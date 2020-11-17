@@ -116,15 +116,14 @@
     </aop:config>
 
 
-    <!-- 所有业务配置文件都要用到sessionFactory，那么这个就是专门来创建sessionFactory的，其他的业务配置文件指定parent就有了该属性 -->
-    <!-- 所有业务dao的parent -->
-<!--    <bean id="testDao" abstract="true">-->
-<!--        <property name="sessionFactory" ref="sessionFactory"/>-->
-<!--    </bean>-->
-
-
-    <bean id="testDaoImpl" class="com.noobyang.dao.impl.TestDaoImpl">
+    <!-- 所有业务配置文件都要用到 sessionFactory，那么这个就是专门来创建 sessionFactory 的，其他的业务配置文件指定parent就有了该属性 -->
+    <!-- 所有业务 dao 的 parent -->
+    <bean id="testDao" class="com.noobyang.dao.AbsDao" abstract="true">
         <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="testDaoImpl" class="com.noobyang.dao.impl.TestDaoImpl" parent="testDao">
+
     </bean>
 
 

@@ -1,5 +1,6 @@
 package com.noobyang.dao.impl;
 
+import com.noobyang.dao.AbsDao;
 import com.noobyang.dao.ITestDao;
 import com.noobyang.entity.Person;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
@@ -12,7 +13,7 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
  * 因此只能通过XML的方式来配置【XML配置TestDaoImpl，
  * TestDaoImpl是拥有setFactory方法的，不能改写，但是能通过XML注入呀】
  */
-public class TestDaoImpl extends HibernateDaoSupport implements ITestDao {
+public class TestDaoImpl extends AbsDao implements ITestDao {
 
     @Override
     public void save(Person person) {

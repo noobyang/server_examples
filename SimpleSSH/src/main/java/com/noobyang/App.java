@@ -84,7 +84,7 @@ public class App {
 
         ITestService testService = (ITestService) context.getBean("testServiceImpl");
 
-        testService.save(new Person("人员20005"));
+        testService.save(new Person("人员20006"));
     }
 
 
