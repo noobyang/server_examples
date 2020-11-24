@@ -21,7 +21,11 @@
     <!-- 启动@aspectj的自动代理支持-->
     <aop:aspectj-autoproxy />
     <!--注意 xmlns:context 的配置，和 xsi:schemaLocation 需要配置 context-->
-    <context:component-scan base-package="com.noobyang" />
+<!--    <context:component-scan base-package="com.noobyang" />-->
+    <!-- 自动扫描组件，要把controller去除，他们是在spring-mvc.xml中配置，如果不去除会影响事务管理。 -->
+    <context:component-scan base-package="com.noobyang">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
 
 
     <!-- C3P0 JDBC 配置 -->
@@ -48,9 +52,9 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
 <!--        <property name="configLocation" value="classpath:mybatis-config.xml" />-->
+        <property name="typeAliasesPackage" value="com.noobyang.entity"/>
         <!--配置扫描式加载SQL映射文件,记得去掉mybatis-config配置-->
-         <property name="mapperLocations" value="classpath:mapper"/>
-         <property name="typeAliasesPackage" value="com.noobyang.entity"/>
+        <property name="mapperLocations" value="classpath*:/mapper/*Mapper.xml"/>
     </bean>
 
     <!-- 配置事务管理器,管理数据源事务处理 -->
