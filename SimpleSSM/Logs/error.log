@@ -1,0 +1,2 @@
+ERROR [main] 2020-11-25 16:41:04 (App.java:54) log4j2日志输出：This is error message.
+ERROR [main] 2020-11-25 16:43:36 (App.java:76) log4j2日志输出：This is error message.

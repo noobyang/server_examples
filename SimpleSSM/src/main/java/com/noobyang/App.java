@@ -5,6 +5,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -18,6 +20,8 @@ import java.io.Reader;
 
 public class App {
 
+    private static final Logger logger = LogManager.getLogger("App");
+
     static private DeptDaoImpl deptDao;
 
     @BeforeClass
@@ -25,20 +29,21 @@ public class App {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         deptDao = (DeptDaoImpl) context.getBean("deptDao");
 
-        System.out.println("setUpBeforeClass");
+        logger.debug("pBeforeClass");
     }
 
     @AfterClass
     public static void tearDownAfterClass() throws Exception {
 
-        System.out.println("tearDownAfterClass");
+        logger.debug("tearDownAfterClass");
     }
 
     @Test
     public void testSpringMVCSelectDept() {
 //        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        deptDao = (DeptDaoImpl) context.getBean("deptDao");
-        System.out.println(deptDao.selectDept(1));
+        logger.debug(deptDao.selectDept(1));
+
     }
 
     @Test
@@ -49,7 +54,7 @@ public class App {
 
             SqlSession sqlSession = sqlSessionFactory.openSession();
 
-            System.out.println(sqlSession.selectOne("com.noobyang.entity.DeptMapper.selectDept", 1));
+            logger.debug(sqlSession.selectOne("com.noobyang.entity.DeptMapper.selectDept", 1));
             sqlSession.commit();
 
             sqlSession.close();
@@ -57,7 +62,20 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    @Test
+    public void testLog4j2() {
+        // 记录trace级别的信息
+        logger.trace("log4j2日志输出：This is trace message.");
+        // 记录debug级别的信息
+        logger.debug("log4j2日志输出：This is debug message.");
+        // 记录info级别的信息
+        logger.info("log4j2日志输出：This is info message.");
+        // 记录error级别的信息
+        logger.error("log4j2日志输出：This is error message.");
+        // 记录warn级别的信息
+        logger.warn("log4j2日志输出：This is warn message.");
     }
 
 }
