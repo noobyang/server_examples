@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- 加载类路径下的属性文件 -->
+    <properties resource="db.properties"/>
+
+
+    <!-- 全局配置参数 -->
+    <settings>
+        <!-- 延迟加载总开关 -->
+        <setting name="lazyLoadingEnabled" value="true" />
+        <!-- 设置按需加载 -->
+        <setting name="aggressiveLazyLoading" value="false" />
+        <!-- 开启二级缓存 -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+
+
+    <!-- 定义 别名 -->
+    <typeAliases>
+        <!--
+        单个别名的定义
+        alias：别名，type：别名映射的类型  -->
+<!--        <typeAlias type="com.noobyang.entity.Student" alias="Student_alias"/>-->
+        <!-- 批量别名定义
+        指定包路径，自动扫描包下边的pojo，定义别名，别名默认为类名（首字母小写或大写）
+         -->
+        <package name="com.noobyang.entity"/>
+
+    </typeAliases>
+
+
+    <!-- 设置一个默认的连接环境信息 -->
+    <environments default="mysql_developer">
+        <!-- 连接环境信息，取一个任意唯一的名字 -->
+        <environment id="mysql_developer">
+            <!-- mybatis使用jdbc事务管理方式 -->
+            <transactionManager type="jdbc"/>
+            <!-- mybatis使用连接池方式来获取连接 -->
+            <dataSource type="pooled">
+                <!-- 配置与数据库交互的4个必要属性 -->
+                <property name="driver" value="${mysql.driver}"/>
+                <property name="url" value="${mysql.url}"/>
+                <property name="username" value="${mysql.username}"/>
+                <property name="password" value="${mysql.password}"/>
+            </dataSource>
+        </environment>
+
+        <!-- 连接环境信息，取一个任意唯一的名字 -->
+        <environment id="oracle_developer">
+            <!-- mybatis使用jdbc事务管理方式 -->
+            <transactionManager type="jdbc"/>
+            <!-- mybatis使用连接池方式来获取连接 -->
+            <dataSource type="pooled">
+                <!-- 配置与数据库交互的4个必要属性 -->
+                <property name="driver" value="${oracle.driver}"/>
+                <property name="url" value="${oracle.url}"/>
+                <property name="username" value="${oracle.username}"/>
+                <property name="password" value="${oracle.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mapper/DeptMapper.xml"/>
+
+    </mappers>
+
+
+
+</configuration>
