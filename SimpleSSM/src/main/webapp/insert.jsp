@@ -12,10 +12,8 @@
 </head>
 <body>
 
-<form action="dept/insert.action" method="post">
-    名称：<input type="text"   name="deptName"><br>
-    地址：<input type="text" name="deptAddress"><br>
-    <input type="submit" value="ok">
+<form action="params6.action" method="post">
+    <input type="submit" value="提交">
 </form>
 
 </body>
