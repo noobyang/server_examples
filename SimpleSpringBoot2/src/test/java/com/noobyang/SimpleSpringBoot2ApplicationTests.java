@@ -1,10 +1,10 @@
-package com.noobyang.simplespringboot2;
+package com.noobyang;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Simplespringboot2ApplicationTests {
+class SimpleSpringBoot2ApplicationTests {
 
     @Test
     void contextLoads() {
