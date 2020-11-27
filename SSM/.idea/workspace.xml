@@ -25,10 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d65b134-96f8-485b-bc71-58ff64384de8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../SimpleMybatis/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleMybatis/src/main/java/com/noobyang/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleMybatis/src/main/java/com/noobyang/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleMybatis/src/main/java/com/noobyang/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleMybatis/src/main/java/com/noobyang/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleMybatis/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleMybatis/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSSM/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSSM/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleSpring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleSpring/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -213,6 +213,7 @@
       <workItem from="1560445432359" duration="1832000" />
       <workItem from="1599000681385" duration="2370000" />
       <workItem from="1605157789865" duration="942000" />
+      <workItem from="1606459647771" duration="47000" />
     </task>
     <servers />
   </component>
@@ -229,11 +230,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="https://github.com/noobyang/SSM.git" />
     </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606459676303">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1606459676303" />
   </component>
   <component name="masterDetails">
     <states>
