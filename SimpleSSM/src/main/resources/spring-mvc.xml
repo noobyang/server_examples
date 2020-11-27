@@ -51,15 +51,15 @@
 
     <!--映射器【可省略】 -->
     <!--当我们需要多个请求路径都交由helloAction控制器来处理的话，我们只要添加prop标签就行了-->
-<!--    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
-<!--        <property name="mappings">-->
-<!--            <props>-->
-<!--                <prop key="/hi.action">helloAction</prop>-->
-<!--                <prop key="/bye.action">helloAction</prop>-->
-<!--            </props>-->
-<!--        </property>-->
-<!--    </bean>-->
-<!--    <bean id="helloAction" class="com.noobyang.action.HelloAction2"/>-->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/hi.action">manyOneAction</prop>
+                <prop key="/bye.action">manyOneAction</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="manyOneAction" class="com.noobyang.action.ManyOneAction"/>
 
 
     <!-- 适配器【可省略】 -->

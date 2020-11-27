@@ -8,9 +8,9 @@ import org.springframework.web.servlet.mvc.Controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class HelloAction2 implements Controller {
+public class ManyOneAction implements Controller {
 
-    private static final Logger logger = LogManager.getLogger("HelloAction2");
+    private static final Logger logger = LogManager.getLogger("ManyOneAction");
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {

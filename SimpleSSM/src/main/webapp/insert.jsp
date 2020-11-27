@@ -11,26 +11,10 @@
     <title>Post</title>
 </head>
 <body>
-<form action="/params2.action" method="post">
-    <table align="center">
-        <tr>
-            <td>用户名：</td>
-            <td><input type="text" name="username"></td>
-        </tr>
-        <tr>
-            <td>爱好</td>
-            <td><input type="checkbox" name="hobby" value="1">篮球</td>
-            <td><input type="checkbox" name="hobby" value="2">足球</td>
-            <td><input type="checkbox" name="hobby" value="3">排球</td>
-            <td><input type="checkbox" name="hobby" value="4">羽毛球</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="提交">
-            </td>
-        </tr>
-    </table>
-
-</form>
+    <form action="dept/insert.action" method="post">
+        名称：<input type="text"   name="deptName"><br>
+        地址：<input type="text" name="deptAddress"><br>
+        <input type="submit" value="ok">
+    </form>
 </body>
 </html>
