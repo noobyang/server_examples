@@ -1,0 +1,12 @@
+DEBUG [main] 2020-11-27 11:03:14 (JakartaCommonsLoggingImpl.java:54) Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+DEBUG [main] 2020-11-27 11:03:15 (JakartaCommonsLoggingImpl.java:54) Property 'configuration' or 'configLocation' not specified, using default MyBatis Configuration
+DEBUG [main] 2020-11-27 11:03:15 (JakartaCommonsLoggingImpl.java:54) Parsed mapper file: 'file [D:\code\web\server_examples\SimpleSSM\target\classes\mapper\DeptMapper.xml]'
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [add*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [save*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [delete*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [update*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [find*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly]
+DEBUG [main] 2020-11-27 11:03:15 (NameMatchTransactionAttributeSource.java:95) Adding transactional method [*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly,-Throwable]
+DEBUG [main] 2020-11-27 11:03:15 (App.java:32) pBeforeClass
+DEBUG [main] 2020-11-27 11:03:15 (App.java:72) log4j2日志输出：This is debug message.
+DEBUG [main] 2020-11-27 11:03:15 (App.java:38) tearDownAfterClass
