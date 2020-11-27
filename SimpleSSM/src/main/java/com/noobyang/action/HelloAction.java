@@ -24,7 +24,7 @@ public class HelloAction {
 
         deptDao.insertDept(dept);
 
-        return "message";
+        return "forward:/message.jsp";
     }
 
 }
