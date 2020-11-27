@@ -5,11 +5,11 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,7 +20,7 @@ import java.io.Reader;
 
 public class App {
 
-    private static final Logger logger = LogManager.getLogger("App");
+    private static final Logger logger = LoggerFactory.getLogger("App");
 
     static private DeptDaoImpl deptDao;
 
@@ -42,7 +42,7 @@ public class App {
     public void testSpringMVCSelectDept() {
 //        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        deptDao = (DeptDaoImpl) context.getBean("deptDao");
-        logger.debug(deptDao.selectDept(1));
+        logger.debug("testSpringMVCSelectDept", deptDao.selectDept(1));
 
     }
 
@@ -54,7 +54,7 @@ public class App {
 
             SqlSession sqlSession = sqlSessionFactory.openSession();
 
-            logger.debug(sqlSession.selectOne("com.noobyang.entity.DeptMapper.selectDept", 1));
+            logger.debug("testMyBatisSelectDept", sqlSession.selectOne("com.noobyang.entity.DeptMapper.selectDept", 1));
             sqlSession.commit();
 
             sqlSession.close();

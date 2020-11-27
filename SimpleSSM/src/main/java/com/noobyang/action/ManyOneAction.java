@@ -1,7 +1,7 @@
 package com.noobyang.action;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ManyOneAction implements Controller {
 
-    private static final Logger logger = LogManager.getLogger("ManyOneAction");
+    private static final Logger logger = LoggerFactory.getLogger("ManyOneAction");
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {

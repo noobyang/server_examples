@@ -1,9 +1,0 @@
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.driver'
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.url'
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.username'
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.password'
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.initialPoolSize'
-TRACE [main] 2020-11-27 11:03:14 (PropertyPlaceholderHelper.java:169) Resolved placeholder 'mysql.maxPoolSize'
-TRACE [main] 2020-11-27 11:03:14 (AbstractAutoProxyCreator.java:378) Did not attempt to auto-proxy infrastructure class [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor]
-TRACE [main] 2020-11-27 11:03:15 (AbstractAutoProxyCreator.java:378) Did not attempt to auto-proxy infrastructure class [org.springframework.transaction.interceptor.TransactionInterceptor]
-TRACE [main] 2020-11-27 11:03:15 (App.java:70) log4j2日志输出：This is trace message.

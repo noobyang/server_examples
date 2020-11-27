@@ -1,8 +1,7 @@
 package com.noobyang.action;
 
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HandlerInterceptor1 implements HandlerInterceptor {
 
-    private static final Logger logger = LogManager.getLogger("HandlerInterceptor1");
+    private static final Logger logger = LoggerFactory.getLogger("HandlerInterceptor1");
 
     //在执行handler之前来执行的
     //用于用户认证校验、用户权限校验

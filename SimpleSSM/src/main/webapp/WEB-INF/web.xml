@@ -21,6 +21,15 @@
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
+
+<!--    配置文件放在resources文件夹下面亲测有效,放在conf文件夹里面,一直报配置文件找不到的错误-->
+<!--    如果想放在其他文件夹下，则需要在web.xml文件中添加如下配置：-->
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>classpath:log4j2.xml</param-value>
+    </context-param>
+
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
