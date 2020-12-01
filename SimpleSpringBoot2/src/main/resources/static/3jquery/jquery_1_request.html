@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery 1 Request</title>
+
+    <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+</head>
+<body>
+
+<div class="divForm">
+    <br/><br/>
+
+    <input align="right" type="button" value="do Get" id="doGet" />
+
+    <br/><br/>
+
+    <input align="right" type="button" value="do Post" id="doPost" />
+</div>
+
+</body>
+
+<script type="text/javascript">
+    //ajax的代码
+    var btn=$('#doPost');
+    btn.click(function () {
+        $.post('/hello_post',
+            {
+                fname:'Lee',
+                lname:'Noobyang'
+            },
+            function (data,status) {
+                alert(data+"--"+status);
+            });
+    });
+
+    var btn=$('#doGet');
+    btn.click(function () {
+        $.get('/hello_get',
+            function (data,status) {
+                alert(data+"--"+status);
+            });
+    });
+</script>
+
+</html>
