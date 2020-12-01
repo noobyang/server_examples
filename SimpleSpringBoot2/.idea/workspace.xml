@@ -25,8 +25,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: run application">
+    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header...">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_html4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_html5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_vue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_1_hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_2_request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/vue.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/SimpleWeb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_html4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_html5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/2ajax/ajax_1_hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/2ajax/ajax_2_request.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleWeb/js/vue.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +84,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\2ajax" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SimpleSpringBoot2Application">
     <configuration name="SimpleSpringBoot2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -107,6 +136,7 @@
       <workItem from="1606468059800" duration="71000" />
       <workItem from="1606697642722" duration="2738000" />
       <workItem from="1606784296508" duration="790000" />
+      <workItem from="1606800178714" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -143,45 +173,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson springboot2: init project" />
     <MESSAGE value="lesson springboot2: run application" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: run application" />
+    <MESSAGE value="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header..." />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="150" width="1182" height="544" key="DiffContextDialog" timestamp="1606467201876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="94" y="150" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1606467201876" />
-    <state width="1313" height="311" key="GridCell.Tab.0.bottom" timestamp="1606467980819">
+    <state width="1313" height="311" key="GridCell.Tab.0.bottom" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606467980818" />
-    <state width="1313" height="311" key="GridCell.Tab.0.center" timestamp="1606467980818">
+    <state width="1313" height="311" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="311" key="GridCell.Tab.0.center" timestamp="1606801513186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606467980818" />
-    <state width="1313" height="311" key="GridCell.Tab.0.left" timestamp="1606467980818">
+    <state width="1313" height="311" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606801513186" />
+    <state width="1313" height="311" key="GridCell.Tab.0.left" timestamp="1606801513186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606467980818" />
-    <state width="1313" height="311" key="GridCell.Tab.0.right" timestamp="1606467980818">
+    <state width="1313" height="311" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606801513186" />
+    <state width="1313" height="311" key="GridCell.Tab.0.right" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606467980818" />
-    <state width="1313" height="311" key="GridCell.Tab.1.bottom" timestamp="1606467980819">
+    <state width="1313" height="311" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="311" key="GridCell.Tab.1.bottom" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606467980819" />
-    <state width="1313" height="311" key="GridCell.Tab.1.center" timestamp="1606467980819">
+    <state width="1313" height="311" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="311" key="GridCell.Tab.1.center" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606467980819" />
-    <state width="1313" height="311" key="GridCell.Tab.1.left" timestamp="1606467980819">
+    <state width="1313" height="311" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="311" key="GridCell.Tab.1.left" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606467980819" />
-    <state width="1313" height="311" key="GridCell.Tab.1.right" timestamp="1606467980819">
+    <state width="1313" height="311" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="311" key="GridCell.Tab.1.right" timestamp="1606801513187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606467980819" />
+    <state width="1313" height="311" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
     <state x="67" y="0" key="SettingsEditor" timestamp="1606467979536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
