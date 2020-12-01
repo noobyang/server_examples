@@ -51,6 +51,58 @@
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             xmlhttp.send("fname=Bill&lname=Gates");
         }
+
+        function doPostResponse()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    xmlDoc = xmlhttp.responseXML;
+                    book = xmlDoc.getElementsByTagName("book");
+                    console.log(book);
+
+                    var title = book[0].getElementsByTagName('title')[0];
+                    var author = book[0].getElementsByTagName('author')[0];
+                    var year = book[0].getElementsByTagName('year')[0];
+                    var price = book[0].getElementsByTagName('price')[0];
+
+                    console.debug(title);
+                    console.debug(author);
+                    console.debug(year);
+                    console.debug(price);
+
+                    txt = getNodeText(title) + " " + getNodeText(author) + " " + getNodeText(year) + " " + getNodeText(price);
+
+                    document.getElementById("post_response_div").innerHTML=txt;
+                }
+            }
+            xmlhttp.open("POST","/hello_post_response", true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send();
+        }
+
+        //获取文本节点内容，存在兼容性
+        function getNodeText(node){
+            if(window.ActiveXObject){//IE
+                return node.text;
+            }else{//标准浏览器
+                if(node.nodeType === 1){
+                    return node.textContent;
+                }
+            }
+        }
+
     </script>
 
 </head>
@@ -63,6 +115,11 @@
 
 <button type="button" onclick="doPost()">请求数据 POST</button>
 <div id="post_div"></div>
+
+</br>
+
+<button type="button" onclick="doPostResponse()">请求数据 POST Response</button>
+<div id="post_response_div"></div>
 
 </body>
 </html>

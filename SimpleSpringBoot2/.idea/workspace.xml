@@ -26,27 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header...">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_html4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_html5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/1hello/hello_vue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_1_hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_2_request.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleSpringBoot2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSpringBoot2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/SimpleWeb.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_html4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_html5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/1hello/hello_vue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/2ajax/ajax_1_hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/2ajax/ajax_2_request.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/js/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SimpleWeb/js/vue.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_2_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/2ajax/ajax_2_request.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +121,7 @@
       <workItem from="1606468059800" duration="71000" />
       <workItem from="1606697642722" duration="2738000" />
       <workItem from="1606784296508" duration="790000" />
-      <workItem from="1606800178714" duration="1686000" />
+      <workItem from="1606800178714" duration="6797000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -152,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606467348855</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header...">
+      <created>1606801872080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606801872080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,50 +169,58 @@
     <option name="LAST_COMMIT_MESSAGE" value="lesson web: because Cross-domain problem, Combined Projects&#10;&#10;has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header..." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1606811686748">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1606811686748" />
     <state x="94" y="150" width="1182" height="544" key="DiffContextDialog" timestamp="1606467201876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="94" y="150" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1606467201876" />
-    <state width="1313" height="311" key="GridCell.Tab.0.bottom" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.0.bottom" timestamp="1606814364844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
-    <state width="1313" height="311" key="GridCell.Tab.0.center" timestamp="1606801513186">
+    <state width="1313" height="385" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606814364844" />
+    <state width="1313" height="385" key="GridCell.Tab.0.center" timestamp="1606814364844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606801513186" />
-    <state width="1313" height="311" key="GridCell.Tab.0.left" timestamp="1606801513186">
+    <state width="1313" height="385" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606814364844" />
+    <state width="1313" height="385" key="GridCell.Tab.0.left" timestamp="1606814364844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606801513186" />
-    <state width="1313" height="311" key="GridCell.Tab.0.right" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606814364844" />
+    <state width="1313" height="385" key="GridCell.Tab.0.right" timestamp="1606814364844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
-    <state width="1313" height="311" key="GridCell.Tab.1.bottom" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606814364844" />
+    <state width="1313" height="385" key="GridCell.Tab.1.bottom" timestamp="1606814364845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
-    <state width="1313" height="311" key="GridCell.Tab.1.center" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606814364845" />
+    <state width="1313" height="385" key="GridCell.Tab.1.center" timestamp="1606814364845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
-    <state width="1313" height="311" key="GridCell.Tab.1.left" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606814364845" />
+    <state width="1313" height="385" key="GridCell.Tab.1.left" timestamp="1606814364845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
-    <state width="1313" height="311" key="GridCell.Tab.1.right" timestamp="1606801513187">
+    <state width="1313" height="385" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606814364845" />
+    <state width="1313" height="385" key="GridCell.Tab.1.right" timestamp="1606814364845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="311" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606801513187" />
+    <state width="1313" height="385" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606814364845" />
+    <state x="97" y="0" key="Maven.ArtifactSearchDialog" timestamp="1606811097743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="97" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1606811097743" />
     <state x="67" y="0" key="SettingsEditor" timestamp="1606467979536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="67" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606467979536" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1606467355853">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1606801885558">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606467355853" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606801885558" />
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606698259911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
