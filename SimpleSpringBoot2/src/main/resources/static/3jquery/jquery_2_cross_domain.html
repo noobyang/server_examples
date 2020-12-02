@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 允许跨域请求 -->
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <title>JQuery 1 Request</title>
+
+    <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+</head>
+<body>
+
+<div class="divForm">
+    <br/><br/>
+
+    <input align="right" type="button" value="do Post" id="doPost" />
+</div>
+
+</body>
+
+<script type="text/javascript">
+    //ajax的代码
+    var btn=$('#doPost');
+    btn.click(function () {
+        $.post('http://localhost:8080/hello_post_cross_domain',
+            {
+            },
+            function (data,status) {
+                alert(data+"--"+status);
+            });
+    });
+</script>
+
+</html>
