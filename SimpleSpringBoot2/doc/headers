@@ -1,0 +1,20 @@
+Server: nginx
+Date: Wed, 02 Dec 2020 09:28:59 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 90
+Connection: keep-alive
+Set-Cookie: route=1ab39699cfec98afd489aaabc85930bc; Path=/
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: User-Agent,Origin,Cache-Control,Content-type,Date,Server,withCredentials,AccessToken
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, HEAD
+Access-Control-Max-Age: 1209600
+Access-Control-Expose-Headers: accesstoken
+Access-Control-Request-Headers: accesstoken
+Content-Security-Policy: default-src 'self';img-src *;style-src 'unsafe-inline'
+Expires: -1
+Cache-Control: no-cache
+pragma: no-cache
+serverTime: 1606901338652
+
+

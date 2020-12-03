@@ -25,14 +25,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson web: vue hello">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/RedisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/util/RedisUtil.java" afterDir="false" />
+    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson web: redis one">
+      <change afterPath="$PROJECT_DIR$/doc/headers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimpleSpringBoot2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSpringBoot2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/AddResponseHeaderFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/filter/AddResponseHeaderFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_2_request.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/vue_hello/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue/vue_hello/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/4vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue/vue_hello" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -131,7 +129,8 @@
       <workItem from="1606697642722" duration="2738000" />
       <workItem from="1606784296508" duration="790000" />
       <workItem from="1606800178714" duration="11572000" />
-      <workItem from="1606870357587" duration="13838000" />
+      <workItem from="1606870357587" duration="15088000" />
+      <workItem from="1606957095712" duration="2380000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -182,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606889595287</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lesson web: redis one">
+      <created>1606898923409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606898923409</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,13 +215,18 @@
     <MESSAGE value="lesson web: jquery request" />
     <MESSAGE value="lesson web: jquery request, solve cross domain &#10;&#10;No 'Access-Control-Allow-Origin' header is present on the requested resource." />
     <MESSAGE value="lesson web: vue hello" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson web: vue hello" />
+    <MESSAGE value="lesson web: redis one" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson web: redis one" />
   </component>
   <component name="WindowStateProjectService">
     <state x="305" y="26" key="#Inspections" timestamp="1606897298220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="305" y="26" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1606897298220" />
+    <state x="383" y="147" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606957370439">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="383" y="147" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1606957370439" />
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1606896578017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -224,38 +235,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="94" y="150" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1606467201876" />
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1606898551102">
+    <state x="410" y="60" key="FileChooserDialogImpl" timestamp="1606963096052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1606898551102">
+    <state x="410" y="60" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606963096052" />
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1606900808093">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606900808093" />
+    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
-    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1606898551102">
+    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1606900808092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606898551102" />
+    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606900808092" />
+    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1606900808093">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606900808093" />
     <state x="97" y="0" key="Maven.ArtifactSearchDialog" timestamp="1606811097743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -264,10 +279,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="67" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606467979536" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1606889597796">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1606898924886">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606889597796" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606898924886" />
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606698259911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
