@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- HTML 页面手机适配方法 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Vue 1 Hello</title>
+</head>
+<body>
+<div id="app">
+  <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    /*
+        Vue的基本使用步骤
+        1、需要提供标签用于填充数据
+        2、引入vue.js文件
+        3、可以使用vue的语法做功能了
+        4、把vue提供的数据填充到标签里面
+     */
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString()
+        }
+    })
+</script>
+
+</body>
+</html>
