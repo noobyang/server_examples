@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -78,12 +79,36 @@ public class HelloController {
 
     @Autowired
     private UserServiceImpl userService;
+
     @RequestMapping(method = RequestMethod.POST, value = "/test_redis")
     public @ResponseBody
     String testRedis(String key, String value) {
         System.out.println("欢迎进入 SpringBoot testRedis " + key + ", " + value);
         userService.setValueRedis(key, value);
         return "redis Hello World!";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/selectUser")
+    public @ResponseBody
+    String selectUser() {
+        System.out.println("欢迎进入 SpringBoot selectUser ");
+        return userService.selectUser().toString();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/selectUser/{id}")
+    public @ResponseBody
+    String selectUser(@PathVariable int id) {
+        System.out.println("欢迎进入 SpringBoot selectUser " + id);
+        return userService.selectUser(id).toString();
+    }
+
+
+    @RequestMapping(method = RequestMethod.POST, value = "/insertUser")
+    public @ResponseBody
+    String insertUser(String name, int age) {
+        System.out.println("欢迎进入 SpringBoot insertUser " + name + ", " + age);
+        userService.insertUser(name, age);
+        return "mybatis Hello World!";
     }
 
 }

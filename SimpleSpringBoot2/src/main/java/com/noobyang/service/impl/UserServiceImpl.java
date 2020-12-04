@@ -1,5 +1,7 @@
 package com.noobyang.service.impl;
 
+import com.noobyang.entity.User;
+import com.noobyang.mapper.UserMapper;
 import com.noobyang.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -21,5 +23,23 @@ public class UserServiceImpl implements IUserService {
             e.printStackTrace();
         }
 
+    }
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public User selectUser(int id) {
+        return userMapper.selectUser(id);
+    }
+
+    @Override
+    public User selectUser() {
+        return userMapper.selectUser();
+    }
+
+    @Override
+    public void insertUser(String name, int age) {
+        userMapper.insertUser(name, age);
     }
 }
