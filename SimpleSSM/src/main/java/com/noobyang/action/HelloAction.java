@@ -2,6 +2,7 @@ package com.noobyang.action;
 
 import com.noobyang.dao.impl.DeptDaoImpl;
 import com.noobyang.entity.Dept;
+import com.noobyang.service.impl.RedisServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -35,6 +36,16 @@ public class HelloAction {
 
         deptDao.insertDept(dept);
 
+        return "forward:/message.jsp";
+    }
+
+    @Resource
+    private RedisServiceImpl redisService;
+
+    @RequestMapping(value="/setRedis.action", method = RequestMethod.POST)
+    public String setRedis(String key, String value) throws Exception {
+        logger.debug("setRedis " + key + ", " + value);
+        redisService.setValueRedis(key, value);
         return "forward:/message.jsp";
     }
 

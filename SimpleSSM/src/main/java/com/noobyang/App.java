@@ -1,6 +1,7 @@
 package com.noobyang;
 
 import com.noobyang.dao.impl.DeptDaoImpl;
+import com.noobyang.redis.RedisUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -76,6 +77,15 @@ public class App {
         logger.error("log4j2日志输出：This is error message.");
         // 记录warn级别的信息
         logger.warn("log4j2日志输出：This is warn message.");
+    }
+
+    @Test
+    public void testRedis() {
+        logger.debug("testRedis");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        RedisUtil redisUtil = (RedisUtil) context.getBean("redisUtil");
+        redisUtil.set("CCC", "DDD");
+
     }
 
 }

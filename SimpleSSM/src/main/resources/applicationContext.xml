@@ -30,7 +30,9 @@
 
     <!-- C3P0 JDBC 配置 -->
     <!-- 导入外部的properties配置文件 -->
-    <context:property-placeholder location="classpath:db.properties" />
+    <context:property-placeholder location="classpath:properties/*.properties"/>
+
+
     <!-- 配置c3p0数据源 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="${mysql.driver}"/>
@@ -118,7 +120,6 @@
     </bean>
 
 
-
-<!--    <import resource="classpath:applicationContext-dao.xml"/>-->
+    <import resource="classpath:applicationContext-redis.xml"/>
 
 </beans>
