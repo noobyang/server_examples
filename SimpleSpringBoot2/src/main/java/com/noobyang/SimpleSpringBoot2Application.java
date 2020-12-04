@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.noobyang.controller") // 扫描所需要的包
+@ComponentScan("com.noobyang.*") // 扫描所需要的包
 public class SimpleSpringBoot2Application {
 
     public static void main(String[] args) {

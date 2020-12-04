@@ -1,0 +1,47 @@
+windows下安装redis并设置自启动
+
+一、下载windows版本的Redis
+去官网找了很久，发现原来在官网上可以下载的windows版本的，现在官网以及没有下载地址，只能在github上下载，官网只提供linux版本的下载
+官网下载地址：http://redis.io/download
+github下载地址：https://github.com/MSOpenTech/redis/tags
+
+二、安装Redis
+1.这里下载的是Redis-x64-3.2.100版本，我的电脑是win7 64位，所以下载64位版本的，在运行中输入cmd，然后把目录指向解压的Redis目录。
+
+2、启动命令
+redis-server redis.windows.conf
+
+三、设置Redis服务
+1、由于上面虽然启动了redis，但是只要一关闭cmd窗口，redis就会消失。所以要把redis设置成windows下的服务。
+也就是设置到这里，首先发现是没用这个Redis服务的。
+
+2、设置服务命令
+redis-server --service-install redis.windows-service.conf --loglevel verbose
+输入命令之后没有报错，表示成功了，刷新服务，会看到多了一个redis服务。
+
+**启动报错1067的话，在刚才redis的目录下新建文件夹Logs然后再次启动即可。
+
+3、常用的redis服务命令。
+卸载服务：redis-server --service-uninstall
+开启服务：redis-server --service-start
+停止服务：redis-server --service-stop
+
+4、启动服务
+redis-server --service-start
+也可以通过 windows 的服务设置为自动启动
+
+5、测试Redis
+打开客户端
+    redis-cli -h 127.0.0.1 -p 6379
+
+6. 设置密码
+打开客户端
+    redis 127.0.0.1:6379> config set requirepass “你的密码”
+验证密码
+    redis 127.0.0.1:6379> auth “你的密码”
+
+
+
+这里只是做简单的安装，部署服务使用，更深入的使用可以去redis中文网看看 http://www.redis.net.cn/ 博客园也有很多深入使用方法，由于我的博客系统需要用到，做个抛砖引玉吧。
+在下载的解压包里面有一份文档，有详细的说明，
+

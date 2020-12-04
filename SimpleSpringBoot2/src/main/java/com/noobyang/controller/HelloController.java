@@ -1,6 +1,8 @@
 package com.noobyang.controller;
 
 import com.noobyang.entity.Book;
+import com.noobyang.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -72,6 +74,16 @@ public class HelloController {
                 .headers(responseHeaders)
                 .body("Post Hello World! helloPostCrossDomain ");
 
+    }
+
+    @Autowired
+    private UserServiceImpl userService;
+    @RequestMapping(method = RequestMethod.POST, value = "/test_redis")
+    public @ResponseBody
+    String testRedis(String key, String value) {
+        System.out.println("欢迎进入 SpringBoot testRedis " + key + ", " + value);
+        userService.setValueRedis(key, value);
+        return "redis Hello World!";
     }
 
 }
