@@ -16,8 +16,6 @@ public class RedisUtil {
 
     /**
      * 批量删除对应的value
-     *
-     * @param keys
      */
     public void remove(final String... keys) {
         for (String key : keys) {
@@ -27,19 +25,16 @@ public class RedisUtil {
 
     /**
      * 批量删除key
-     *
-     * @param pattern
      */
     public void removePattern(final String pattern) {
         Set<Serializable> keys = redisTemplate.keys(pattern);
-        if (keys.size() > 0)
+        if (keys.size() > 0) {
             redisTemplate.delete(keys);
+        }
     }
 
     /**
      * 删除对应的value
-     *
-     * @param key
      */
     public void remove(final String key) {
         if (exists(key)) {
@@ -49,9 +44,6 @@ public class RedisUtil {
 
     /**
      * 判断缓存中是否有对应的value
-     *
-     * @param key
-     * @return
      */
     public boolean exists(final String key) {
         return redisTemplate.hasKey(key);
@@ -59,9 +51,6 @@ public class RedisUtil {
 
     /**
      * 读取缓存
-     *
-     * @param key
-     * @return
      */
     public Object get(final String key) {
         Object result = null;
@@ -73,10 +62,6 @@ public class RedisUtil {
 
     /**
      * 写入缓存
-     *
-     * @param key
-     * @param value
-     * @return
      */
     public boolean set(final String key, Object value) {
         boolean result = false;
@@ -93,10 +78,6 @@ public class RedisUtil {
 
     /**
      * 写入缓存
-     *
-     * @param key
-     * @param value
-     * @return
      */
     public boolean set(final String key, Object value, Long expireTime) {
         boolean result = false;

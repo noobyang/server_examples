@@ -55,8 +55,6 @@ public class MethodCacheInterceptor implements MethodInterceptor {
 
     /**
      * 是否加入缓存
-     *
-     * @return
      */
     private boolean isAddCache(String targetName, String methodName) {
         boolean flag = true;
@@ -69,13 +67,8 @@ public class MethodCacheInterceptor implements MethodInterceptor {
 
     /**
      * 创建缓存key
-     *
-     * @param targetName
-     * @param methodName
-     * @param arguments
      */
-    private String getCacheKey(String targetName, String methodName,
-                               Object[] arguments) {
+    private String getCacheKey(String targetName, String methodName, Object[] arguments) {
         StringBuffer sbu = new StringBuffer();
         sbu.append(targetName).append("_").append(methodName);
         if ((arguments != null) && (arguments.length != 0)) {
