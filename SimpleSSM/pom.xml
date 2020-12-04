@@ -226,6 +226,21 @@
     </dependency>
 
 
+    <!-- rabbit MQ -->
+    <!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
+    <dependency>
+      <groupId>com.rabbitmq</groupId>
+      <artifactId>amqp-client</artifactId>
+      <version>5.10.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework.amqp/spring-rabbit -->
+    <dependency>
+      <groupId>org.springframework.amqp</groupId>
+      <artifactId>spring-rabbit</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+
+
     <!--Log4j2配置-->
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>

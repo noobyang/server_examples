@@ -1,6 +1,7 @@
 package com.noobyang;
 
 import com.noobyang.dao.impl.DeptDaoImpl;
+import com.noobyang.rabbit.MessageSender;
 import com.noobyang.redis.RedisUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -86,6 +87,18 @@ public class App {
         RedisUtil redisUtil = (RedisUtil) context.getBean("redisUtil");
         redisUtil.set("CCC", "DDD");
 
+    }
+
+    @Test
+    public void testRabbitMQ() {
+        logger.debug("testRabbitMQ");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        MessageSender messageSender = (MessageSender) context.getBean("messageSender");
+
+        // 设置RoutingKey，匹配message.*即可
+        messageSender.setRoutingKey("message.test");
+        // 发送消息
+        messageSender.sendDataToQueue("insert Queue");
     }
 
 }
