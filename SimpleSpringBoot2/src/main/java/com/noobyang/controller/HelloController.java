@@ -88,12 +88,12 @@ public class HelloController {
         return "redis Hello World!";
     }
 
-//    @RequestMapping(method = RequestMethod.GET, value = "/selectUser")
-//    public @ResponseBody
-//    String selectUser() {
-//        System.out.println("欢迎进入 SpringBoot selectUser ");
-//        return userService.selectUser().toString();
-//    }
+    @RequestMapping(method = RequestMethod.GET, value = "/selectUsers")
+    public @ResponseBody
+    String selectUsers() {
+        System.out.println("欢迎进入 SpringBoot selectUsers ");
+        return userService.selectUsers().toString();
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/selectUser/{id}")
     public @ResponseBody

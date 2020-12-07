@@ -8,6 +8,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("userService")
 public class UserServiceImpl implements IUserService {
 
@@ -33,10 +35,10 @@ public class UserServiceImpl implements IUserService {
         return userMapper.selectUser(id);
     }
 
-//    @Override
-//    public User selectUser() {
-//        return userMapper.selectUser();
-//    }
+    @Override
+    public List<User> selectUsers() {
+        return userMapper.selectUsers();
+    }
 
     @Override
     public void insertUser(String name, int age) {
