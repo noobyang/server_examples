@@ -1,8 +1,10 @@
 package com.noobyang;
 
 import com.noobyang.dao.impl.DeptDaoImpl;
+import com.noobyang.entity.Dept;
 import com.noobyang.rabbit.MessageSender;
 import com.noobyang.redis.RedisUtil;
+import com.noobyang.service.impl.MongoServiceImpl;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -99,6 +101,18 @@ public class App {
         messageSender.setRoutingKey("message.test");
         // 发送消息
         messageSender.sendDataToQueue("insert Queue");
+    }
+
+    @Test
+    public void testMongoDB() {
+        logger.debug("testMongoDB");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        MongoServiceImpl mongoService = (MongoServiceImpl) context.getBean("mongoService");
+
+        Dept dept = new Dept();
+        dept.setDeptName("TestMongoDB");
+        dept.setDeptAddress("TestMongoDBAddress");
+        mongoService.insert(dept);
     }
 
 }

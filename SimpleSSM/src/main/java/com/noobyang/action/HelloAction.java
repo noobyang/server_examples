@@ -2,6 +2,7 @@ package com.noobyang.action;
 
 import com.noobyang.entity.Dept;
 import com.noobyang.service.IDaoService;
+import com.noobyang.service.IMongoService;
 import com.noobyang.service.IRedisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,8 @@ public class HelloAction {
 
     @Resource
     private IDaoService daoService;
+    @Resource
+    private IMongoService mongoService;
 
     @RequestMapping(value="/selectDept/{id}", method = RequestMethod.GET)
     public String selectDept(@PathVariable Integer id) throws Exception {
@@ -33,6 +36,13 @@ public class HelloAction {
         logger.warn("HelloAction log4j2日志输出：This is warn message.");
 
         daoService.selectDept(id);
+
+
+        Dept dept = new Dept();
+        dept.setDeptName("TestMongoDB");
+        dept.setDeptAddress("TestMongoDBAddress");
+        mongoService.insert(dept);
+
 
         return "forward:/message.jsp";
     }
