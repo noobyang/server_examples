@@ -241,6 +241,21 @@
     </dependency>
 
 
+    <!-- mongodb -->
+    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-mongodb</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver -->
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongodb-driver</artifactId>
+      <version>3.12.7</version>
+    </dependency>
+
+
     <!--Log4j2配置-->
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
