@@ -25,13 +25,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: redis success">
-      <change afterPath="$PROJECT_DIR$/sql/console.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/mapper/UserMapper.java" afterDir="false" />
+    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: mybits failure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleSpringBoot2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSpringBoot2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/SimpleSpringBoot2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/SimpleSpringBoot2Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -79,6 +79,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -154,7 +157,8 @@
       <workItem from="1606870357587" duration="15088000" />
       <workItem from="1606957095712" duration="2380000" />
       <workItem from="1606974790022" duration="4000" />
-      <workItem from="1607049966486" duration="11768000" />
+      <workItem from="1607049966486" duration="11795000" />
+      <workItem from="1607302561080" duration="2754000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -219,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607072882957</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lesson springboot2: mybits failure">
+      <created>1607074364190</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607074364190</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +259,8 @@
     <MESSAGE value="lesson web: vue hello" />
     <MESSAGE value="lesson web: redis one" />
     <MESSAGE value="lesson springboot2: redis success" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: redis success" />
+    <MESSAGE value="lesson springboot2: mybits failure" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: mybits failure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="305" y="26" key="#Inspections" timestamp="1606897298220">
@@ -279,38 +291,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="60" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606963096052" />
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1607074235988">
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607074235988" />
-    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1607074235987">
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607074235987" />
-    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1607074235987">
+    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607074235987" />
-    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1607074235987">
+    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607074235987" />
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1607074235988">
+    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1607306173321">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607074235988" />
-    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1607074235988">
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607306173321" />
+    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607074235988" />
-    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1607074235988">
+    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607074235988" />
-    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1607074235988">
+    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1607306173320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607074235988" />
+    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607306173320" />
+    <state width="1313" height="330" key="GridCell.Tab.2.bottom" timestamp="1607304903386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="330" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607304903386" />
+    <state width="1313" height="330" key="GridCell.Tab.2.center" timestamp="1607304903386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="330" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1607304903386" />
+    <state width="1313" height="330" key="GridCell.Tab.2.left" timestamp="1607304903386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="330" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1607304903386" />
+    <state width="1313" height="330" key="GridCell.Tab.2.right" timestamp="1607304903386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="330" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1607304903386" />
     <state x="97" y="0" key="Maven.ArtifactSearchDialog" timestamp="1606811097743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -319,10 +347,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="67" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606467979536" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1607072885124">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1607074366819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607072885124" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607074366819" />
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606698259911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

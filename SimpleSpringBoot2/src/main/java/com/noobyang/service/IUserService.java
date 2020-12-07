@@ -8,7 +8,7 @@ public interface IUserService {
 
     User selectUser(int id);
 
-    User selectUser();
+//    User selectUser();
 
     void insertUser(String name, int age);
 

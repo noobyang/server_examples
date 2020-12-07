@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(scanBasePackages={"com.noobyang.*"})
-//@ComponentScan("com.noobyang.*") // 扫描所需要的包
-@MapperScan("com.noobyang.mapper") //扫描的mapper
+@ComponentScan("com.noobyang.*") // 扫描所需要的包
+@MapperScan(basePackages = {"com.noobyang.mapper"}, sqlSessionFactoryRef = "sqlSessionFactory") // 扫描的mapper
 public class SimpleSpringBoot2Application {
 
     public static void main(String[] args) {

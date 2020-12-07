@@ -10,8 +10,13 @@ public interface UserMapper {
     @Select("SELECT * FROM user WHERE id = #{id}")
     User selectUser(int id);
 
-    @Select("SELECT * FROM user")
-    User selectUser();
+    /**
+     * Warring: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for
+     *
+     * 注意方法重名，不支持参数重载
+     */
+//    @Select("SELECT * FROM user")
+//    List<User> selectUsers();
 
     @Select("insert into user(name,age) values(#{name},#{age})")
     void insertUser(String name, int age);

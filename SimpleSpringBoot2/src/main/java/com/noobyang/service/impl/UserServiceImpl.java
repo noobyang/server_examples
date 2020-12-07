@@ -33,10 +33,10 @@ public class UserServiceImpl implements IUserService {
         return userMapper.selectUser(id);
     }
 
-    @Override
-    public User selectUser() {
-        return userMapper.selectUser();
-    }
+//    @Override
+//    public User selectUser() {
+//        return userMapper.selectUser();
+//    }
 
     @Override
     public void insertUser(String name, int age) {
