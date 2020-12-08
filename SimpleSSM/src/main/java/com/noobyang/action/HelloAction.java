@@ -19,8 +19,6 @@ public class HelloAction {
 
     @Resource
     private IDaoService daoService;
-    @Resource
-    private IMongoService mongoService;
 
     @RequestMapping(value="/selectDept/{id}", method = RequestMethod.GET)
     public String selectDept(@PathVariable Integer id) throws Exception {
@@ -36,13 +34,6 @@ public class HelloAction {
         logger.warn("HelloAction log4j2日志输出：This is warn message.");
 
         daoService.selectDept(id);
-
-
-        Dept dept = new Dept();
-        dept.setDeptName("TestMongoDB");
-        dept.setDeptAddress("TestMongoDBAddress");
-        mongoService.insert(dept);
-
 
         return "forward:/message.jsp";
     }
@@ -74,6 +65,18 @@ public class HelloAction {
     public String setRedis(String key, String value) throws Exception {
         logger.debug("setRedis " + key + ", " + value);
         redisService.setValueRedis(key, value);
+        return "forward:/message.jsp";
+    }
+
+    @Resource
+    private IMongoService mongoService;
+
+    @RequestMapping(value="/testMongo", method = RequestMethod.GET)
+    public String testMongo() throws Exception {
+        logger.debug("HelloAction testMongo");
+
+        mongoService.save();
+
         return "forward:/message.jsp";
     }
 

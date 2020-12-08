@@ -1,9 +1,9 @@
 package com.noobyang;
 
 import com.noobyang.dao.impl.DeptDaoImpl;
-import com.noobyang.entity.Dept;
 import com.noobyang.rabbit.MessageSender;
 import com.noobyang.redis.RedisUtil;
+import com.noobyang.service.IMongoService;
 import com.noobyang.service.impl.MongoServiceImpl;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -16,16 +16,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.data.mongodb.core.MongoTemplate;
-
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 
 public class App {
 
@@ -112,15 +105,9 @@ public class App {
     public void testMongoDB() {
         logger.debug("testMongoDB");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MongoTemplate mongoTemplate = (MongoTemplate) context.getBean("mongoTemplate");
+        IMongoService mongoService = (MongoServiceImpl) context.getBean("mongoService");
 
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("_id", "10086");
-        map.put("name", "noobyang");
-        map.put("age", "26");
-        mongoTemplate.save(map, "collectionName");
-
+        mongoService.save();
     }
 
 }
