@@ -3,6 +3,7 @@ package com.noobyang;
 import com.noobyang.dao.impl.DeptDaoImpl;
 import com.noobyang.rabbit.MessageSender;
 import com.noobyang.redis.RedisUtil;
+import com.noobyang.request.CustomHttpClient;
 import com.noobyang.service.IMongoService;
 import com.noobyang.service.impl.MongoServiceImpl;
 import org.apache.ibatis.io.Resources;
@@ -19,6 +20,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 
 public class App {
 
@@ -108,6 +110,18 @@ public class App {
         IMongoService mongoService = (MongoServiceImpl) context.getBean("mongoService");
 
         mongoService.save();
+    }
+
+    @Test
+    public void testHttp() {
+        logger.debug("testHttp");
+//        CustomHttpClient.doGet();
+
+        try {
+            CustomHttpClient.doPost();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
 }
