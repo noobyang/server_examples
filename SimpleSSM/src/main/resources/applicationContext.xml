@@ -35,7 +35,7 @@
 
     <import resource="classpath:applicationContext-mysql.xml"/>
     <import resource="classpath:applicationContext-redis.xml"/>
-    <import resource="classpath:applicationContext-rabbitmq.xml"/>
+<!--    <import resource="classpath:applicationContext-rabbitmq.xml"/>-->
     <import resource="classpath:applicationContext-mongo.xml"/>
 
 </beans>

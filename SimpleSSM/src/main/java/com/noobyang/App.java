@@ -22,7 +22,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class App {
@@ -94,17 +96,17 @@ public class App {
 
     }
 
-    @Test
-    public void testRabbitMQ() {
-        logger.debug("testRabbitMQ");
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MessageSender messageSender = (MessageSender) context.getBean("messageSender");
-
-        // 设置RoutingKey，匹配message.*即可
-        messageSender.setRoutingKey("message.test");
-        // 发送消息
-        messageSender.sendDataToQueue("insert Queue");
-    }
+//    @Test
+//    public void testRabbitMQ() {
+//        logger.debug("testRabbitMQ");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        MessageSender messageSender = (MessageSender) context.getBean("messageSender");
+//
+//        // 设置RoutingKey，匹配message.*即可
+//        messageSender.setRoutingKey("message.test");
+//        // 发送消息
+//        messageSender.sendDataToQueue("insert Queue");
+//    }
 
     @Test
     public void testMongoDB() {
@@ -112,11 +114,12 @@ public class App {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MongoTemplate mongoTemplate = (MongoTemplate) context.getBean("mongoTemplate");
 
-        Dept dept = new Dept();
-        dept.setDeptName("TestMongoDB");
-        dept.setDeptAddress("TestMongoDBAddress");
 
-        mongoTemplate.save(dept);
+        Map<String, Object> map = new HashMap<>();
+        map.put("_id", "10086");
+        map.put("name", "noobyang");
+        map.put("age", "26");
+        mongoTemplate.save(map, "collectionName");
 
     }
 

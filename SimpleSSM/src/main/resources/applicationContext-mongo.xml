@@ -16,11 +16,13 @@
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/data/mongo
-       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
-       http://www.springframework.org/schema/data/repository
-       http://www.springframework.org/schema/data/repository/spring-repository-1.5.xsd">
+       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
-    <mongo:mongo-client id="mongoClient" connection-string="mongodb://liyang:liyang@localhost:27017/mongo"/>
+    <mongo:mongo-client id="mongoClient"
+                        host="127.0.0.1"
+                        port="27017"
+                        credential="liyang:liyang@mongo">
+    </mongo:mongo-client>
 
     <mongo:db-factory  id="mongoDbFactory" dbname="mongo" mongo-client-ref="mongoClient" />
 
