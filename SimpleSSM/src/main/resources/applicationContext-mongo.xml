@@ -16,7 +16,17 @@
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/data/mongo
-       http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd">
+       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+       http://www.springframework.org/schema/data/repository
+       http://www.springframework.org/schema/data/repository/spring-repository-1.5.xsd">
 
+    <mongo:mongo-client id="mongoClient" connection-string="mongodb://liyang:liyang@localhost:27017/mongo"/>
+
+    <mongo:db-factory  id="mongoDbFactory" dbname="mongo" mongo-client-ref="mongoClient" />
+
+    <!-- 只要使用这个调用相应的方法操作 -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+    </bean>
 
 </beans>

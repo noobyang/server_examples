@@ -4,7 +4,6 @@ import com.noobyang.entity.Dept;
 import com.noobyang.service.IMongoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -15,7 +14,7 @@ public class MongoServiceImpl implements IMongoService {
 
     private static final Logger logger = LoggerFactory.getLogger("MongoServiceImpl");
 
-//    @Resource
+    @Resource
     private MongoTemplate mongoTemplate;
 
     @Override

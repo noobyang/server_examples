@@ -16,10 +16,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class App {
@@ -107,12 +110,14 @@ public class App {
     public void testMongoDB() {
         logger.debug("testMongoDB");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MongoServiceImpl mongoService = (MongoServiceImpl) context.getBean("mongoService");
+        MongoTemplate mongoTemplate = (MongoTemplate) context.getBean("mongoTemplate");
 
         Dept dept = new Dept();
         dept.setDeptName("TestMongoDB");
         dept.setDeptAddress("TestMongoDBAddress");
-        mongoService.insert(dept);
+
+        mongoTemplate.save(dept);
+
     }
 
 }
