@@ -14,4 +14,6 @@ public interface IUserService {
 
     void insertUser(String name, int age);
 
+    void saveMongo();
+
 }

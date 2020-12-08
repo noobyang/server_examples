@@ -111,4 +111,12 @@ public class HelloController {
         return "mybatis Hello World!";
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/testMongo")
+    public @ResponseBody
+    String testMongo() {
+        System.out.println("欢迎进入 SpringBoot testMongo");
+        userService.saveMongo();
+        return "mongo Hello World!";
+    }
+
 }
