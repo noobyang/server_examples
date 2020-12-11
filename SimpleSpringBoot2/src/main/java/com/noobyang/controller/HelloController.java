@@ -2,6 +2,8 @@ package com.noobyang.controller;
 
 import com.noobyang.entity.Book;
 import com.noobyang.service.impl.UserServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -17,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class HelloController {
+
+    private static final Logger logger = LoggerFactory.getLogger("HelloController");
 
     @RequestMapping(method = RequestMethod.GET, value = "/hello_get")
     public @ResponseBody String helloGet() {
@@ -116,6 +120,13 @@ public class HelloController {
     String testMongo() {
         System.out.println("欢迎进入 SpringBoot testMongo");
         userService.saveMongo();
+
+        logger.trace("HelloController testMongo trace");
+        logger.debug("HelloController testMongo debug");
+        logger.warn("HelloController testMongo warn");
+        logger.info("HelloController testMongo info");
+        logger.error("HelloController testMongo error");
+
         return "mongo Hello World!";
     }
 
