@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SimpleSpringBoot2:war" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,14 +30,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: mybatis success">
+    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: mongo success, warring set auth">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimpleSpringBoot2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSpringBoot2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noobyang/SimpleSpringBoot2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noobyang/SimpleSpringBoot2Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +173,9 @@
       <workItem from="1607049966486" duration="11795000" />
       <workItem from="1607302561080" duration="5616000" />
       <workItem from="1607324658369" duration="671000" />
-      <workItem from="1607405953150" duration="1769000" />
+      <workItem from="1607405953150" duration="4301000" />
+      <workItem from="1607649130222" duration="1244000" />
+      <workItem from="1607665614546" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -245,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607307038329</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="lesson springboot2: mongo success, warring set auth">
+      <created>1607407856507</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607407856507</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +300,8 @@
     <MESSAGE value="lesson springboot2: mybits failure" />
     <MESSAGE value="lesson springboot2: mybatis success&#10;&#10;Warring: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for" />
     <MESSAGE value="lesson springboot2: mybatis success" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: mybatis success" />
+    <MESSAGE value="lesson springboot2: mongo success, warring set auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: mongo success, warring set auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="305" y="26" key="#Inspections" timestamp="1606897298220">
@@ -308,38 +332,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="60" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606963096052" />
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.0.center" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.0.left" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.0.right" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom" timestamp="1607410391523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607410391523" />
+    <state width="1313" height="384" key="GridCell.Tab.1.center" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.1.left" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
-    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1607407466965">
+    <state width="1313" height="384" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
+    <state width="1313" height="384" key="GridCell.Tab.1.right" timestamp="1607410391522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607407466965" />
+    <state width="1313" height="384" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607410391522" />
     <state width="1313" height="330" key="GridCell.Tab.2.bottom" timestamp="1607324538333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -364,10 +388,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="67" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606467979536" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1607307040362">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1607407940900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607307040362" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607407940900" />
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606698259911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
