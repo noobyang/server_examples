@@ -1,0 +1,40 @@
+一、准备工作
+1.安装node.js，根据自己的平台下载合适的安装包。
+http://nodejs.cn/download/
+
+2.设置npm工具加速，使用淘宝镜像仓库。
+打开你的命令行工具如windows的cmd
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+3.安装vue-cli工具
+npm install -g vue-cli
+
+4、选择一个新建项目的文件夹，如：D:\coding\Vue\vueclidemo01
+点击地址栏，输入CMD回车
+
+二、初始化模板
+模板：vue官方初始化了几种常用模板，如图使用vue list查看官方模板（选做）
+vue list
+
+1.选择模板创建vue项目骨架，此处选择模板为webpack-simple，项目名称为myvuedemo0620，回车后需要填写项目名称 项目描述 作者 许可协议 是否使用sass 一路回车就可以。
+vue init webpack mybuedemo0620
+此时D:\coding\Vue\vueclidemo01文件会新建一个文件夹mybuedemo0620
+
+三、安装依赖、运行项目
+#进入项目目录
+ cd mybuedemo0620
+#安装依赖
+ npm install
+#启动项目
+npm run dev
+
+浏览器会自动跳转至http://localhost:8080/
+
+四.修改源文件
+修改App.vue文件，div中内容为
+
+    <div id="app">
+        <h1>Hello,world</h1>
+    </div>
+
+打开浏览器查看 http://localhost:8080/
