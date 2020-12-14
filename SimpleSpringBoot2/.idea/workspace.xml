@@ -31,8 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: output log to file">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_3_one.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_2_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_2_demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_2_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_2_test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,23 +84,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/4vue" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources" />
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\sql" />
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\3jquery" />
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\2ajax" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources" />
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\sql" />
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\3jquery" />
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
@@ -240,6 +241,7 @@
       <workItem from="1607405953150" duration="4301000" />
       <workItem from="1607649130222" duration="1244000" />
       <workItem from="1607665614546" duration="5829000" />
+      <workItem from="1607931157318" duration="4340000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>

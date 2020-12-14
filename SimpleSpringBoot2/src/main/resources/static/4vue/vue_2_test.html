@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- HTML 页面手机适配方法 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>Vue 1 Hello</title>
+    <title>Vue 2 Test</title>
 </head>
 <body>
 <!--页面布局-->
@@ -44,8 +44,8 @@
         -->
         <todo-item v-for="item in groceryList"
                 v-bind:todo="item"
-                v-bind:key="item.id"
-        ></todo-item>
+                v-bind:key="item.id"><!--id 没啥用呢-->
+        </todo-item>
     </ol>
 
 </div>
@@ -79,7 +79,8 @@
                 { text: '整个牛项目' }
             ],
 
-            msgOriginal: 'Hello Vue.js!',
+            clickOriginal: 'Hello Vue.js!',
+
             inputOriginal: 'Hello Vue.js!',
 
             groceryList: [
