@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- HTML 页面手机适配方法 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Vue 4 Two 模板</title>
+</head>
+<body>
+<!--页面布局-->
+<!--<div id="app1">-->
+<!--    <app-nav></app-nav>-->
+<!--    <app-view>-->
+<!--        <app-sidebar></app-sidebar>-->
+<!--        <app-content></app-content>-->
+<!--    </app-view>-->
+<!--</div>-->
+
+<div id="app">
+
+    <span v-once>Message: {{ msg }}</span>
+
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+    <div v-bind:id="dynamicId">AAAA</div>
+
+    <a v-bind:href="url">href</a>
+
+    <br/>
+
+    <button v-on:click="doSomething">click</button >
+
+
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+
+    <div id="demo">{{ fullName }}</div>
+
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    /*
+        Vue的基本使用步骤
+        1、需要提供标签用于填充数据
+        2、引入vue.js文件
+        3、可以使用vue的语法做功能了
+        4、把vue提供的数据填充到标签里面
+     */
+    var app = new Vue({
+
+        el: '#app',
+        data: {
+            msg: "模板",
+            rawHtml: "Raw Html",
+            dynamicId: "Dynamic Id",
+            url: "https://cn.vuejs.org/v2/guide/syntax.html#Attribute",
+            message: 'Hello World!',
+
+            firstName: 'Foo',
+            lastName: 'Bar'
+        },
+        method: {
+            doSomething: function () {
+
+            }
+        },
+        // 计算属性缓存 vs 方法
+        // 我们可以将同一函数定义为一个方法而不是一个计算属性。
+        // 两种方式的最终结果确实是完全相同的。
+        // 然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。
+        // 只在相关响应式依赖发生改变时它们才会重新求值。
+        // 这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。
+        computed: {
+            // 计算属性的 getter
+            reversedMessage: function () {
+                // `this` 指向 vm 实例
+                return this.message.split('').reverse().join('')
+            },
+            fullName: {
+                // getter
+                get: function () {
+                    return this.firstName + ' ' + this.lastName
+                },
+                // setter
+                set: function (newValue) {
+                    var names = newValue.split(' ')
+                    this.firstName = names[0]
+                    this.lastName = names[names.length - 1]
+                }
+            }
+        },
+        watch: {
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

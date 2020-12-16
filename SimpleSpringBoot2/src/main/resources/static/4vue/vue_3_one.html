@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- HTML 页面手机适配方法 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>Vue 3 One</title>
+    <title>Vue 3 One 实例</title>
 </head>
 <body>
 <!--页面布局-->
@@ -39,6 +39,13 @@
         el: '#app',
         data: {
             message
+        },
+        template: {
+
+        },
+        created: function () {
+            // `this` 指向 vm 实例
+            console.log('a is: ' + this.a)
         },
         methods: {
 
