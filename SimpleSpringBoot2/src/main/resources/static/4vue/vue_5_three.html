@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- HTML 页面手机适配方法 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Vue 5 Three Class 与 Style 绑定</title>
+</head>
+<body>
+<!--页面布局-->
+<!--<div id="app1">-->
+<!--    <app-nav></app-nav>-->
+<!--    <app-view>-->
+<!--        <app-sidebar></app-sidebar>-->
+<!--        <app-content></app-content>-->
+<!--    </app-view>-->
+<!--</div>-->
+
+<div id="app">
+
+    <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+
+    <div v-bind:class="classObject"></div>
+
+    <div v-bind:class="classObject2"></div>
+
+    <my-component class="baz boo"></my-component>
+
+
+    <div v-if="Math.random() > 0.5">
+        Now you see me
+    </div>
+    <div v-else>
+        Now you don't
+    </div>
+
+    <ul id="example-1">
+        <li v-for="item in items" :key="item.message">
+            {{ item.message }}
+        </li>
+    </ul>
+
+    <ul id="example-2">
+        <li v-for="(item, index) in items">
+            {{ parentMessage }} - {{ index }} - {{ item.message }}
+        </li>
+    </ul>
+
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+
+    Vue.component('my-component', {
+        template: '<p class="foo bar">Hi</p>'
+    })
+
+    /*
+        Vue的基本使用步骤
+        1、需要提供标签用于填充数据
+        2、引入vue.js文件
+        3、可以使用vue的语法做功能了
+        4、把vue提供的数据填充到标签里面
+     */
+    var app = new Vue({
+
+        el: '#app',
+        data: {
+            isActive: true,
+            hasError: true,
+            classObject: {
+                active: true,
+                'text-danger': false
+            },
+            error: null,
+
+
+            parentMessage: 'Parent',
+            items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+            ]
+        },
+        computed: {
+            classObject2: function () {
+                return {
+                    active: this.isActive && !this.error,
+                    'text-danger': this.error && this.error.type === 'fatal'
+                }
+            }
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

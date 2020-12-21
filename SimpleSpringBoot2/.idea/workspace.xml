@@ -30,10 +30,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: vue lesson one">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_4_two.html" afterDir="false" />
+    <list default="true" id="56b0d36d-5142-4d97-8b2e-b6e5f4179602" name="Default Changelist" comment="lesson springboot2: vue lesson two">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_5_three.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_3_one.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_3_one.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_4_two.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/4vue/vue_4_two.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,16 +91,16 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
+      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\2ajax" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources" />
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\sql" />
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\3jquery" />
       <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\4vue" />
-      <recent name="D:\code\web\server_examples\SimpleSpringBoot2\src\main\resources\static\2ajax" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
@@ -243,7 +243,8 @@
       <workItem from="1607665614546" duration="5829000" />
       <workItem from="1607931157318" duration="4610000" />
       <workItem from="1607997483124" duration="3633000" />
-      <workItem from="1608079563449" duration="4858000" />
+      <workItem from="1608079563449" duration="4904000" />
+      <workItem from="1608511975622" duration="6508000" />
     </task>
     <task id="LOCAL-00001" summary="lesson springboot2: init project">
       <created>1606466330951</created>
@@ -357,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607938263375</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="lesson springboot2: vue lesson two">
+      <created>1608105990152</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608105990152</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +401,8 @@
     <MESSAGE value="lesson springboot2: build output war, deploy to tomcat" />
     <MESSAGE value="lesson springboot2: output log to file" />
     <MESSAGE value="lesson springboot2: vue lesson one" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: vue lesson one" />
+    <MESSAGE value="lesson springboot2: vue lesson two" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson springboot2: vue lesson two" />
   </component>
   <component name="WindowStateProjectService">
     <state x="305" y="26" key="#Inspections" timestamp="1606897298220">
@@ -480,10 +489,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="67" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606467979536" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1607938300139">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1608105996530">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607938300139" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608105996530" />
     <state x="440" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607938275280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
